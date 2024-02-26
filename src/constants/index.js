@@ -28,6 +28,9 @@ import {
   typescript,
   node_js,
   freecodecamp,
+  sunnifyimage,
+  knifethrowimage,
+  pythonanalysis,
 } from "../assets";
 
 export const navLinks = [
@@ -264,7 +267,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: portfolio,
+    image: sunnifyimage,
     source_code_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
     live_project_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
   },
@@ -290,7 +293,7 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: pglife,
+    image: knifethrowimage,
     source_code_link: "https://github.com/sunnypatell/KnifeThrow",
     live_project_link: "https://github.com/sunnypatell/KnifeThrow",
   },
@@ -324,7 +327,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: sortingvisualiser,
+    image: pythonanalysis,
     source_code_link:
       "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
     live_project_link: "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",

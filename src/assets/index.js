@@ -25,6 +25,8 @@ import node_js from "./tech/node_js.svg"
 
 import samaritans from "./samaritans.png";
 import oist from "./oist.png";
+
+// 
 import otu from "./company/otu.png"
 import rhhs from "./company/rhhs.jpg"
 import wonderland from "./company/wonderland.jpg"
@@ -33,6 +35,12 @@ import privcurity from "./company/privcurity.jpg"
 import google from "./company/google.png"
 import freecodecamp from "./company/freecodecamp.png"
 import whmis from "./company/whmis.png"
+
+import sunnifyimage from "./demonstration 2.jpg"
+import knifethrowimage from "./knifethrow_demonstration.jpg"
+import pythonanalysis from "./data_analysis.png"
+//
+
 
 import nextinnovation from "./company/nextinnovation.jpeg";
 import cognizant from "./company/cognizant.png";
@@ -76,6 +84,9 @@ export {
   google,
   freecodecamp,
   whmis,
+  sunnifyimage,
+  knifethrowimage,
+  pythonanalysis,
   nextinnovation,
   cognizant,
   internshala,
