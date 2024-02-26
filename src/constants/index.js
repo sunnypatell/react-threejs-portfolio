@@ -21,6 +21,7 @@ import {
   mackenziehealth,
   privcurity,
   google,
+  freecodecamp,
   nextinnovation,
   cognizant,
   internshala,
@@ -35,6 +36,7 @@ import {
   cplusplus,
   typescript,
   node_js,
+  freecodecamp,
 } from "../assets";
 
 export const navLinks = [
@@ -231,7 +233,7 @@ const extracurricular = [
   {
     title: "Scientific Computing with Python",
     type: "Certification",
-    icon: internshala,
+    icon: freecodecamp,
     iconBg: "#1294C8",
     date: "Mar 2023",
     points: ["Arithmetic Formatter, Time Calculator, Budget App, Polygon Area Calculator, Probability Calculator"],

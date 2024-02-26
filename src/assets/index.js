@@ -31,6 +31,7 @@ import wonderland from "./company/wonderland.jpg"
 import mackenziehealth from "./company/mackenziehealth.png"
 import privcurity from "./company/privcurity.jpg"
 import google from "./company/google.png"
+import freecodecamp from "./company/freecodecamp.png"
 
 import nextinnovation from "./company/nextinnovation.jpeg";
 import cognizant from "./company/cognizant.png";
@@ -72,6 +73,7 @@ export {
   mackenziehealth,
   privcurity,
   google,
+  freecodecamp,
   nextinnovation,
   cognizant,
   internshala,
