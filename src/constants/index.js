@@ -21,7 +21,7 @@ import {
   mackenziehealth,
   privcurity,
   google,
-  freecodecamp,
+  whmis,
   nextinnovation,
   cognizant,
   internshala,
@@ -243,7 +243,7 @@ const extracurricular = [
   {
     title: "WHMIS (Worker Health and Safety)",
     type: "Government Workforce Requirement",
-    icon: karate,
+    icon: whmis,
     iconBg: "#CCCFD8",
     date: "Sep 2020",
     points: ["Hazard Awareness, Legal Compliance, Personal Protection, Accident Prevention"],

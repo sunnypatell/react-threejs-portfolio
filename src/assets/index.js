@@ -18,7 +18,7 @@ import mysql from "./tech/mysql.png";
 import linux from "./tech/linux.png";
 import tailwind from "./tech/tailwind.png";
 import aws from "./tech/aws.png";
-import python from "./tech/python.jpg"
+import python from "./tech/python.png"
 import cplusplus from "./tech/c++.svg"
 import typescript from "./tech/typescript.png"
 import node_js from "./tech/node_js.svg"
@@ -32,6 +32,7 @@ import mackenziehealth from "./company/mackenziehealth.png"
 import privcurity from "./company/privcurity.jpg"
 import google from "./company/google.png"
 import freecodecamp from "./company/freecodecamp.png"
+import whmis from "./company/whmis.png"
 
 import nextinnovation from "./company/nextinnovation.jpeg";
 import cognizant from "./company/cognizant.png";
@@ -74,6 +75,7 @@ export {
   privcurity,
   google,
   freecodecamp,
+  whmis,
   nextinnovation,
   cognizant,
   internshala,
