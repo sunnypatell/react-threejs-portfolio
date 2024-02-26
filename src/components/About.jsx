@@ -56,7 +56,7 @@ const About = () => {
 
       <div className="mt-10 flex flex-wrap gap-10">
         <button className="mt-4 px-6 py-3 text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-md shadow-md hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50" 
-          onClick={() => window.open("https://drive.google.com/file/d/16xHITIKZF4NNFqm6DCBwFGJrQE354OzZ/view?usp=sharing", "_blank")}
+          onClick={() => window.open("https://drive.google.com/file/d/19WAMtCnc7NGqAshbHMLYZvJX62JsqYiS/view?usp=drive_link", "_blank")}
         >
           <span className="font-semibold">Resume</span>
         </button>
