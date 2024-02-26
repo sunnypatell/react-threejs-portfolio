@@ -270,12 +270,12 @@ const projects = [
     live_project_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
   },
   {
-    name: "PG Life",
+    name: "KnifeThrow",
     description:
-      "The PG-Life Web Application is a platform designed to facilitate the management and search for Paying Guest (PG) accommodations. It allows users to explore available PG options, view details, and connect with potential landlords or tenants.",
+      "A Knife Throwing game developed in Java using Java Swing, made in only Java libraries, sprites and no packages. Over 5000+ lines of code.",
     tags: [
       {
-        name: "html",
+        name: "java",
         color: "blue-text-gradient",
       },
       {
@@ -292,8 +292,8 @@ const projects = [
       },
     ],
     image: pglife,
-    source_code_link: "https://github.com/mohitrajput2002/PG_Life",
-    live_project_link: "https://github.com/mohitrajput2002/PG_Life",
+    source_code_link: "https://github.com/sunnypatell/KnifeThrow",
+    live_project_link: "https://github.com/sunnypatell/KnifeThrow",
   },
   {
     name: "Sorting Visualizer",
