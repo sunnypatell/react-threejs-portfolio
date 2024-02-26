@@ -31,6 +31,8 @@ import {
   sunnifyimage,
   knifethrowimage,
   pythonanalysis,
+  password_generator,
+  wordsearch,
 } from "../assets";
 
 export const navLinks = [
@@ -354,7 +356,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: portfolio,
+    image: password_generator,
     source_code_link: "https://github.com/sunnypatell/SecurePasswordGenerator",
     live_project_link: "https://github.com/sunnypatell/SecurePasswordGenerator",
   },
@@ -376,7 +378,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: pglife,
+    image: wordsearch,
     source_code_link: "https://github.com/sunnypatell/Word-Search-Game",
     live_project_link: "https://github.com/sunnypatell/Word-Search-Game",
   },

@@ -39,6 +39,8 @@ import whmis from "./company/whmis.png"
 import sunnifyimage from "./demonstration 2.jpg"
 import knifethrowimage from "./knifethrow_demonstration.jpg"
 import pythonanalysis from "./data_analysis.png"
+import password_generator from "./passwordgenerator.png"
+import wordsearch from "./wordsearchoutput.jpg"
 //
 
 
@@ -87,6 +89,8 @@ export {
   sunnifyimage,
   knifethrowimage,
   pythonanalysis,
+  password_generator,
+  wordsearch,
   nextinnovation,
   cognizant,
   internshala,
