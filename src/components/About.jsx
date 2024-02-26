@@ -68,7 +68,7 @@ const About = () => {
         </button>
 
         <button className="mt-4 px-6 py-3 text-white bg-gradient-to-r from-gray-600 to-gray-800 rounded-md shadow-md hover:bg-gradient-to-r hover:from-gray-700 hover:to-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50" 
-          onClick={() => window.open("https://github.com/sunnypatel99", "_blank")}
+          onClick={() => window.open("https://github.com/sunnypatell", "_blank")}
         >
           <span className="font-semibold">GitHub</span>
         </button>
