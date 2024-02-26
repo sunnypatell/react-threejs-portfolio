@@ -272,22 +272,22 @@ const projects = [
   {
     name: "KnifeThrow",
     description:
-      "A Knife Throwing game developed in Java using Java Swing, made in only Java libraries, sprites and no packages. Over 5000+ lines of code.",
+      "KnifeThrow is a Java Swing-based 2D mini-game, packed by maven with over 5000 lines of code. It includes a menu, game-over screens, sound effects, and custom sprites. Players unlock different knives with varied abilities in a dedicated knife shop. The game features improved collision systems, animations, and particle effects for an immersive experience.",
     tags: [
       {
         name: "java",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "swing",
         color: "green-text-gradient",
       },
       {
-        name: "bootstrap",
+        name: "maven",
         color: "pink-text-gradient",
       },
       {
-        name: "javascript",
+        name: "arcadegame",
         color: "green-text-gradient",
       },
     ],
