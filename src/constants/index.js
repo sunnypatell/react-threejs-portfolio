@@ -233,21 +233,18 @@ const extracurricular = [
       "https://www.freecodecamp.org/certification/sunnypatell/scientific-computing-with-python-v7",
   },
   {
-    title: "Combat Sport-Karate",
-    type: "Extracurricular(Hobby)/Combat Sport",
+    title: "WHMIS (Worker Health and Safety)",
+    type: "Government Workforce Requirement",
     icon: karate,
     iconBg: "#CCCFD8",
-    date: "2006-2020",
-    points: [
-      "State level Gold medalist in Kumite.",
-      "Renshi Cup National Championship Bronze medalist in Kumite.",
-    ],
+    date: "Sep 2020",
+    points: ["Hazard Awareness, Legal Compliance, Personal Protection, Accident Prevention"],
   },
 ];
 
 const projects = [
   {
-    name: "3D Portfolio",
+    name: "Sunnify (Spotify Downloader)",
     description:
       "Web Portfolio in React JS which uses 3D graphics and animations to bring the content to life. The website is divided into several main sections, including an about, Education, project, connect and contact section. Each section is designed to showcase 3D's unique style and creativity, with an emphasis on interactivity and user engagement.",
     tags: [
