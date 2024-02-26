@@ -246,28 +246,28 @@ const projects = [
   {
     name: "Sunnify (Spotify Downloader)",
     description:
-      "Web Portfolio in React JS which uses 3D graphics and animations to bring the content to life. The website is divided into several main sections, including an about, Education, project, connect and contact section. Each section is designed to showcase 3D's unique style and creativity, with an emphasis on interactivity and user engagement.",
+      "Sunnify is a Spotify downloader application that allows you to download entire playlists locally onto your Mac/Linux/Windows PC.",
     tags: [
       {
-        name: "react",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "webscraping",
         color: "green-text-gradient",
       },
       {
-        name: "framer-motion",
+        name: "pyqt5",
         color: "pink-text-gradient",
       },
       {
-        name: "three.js",
+        name: "(EDUCATIONAL PURPOSES ONLY)",
         color: "blue-text-gradient",
       },
     ],
     image: portfolio,
-    source_code_link: "https://github.com/mohitrajput2002/my-portfolio",
-    live_project_link: "https://mohit-singh-rajput.vercel.app/",
+    source_code_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
+    live_project_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
   },
   {
     name: "PG Life",
