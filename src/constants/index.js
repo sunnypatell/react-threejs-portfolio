@@ -305,15 +305,15 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "TensorFlow",
+        name: "tensorflow",
         color: "green-text-gradient",
       },
       {
-        name: "Scikit-Learn",
+        name: "scikit-learn",
         color: "pink-text-gradient",
       },
       {
-        name: "Pandas",
+        name: "pandas",
         color: "green-text-gradient",
       },
       {
@@ -321,14 +321,40 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "TensorFlow",
+        name: "numpy",
         color: "blue-text-gradient",
       },
     ],
     image: sortingvisualiser,
     source_code_link:
-      "https://github.com/mohitrajput2002/sorting-visualizer-project.github.io.git",
-    live_project_link: "https://sorting-visuallizer.netlify.app/",
+      "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
+    live_project_link: "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
+  },
+  {
+    name: "Sunnify (Spotify Downloader)",
+    description:
+      "Secure Password Generator is a Java-based tool designed to generate and manage secure passwords, prioritizing simplicity, security, and user-friendliness. It employs industry-standard encryption algorithms to create strong, unique passwords resistant to common hacking attempts.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "webscraping",
+        color: "green-text-gradient",
+      },
+      {
+        name: "pyqt5",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "(EDUCATIONAL PURPOSES ONLY)",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
+    live_project_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
   },
 ];
 
