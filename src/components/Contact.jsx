@@ -8,14 +8,14 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faEnvelope, faComment } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
-    location: "",
+    message: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -37,15 +37,15 @@ const Contact = () => {
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        "template_tn53hil",
         {
           from_name: form.name,
           to_name: "Sunny Patel",
           from_email: form.email,
           to_email: "sunnypatel124555@gmail.com",
-          location: form.location,
+          message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        "qKXGy2B0mb2m5HSJH"
       )
       .then(
         () => {
@@ -55,7 +55,7 @@ const Contact = () => {
           setForm({
             name: "",
             email: "",
-            location: "",
+            message: "",
           });
         },
         (error) => {
@@ -67,14 +67,6 @@ const Contact = () => {
       );
   };
 
-  const openLinkedInProfile = () => {
-    window.open("https://www.linkedin.com/in/sunny-patel-30b460204/", "_blank");
-  };
-
-  const openCustomLink = (url) => {
-    window.open(url, "_blank");
-  };
-
   return (
     <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
       <motion.div variants={slideIn("left", "tween", 0.2, 1)} className='flex-[0.75] bg-black-100 p-8 rounded-2xl'>
@@ -84,56 +76,47 @@ const Contact = () => {
         <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>
-              <FontAwesomeIcon icon={faUser} size="1x" style={{ color: "#915EFF" }} /> Name
+              <FontAwesomeIcon icon={faUser} color="#915EFF"/> Name
             </span>
             <input
-              type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="Sunny Patel"
+              placeholder="Your name"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-              disabled
             />
           </label>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>
-              <FontAwesomeIcon icon={faEnvelope} size="1x" style={{ color: "#915EFF" }} /> Email Id
+              <FontAwesomeIcon icon={faEnvelope} color="#915EFF"/> Email
             </span>
             <input
-              type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="sunnypatel124555@gmail.com"
+              placeholder="Your email"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-              disabled
             />
           </label>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>
-              <FontAwesomeIcon icon={faMapMarkerAlt} size="1x" style={{ color: "#915EFF" }} /> Location
+              <FontAwesomeIcon icon={faComment} color="#915EFF"/> Message
             </span>
-            <input
-              type='email'
-              name='email'
-              value={form.location}
+            <textarea
+              name='message'
+              value={form.message}
               onChange={handleChange}
-              placeholder="Toronto, ON, Canada"
+              placeholder="Type your message here..."
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-              disabled
             />
           </label>
-
-          <label className="flex flex-col">
-            <p className="text-center" style={{ color: "#7C7E80" }}>
-              Copyright &copy; 2024 Sunny Patel's Portfolio <br />
-              Designed and Developed by
-              <a href="https://www.linkedin.com/in/sunny-patel-30b460204/" onClick={openLinkedInProfile}>
-                <strong> Sunny Jayendra Patel.</strong>
-              </a>
-            </p>
-          </label>
+          <button
+            type='submit'
+            className='bg-purple-600 text-white py-4 px-6 rounded-lg font-medium'
+            disabled={loading}
+          >
+            {loading ? 'Sending...' : 'Send Message'}
+          </button>
         </form>
       </motion.div>
 
