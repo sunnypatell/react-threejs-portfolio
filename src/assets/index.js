@@ -26,6 +26,8 @@ import node_js from "./tech/node_js.svg"
 import samaritans from "./samaritans.png";
 import oist from "./oist.png";
 import otu from "./company/otu.png"
+import rhhs from "./company/rhhs.jpg"
+import wonderland from "./company/wonderland.jpg"
 
 import nextinnovation from "./company/nextinnovation.jpeg";
 import cognizant from "./company/cognizant.png";
@@ -62,6 +64,8 @@ export {
   samaritans,
   oist,
   otu,
+  rhhs,
+  wonderland,
   nextinnovation,
   cognizant,
   internshala,

@@ -16,6 +16,8 @@ import {
   samaritans,
   oist,
   otu,
+  rhhs,
+  wonderland,
   nextinnovation,
   cognizant,
   internshala,
@@ -96,7 +98,7 @@ const education = [
   {
     title: "High School",
     company_name: "Richmond Hill High School, ON",
-    icon: samaritans,
+    icon: rhhs,
     iconBg: "#fff",
     date: "2018-2022",
     points: [
@@ -166,7 +168,7 @@ const experiences = [
   {
     title: "IT Technician - L3",
     company_name: "Canada's Wonderland",
-    icon: cognizant,
+    icon: wonderland,
     iconBg: "#fff",
     date: "Jun 2023 - Present",
     points: [
