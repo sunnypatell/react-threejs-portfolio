@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
-  const typedItems = ["Developer", "Freelancer", "Designer", "Learner"];
+  const typedItems = ["Honours Computer Science", "Software Developer", "Systems Administrator", "IT Professional", "Team Leader"];
   const [itemIndex, setItemIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
@@ -22,7 +22,7 @@ const Hero = () => {
           setItemIndex((itemIndex + 1) % typedItems.length);
           setCharIndex(0);
           setTypedText("");
-        }, 1000); // Delay before typing the next item
+        },1000); // Delay before typing the next item
       }
     };
 
@@ -43,10 +43,10 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Mohit Singh Rajput</span>
+            Hi, I'm <span className="text-[#915EFF]">Sunny Patel</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm{" "}
+            I'm a{" "}
             <span
               className="typed"
               aria-hidden="true"
@@ -69,7 +69,7 @@ const Hero = () => {
               |
             </span>
             <br />
-            <b>Bring on the challenges, I'm ready to soak up knowledge!</b>
+            <b>Welcome to my portfolio, feel free to play around with the interactive elements!</b>
           </p>
         </div>
       </div>
