@@ -33,9 +33,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-// service_y0o5xfi
-// template_tn53hil
-// qKXGy2B0mb2m5HSJH
+
     emailjs
       .send(
         'service_y0o5xfi',
@@ -67,6 +65,10 @@ const Contact = () => {
           alert("Ahh, something went wrong. Please try again.");
         }
       );
+  };
+
+ const openLinkedInProfile = () => {
+    window.open("https://www.linkedin.com/in/sunny-patel-30b460204/", "_blank");
   };
 
   return (
@@ -119,6 +121,15 @@ const Contact = () => {
           >
             {loading ? 'Sending...' : 'Send Message'}
           </button>
+          <label className="flex flex-col">
+            <p className="text-center" style={{ color: "#7C7E80" }}>
+              Copyright &copy; 2023 Sunny Patel's Portfolio <br />
+              Designed and Developed by
+              <a href="https://www.linkedin.com/in/sunny-patel-30b460204/" onClick={openLinkedInProfile}>
+                <strong> Sunny Jayendra Patel.</strong>
+              </a>
+            </p>
+          </label>
         </form>
       </motion.div>
 
@@ -126,7 +137,6 @@ const Contact = () => {
         <EarthCanvas />
       </motion.div>
     </div>
-    
   ); 
 };
 
