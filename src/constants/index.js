@@ -19,6 +19,8 @@ import {
   rhhs,
   wonderland,
   mackenziehealth,
+  privcurity,
+  google,
   nextinnovation,
   cognizant,
   internshala,
@@ -201,7 +203,7 @@ const experiences = [
   {
     title: "Junior Systems Administrator",
     company_name: "Privcurity Consulting Corporation",
-    icon: internshala,
+    icon: privcurity,
     iconBg: "#1294C8",
     date: "May 2021 - Sep 2021 (5 mos.)",
     points: [
@@ -218,7 +220,7 @@ const extracurricular = [
   {
     title: "Google IT Automation With Python",
     type: "Professional Certificate (600+ hours)",
-    icon: hackerrank,
+    icon: google,
     iconBg: "#050C18",
     date: "Mar 2023",
     points: [

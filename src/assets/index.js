@@ -29,6 +29,8 @@ import otu from "./company/otu.png"
 import rhhs from "./company/rhhs.jpg"
 import wonderland from "./company/wonderland.jpg"
 import mackenziehealth from "./company/mackenziehealth.png"
+import privcurity from "./company/privcurity.jpg"
+import google from "./company/google.png"
 
 import nextinnovation from "./company/nextinnovation.jpeg";
 import cognizant from "./company/cognizant.png";
@@ -68,6 +70,8 @@ export {
   rhhs,
   wonderland,
   mackenziehealth,
+  privcurity,
+  google,
   nextinnovation,
   cognizant,
   internshala,
