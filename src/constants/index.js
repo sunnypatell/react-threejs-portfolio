@@ -18,6 +18,7 @@ import {
   otu,
   rhhs,
   wonderland,
+  mackenziehealth,
   nextinnovation,
   cognizant,
   internshala,
@@ -185,7 +186,7 @@ const experiences = [
   {
     title: "System Support Specialist - L2",
     company_name: "Mackenzie Health Hospital",
-    icon: nextinnovation,
+    icon: mackenziehealth,
     iconBg: "#fff",
     date: "Jan 2023 - Aug 2023 (8 mos.)",
     points: [

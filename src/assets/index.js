@@ -28,6 +28,7 @@ import oist from "./oist.png";
 import otu from "./company/otu.png"
 import rhhs from "./company/rhhs.jpg"
 import wonderland from "./company/wonderland.jpg"
+import mackenziehealth from "./company/mackenziehealth.png"
 
 import nextinnovation from "./company/nextinnovation.jpeg";
 import cognizant from "./company/cognizant.png";
@@ -66,6 +67,7 @@ export {
   otu,
   rhhs,
   wonderland,
+  mackenziehealth,
   nextinnovation,
   cognizant,
   internshala,
