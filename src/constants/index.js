@@ -212,36 +212,25 @@ const experiences = [
 
 const extracurricular = [
   {
-    title: "1.5K+ Connections on LinkedIn",
-    type: "Achievements",
-    icon: linkedin,
-    iconBg: "#007BB5",
-    date: "April 2023",
-    points: ["Credential ID: mohitsinghrajput"],
-    credential: "https://www.linkedin.com/in/mohitsinghrajput/",
-  },
-  {
-    title: "Java (Basic), CSS, SQL (Basic)-HackerRank",
-    type: "Certification",
+    title: "Google IT Automation With Python",
+    type: "Professional Certificate (600+ hours)",
     icon: hackerrank,
     iconBg: "#050C18",
-    date: "2022-2023",
+    date: "Mar 2023",
     points: [
-      "Credential ID: aac000e38dc9",
-      "Credential ID: a274bb1292eb",
-      "Credential ID: b024370fa737",
+      "Configuration Management, Automation, Google Cloud Platform (GCP), Cloud Servers and VM's, Version Control Tools, Automation.",
     ],
-    credential: "https://www.hackerrank.com/certificates/aac000e38dc9",
+    credential: "https://www.coursera.org/account/accomplishments/specialization/certificate/82SZFUWF4B3T",
   },
   {
-    title: "Web Development-Internshala",
+    title: "Scientific Computing with Python",
     type: "Certification",
     icon: internshala,
     iconBg: "#1294C8",
-    date: "Sept 2021",
-    points: ["Credential ID: 281DB109-2DA8-A160-DCBC-C6C0F552B57C"],
+    date: "Mar 2023",
+    points: ["Arithmetic Formatter, Time Calculator, Budget App, Polygon Area Calculator, Probability Calculator"],
     credential:
-      "https://trainings.internshala.com/verify-certificate/?certificate_number=281DB109-2DA8-A160-DCBC-C6C0F552B57C",
+      "https://www.freecodecamp.org/certification/sunnypatell/scientific-computing-with-python-v7",
   },
   {
     title: "Combat Sport-Karate",
