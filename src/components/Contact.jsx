@@ -22,7 +22,7 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { target } = e;
-    const { name, value } = target;
+    const { name, value } = e.target;
 
     setForm({
       ...form,
@@ -33,11 +33,13 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
+// service_y0o5xfi
+// template_tn53hil
+// qKXGy2B0mb2m5HSJH
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        "template_tn53hil",
+        'service_y0o5xfi',
+        'template_tn53hil',
         {
           from_name: form.name,
           to_name: "Sunny Patel",
