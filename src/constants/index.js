@@ -331,30 +331,30 @@ const projects = [
     live_project_link: "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
   },
   {
-    name: "Sunnify (Spotify Downloader)",
+    name: "Secure Password Generator",
     description:
       "Secure Password Generator is a Java-based tool designed to generate and manage secure passwords, prioritizing simplicity, security, and user-friendliness. It employs industry-standard encryption algorithms to create strong, unique passwords resistant to common hacking attempts.",
     tags: [
       {
-        name: "python",
+        name: "java",
         color: "blue-text-gradient",
       },
       {
-        name: "webscraping",
+        name: "sha-256",
         color: "green-text-gradient",
       },
       {
-        name: "pyqt5",
+        name: "encryption/decryption",
         color: "pink-text-gradient",
       },
       {
-        name: "(EDUCATIONAL PURPOSES ONLY)",
+        name: "data-algorithms",
         color: "blue-text-gradient",
       },
     ],
     image: portfolio,
-    source_code_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
-    live_project_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
+    source_code_link: "https://github.com/sunnypatell/SecurePasswordGenerator",
+    live_project_link: "https://github.com/sunnypatell/SecurePasswordGenerator",
   },
 ];
 
