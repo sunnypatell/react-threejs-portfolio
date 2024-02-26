@@ -356,6 +356,28 @@ const projects = [
     source_code_link: "https://github.com/sunnypatell/SecurePasswordGenerator",
     live_project_link: "https://github.com/sunnypatell/SecurePasswordGenerator",
   },
+  {
+    name: "Word Search Generator",
+    description:
+      "Word Search Generator is a Java application that creates word search puzzles and allows the user to solve them. The application includes a GUI interface that allows the user to input the size of the puzzle, the path to a word list, and the paths to the output files for the unsolved and solved puzzles. Java game that takes an input.txt of a list of words and exports an HTML of solved words and Locations. Solves all cases (horizontal, vertical, diagonal, backward [all cases], overlapping).",
+    tags: [
+      {
+        name: "java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "puzzle-solver",
+        color: "green-text-gradient",
+      },
+      {
+        name: "data-structures/algorithms",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: pglife,
+    source_code_link: "https://github.com/sunnypatell/Word-Search-Game",
+    live_project_link: "https://github.com/sunnypatell/Word-Search-Game",
+  },
 ];
 
 export {
