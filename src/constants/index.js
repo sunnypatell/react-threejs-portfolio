@@ -15,6 +15,7 @@ import {
   git,
   samaritans,
   oist,
+  otu,
   nextinnovation,
   cognizant,
   internshala,
@@ -85,7 +86,7 @@ const education = [
   {
     title: "Honours Computer Science (H. BSc)",
     company_name: "Ontario Tech University, Oshawa, ON",
-    icon: oist,
+    icon: otu,
     iconBg: "#fff",
     date: "2022 - Present",
     points: [
