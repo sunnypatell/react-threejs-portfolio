@@ -91,7 +91,7 @@ const Contact = () => {
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="Mohit Singh Rajput"
+              placeholder="Sunny Patel"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               disabled
             />
@@ -105,7 +105,7 @@ const Contact = () => {
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="mohit.s.rajput032997@gmail.com"
+              placeholder="sunnypatel124555@gmail.com"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               disabled
             />
@@ -119,7 +119,7 @@ const Contact = () => {
               name='email'
               value={form.location}
               onChange={handleChange}
-              placeholder="Bhopal, Madhya Pradesh, India"
+              placeholder="Toronto, ON, Canada"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               disabled
             />
@@ -127,10 +127,10 @@ const Contact = () => {
 
           <label className="flex flex-col">
             <p className="text-center" style={{ color: "#7C7E80" }}>
-              Copyright &copy; 2023 MR Portfolio <br />
+              Copyright &copy; 2024 Sunny Patel's Portfolio <br />
               Designed and Developed by
-              <a href="http://linkedin.com/in/mohitsinghrajput" onClick={openLinkedInProfile}>
-                <strong> Mohit Singh Rajput.</strong>
+              <a href="https://www.linkedin.com/in/sunny-patel-30b460204/" onClick={openLinkedInProfile}>
+                <strong> Sunny Jayendra Patel.</strong>
               </a>
             </p>
           </label>
