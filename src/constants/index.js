@@ -296,24 +296,32 @@ const projects = [
     live_project_link: "https://github.com/sunnypatell/KnifeThrow",
   },
   {
-    name: "Sorting Visualizer",
+    name: "COVID-19 GTA Cases Data Analysis",
     description:
-      "The Sorting Visualizer is a web application that provides a visual representation of various sorting algorithms. It allows users to observe and understand how different sorting algorithms work by animating the sorting process.",
+      "A deep dive into ongoing COVID-19 outbreaks in the Greater Toronto Area (GTA), Ontario. using data from a government-licensed dataset called Outbreaks by Public Health Unit (PHU) to explore trends and patterns in these outbreaks. This data analysis integrates the essential aspects of the data science workflow (Filesize: 3.5 MiB, 62699 Lines of Data)",
     tags: [
       {
-        name: "html",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "TensorFlow",
         color: "green-text-gradient",
       },
       {
-        name: "javascript",
+        name: "Scikit-Learn",
         color: "pink-text-gradient",
       },
       {
-        name: "bootstrap",
+        name: "Pandas",
+        color: "green-text-gradient",
+      },
+      {
+        name: "matplotlib",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "TensorFlow",
         color: "blue-text-gradient",
       },
     ],
