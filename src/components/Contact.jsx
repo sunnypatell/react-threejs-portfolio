@@ -68,7 +68,7 @@ const Contact = () => {
   };
 
   const openLinkedInProfile = () => {
-    window.open("http://linkedin.com/in/mohitsinghrajput", "_blank");
+    window.open("https://www.linkedin.com/in/sunny-patel-30b460204/", "_blank");
   };
 
   const openCustomLink = (url) => {
