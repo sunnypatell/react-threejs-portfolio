@@ -125,7 +125,7 @@ const Contact = () => {
             <p className="text-center" style={{ color: "#7C7E80" }}>
               Copyright &copy; 2023 Sunny Patel's Portfolio <br />
               Designed and Developed by
-              <a href="https://www.linkedin.com/in/sunny-patel-30b460204/" onClick={openLinkedInProfile}>
+              <a href="https://www.linkedin.com/in/sunny-patel-30b460204/">
                 <strong> Sunny Jayendra Patel.</strong>
               </a>
             </p>
