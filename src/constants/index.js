@@ -199,6 +199,37 @@ const itTools = [
   },
 ];
 
+const cybersecurityTools = [
+  {
+    name: "Kali Linux",
+    icon: kalilinux,
+  },
+  {
+    name: "Wireshark",
+    icon: wireshark,
+  },
+  {
+    name: "Nmap",
+    icon: nmap,
+  },
+  {
+    name: "Metasploit",
+    icon: metasploit,
+  },
+  {
+    name: "John the Ripper",
+    icon: johntheripper,
+  },
+  {
+    name: "Hydra",
+    icon: hydra,
+  },
+  {
+    name: "Aircrack-ng",
+    icon: aircrackng,
+  },
+];
+
 const experiences = [
   {
     title: "IT Technician - L3",
