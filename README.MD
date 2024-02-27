@@ -2,15 +2,11 @@
 
 Welcome to the 3D Portfolio project! 🎉 This repository hosts a fully functional portfolio website designed with React.js and Three.js. It offers an immersive experience to showcase your skills and projects in a visually appealing manner.
 
+![3D Portfolio Landing Page](SPLASHSCREEN.png)
+
 ## Overview ℹ️
 
-The 3D Portfolio is a dynamic web application that utilizes modern web technologies to create an interactive portfolio experience. It features:
-
-- Engaging Three.js animations and visuals. 🌟
-- Responsive design for seamless viewing across devices. 📱
-- Integration with React.js for dynamic content rendering. ⚛️
-- Utilization of Tailwind CSS for styling flexibility. 🎨
-- Smooth transitions and animations powered by Framer Motion. 💫
+The 3D Portfolio is a modern and interactive web application built with React.js and Three.js, hosted on Vercel with Next.js. It offers a visually stunning platform to showcase your skills and projects, featuring smooth animations and responsive design.
 
 ## Live Demo 💻
 
@@ -32,6 +28,14 @@ Feel free to explore the codebase and use it as a reference for building your ow
 
 This project is deployed on Vercel using Next.js. It dynamically hides environment variables, such as emailJS configuration, to ensure security. You can access the deployed project at [www.sunnypatel.net](www.sunnypatel.net).
 
+## GitHub Stars ⭐
+
+![GitHub Repo Stars](https://img.shields.io/github/stars/sunnypatell/react-threejs-portfolio?style=social)
+
+## Contributing 🤝
+
+Contributions are welcome! If you have ideas for improvements or new features, feel free to submit a pull request. Let's collaborate to make the 3D Portfolio even better! 🚀
+
 ## Acknowledgements 🙏
 
 Special thanks to the creators and maintainers of the following libraries and tools that made this project possible:
@@ -48,7 +52,7 @@ Special thanks to the creators and maintainers of the following libraries and to
 
 ## License 📝
 
-This project is open source and licensed under the Sunny Patel License. See the [`LICENSE`](LICENSE) file for more details.
+This project is open source and licensed under the Sunny Patel License. See the `LICENSE` file for more details.
 
 ## Need Help? 🤔
 
