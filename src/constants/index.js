@@ -471,6 +471,9 @@ const projects = [
 export {
   services,
   technologies,
+  itTools,
+  cybersecurityTools,
+  designTools,
   experiences,
   extracurricular,
   projects,
