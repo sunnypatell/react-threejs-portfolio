@@ -28,13 +28,9 @@ Feel free to explore the codebase and use it as a reference for building your ow
 
 This project is deployed on Vercel using Next.js. It dynamically hides environment variables, such as emailJS configuration, to ensure security. You can access the deployed project at [www.sunnypatel.net](www.sunnypatel.net).
 
-## GitHub Stars ⭐
+## Built with Vite 🚀
 
-![GitHub Repo Stars](https://img.shields.io/github/stars/sunnypatell/react-threejs-portfolio?style=social)
-
-## Contributing 🤝
-
-Contributions are welcome! If you have ideas for improvements or new features, feel free to submit a pull request. Let's collaborate to make the 3D Portfolio even better! 🚀
+This project was developed using Vite, a blazing fast build tool for modern web development, created by the same team behind Vue.js. With its lightning-fast hot module replacement and optimized bundling, Vite provides a smooth development experience, making it an excellent choice for building high-performance web applications.
 
 ## Acknowledgements 🙏
 
@@ -57,3 +53,7 @@ This project is open source and licensed under the Sunny Patel License. See the 
 ## Need Help? 🤔
 
 If you have any questions or need assistance, feel free to reach out to me at sunnypatel124555@gmail.com. I'm here to help! 🌞
+
+## GitHub Stars ⭐
+
+![GitHub Repo Stars](https://img.shields.io/github/stars/sunnypatell/react-threejs-portfolio?style=social)
