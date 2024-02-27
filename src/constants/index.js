@@ -138,29 +138,13 @@ const technologies = [
     name: "C++",
     icon: cplusplus,
   },
-  {
-    name: "JavaScript",
-    icon: javascript,
+    {
+    name: "Powershell",
+    icon: powershell,
   },
   {
-    name: "Typescript",
-    icon: typescript,
-  },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Kali Linux",
+    icon: kalilinux,
   },
   {
     name: "Ubuntu",
@@ -169,6 +153,22 @@ const technologies = [
   {
     name: "NodeJS",
     icon: node_js,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+    {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  }, 
+  {
+    name: "React JS",
+    icon: reactjs,
   },
   {
     name: "git",

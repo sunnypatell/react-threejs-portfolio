@@ -15,7 +15,7 @@ const Tech = () => {
     <>
       <motion.div variants={textVariant()}>
         <h3 className={`${styles.sectionHeadText} text-center`}>
-          Software Development.
+          Skills.
         </h3>
       </motion.div>
 
@@ -29,7 +29,7 @@ const Tech = () => {
         </div>
       </div>
 
-      <motion.div variants={textVariant()}>
+      {/* <motion.div variants={textVariant()}>
         <h3 className={`${styles.sectionHeadText} text-center`}>
           IT Tools.
         </h3>
@@ -75,7 +75,7 @@ const Tech = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
