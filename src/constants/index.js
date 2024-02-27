@@ -33,6 +33,21 @@ import {
   pythonanalysis,
   password_generator,
   wordsearch,
+  powershell,
+  cisco,
+  connectwise,
+  virtualbox,
+  kalilinux,
+  wireshark,
+  nmap,
+  metasploit,
+  johntheripper,
+  hydra,
+  aircrackng,
+  photoshop,
+  premiere,
+  cinema4d,
+  blender,
 } from "../assets";
 
 export const navLinks = [
@@ -162,6 +177,25 @@ const technologies = [
   {
     name: "AWS",
     icon: aws,
+  },
+];
+
+const itTools = [
+  {
+    name: "Powershell",
+    icon: powershell,
+  },
+  {
+    name: "Cisco",
+    icon: cisco,
+  },
+  {
+    name: "ConnectWise",
+    icon: connectwise,
+  },
+  {
+    name: "VirtualBox",
+    icon: virtualbox,
   },
 ];
 
