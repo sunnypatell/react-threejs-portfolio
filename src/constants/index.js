@@ -230,6 +230,25 @@ const cybersecurityTools = [
   },
 ];
 
+const designTools = [
+  {
+    name: "Photoshop",
+    icon: photoshop,
+  },
+  {
+    name: "Premiere",
+    icon: premiere,
+  },
+  {
+    name: "Cinema 4D",
+    icon: cinema4d,
+  },
+  {
+    name: "Blender",
+    icon: blender,
+  },
+];
+
 const experiences = [
   {
     title: "IT Technician - L3",
