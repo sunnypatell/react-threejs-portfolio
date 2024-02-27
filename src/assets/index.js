@@ -23,6 +23,20 @@ import cplusplus from "./tech/c++.svg"
 import typescript from "./tech/typescript.png"
 import node_js from "./tech/node_js.svg"
 
+import powershell from "./tech/powershell.svg"
+import cisco from "./tech/cisco.svg"
+import connectwise from "./tech/connectwise.png"
+import virtualbox from "./tech/virtualbox.png"
+
+import kalilinux from "./tech/kali_linux.svg"
+import wireshark from "./tech/wireshark.png"
+import nmap from "./tech/nmap.svg"
+import metasploit from "./tech/metasploit.svg"
+import johntheripper from "./tech/johntheripper.svg"
+import hydra from "./tech/hydra.svg"
+import aircrackng from "./tech/aircrackng.svg"
+
+
 import samaritans from "./samaritans.png";
 import oist from "./oist.png";
 
@@ -104,4 +118,5 @@ export {
   cplusplus,
   typescript,
   node_js,
+  powershell,
 };
