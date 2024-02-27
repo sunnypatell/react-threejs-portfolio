@@ -10,26 +10,26 @@ const Hero = () => {
   const [charIndex, setCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
-  useEffect(() => {
-    const typeItem = () => {
-      if (charIndex < typedItems[itemIndex].length) {
-        setTypedText((prevText) => prevText + typedItems[itemIndex][charIndex]);
-        setCharIndex(charIndex + 1);
-      } else {
-        setIsTyping(false);
-        setTimeout(() => {
-          setIsTyping(true);
-          setItemIndex((itemIndex + 1) % typedItems.length);
-          setCharIndex(0);
-          setTypedText("");
-        },1000); // Delay before typing the next item
-      }
-    };
+useEffect(() => {
+  const typeItem = () => {
+    if (charIndex < typedItems[itemIndex].length) {
+      setTypedText((prevText) => prevText + typedItems[itemIndex][charIndex]);
+      setCharIndex(charIndex + 1);
+    } else {
+      setIsTyping(false);
+      setTimeout(() => {
+        setIsTyping(true);
+        setItemIndex((itemIndex + 1) % typedItems.length);
+        setCharIndex(0);
+        setTypedText("");
+      }, 1000); // Delay before typing the next item
+    }
+  };
 
-    const typingInterval = setInterval(typeItem, 100); // Typing speed
+  const typingInterval = setInterval(typeItem, 100); // Typing speed
 
-    return () => clearInterval(typingInterval);
-  }, [charIndex, itemIndex]);
+  return () => clearInterval(typingInterval);
+}, [charIndex, itemIndex]);
 
   return (
     <section className={`relative w-full h-screen mx-auto`}>
