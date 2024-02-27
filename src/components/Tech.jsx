@@ -5,6 +5,9 @@ import { styles } from "../styles";
 import { BallCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
+import { itTools } from "../constants";
+import { cybersecurityTools } from "../constants";
+import { designTools } from "../constants";
 import { textVariant } from "../utils/motion";
 
 const Tech = () => {
@@ -34,19 +37,43 @@ const Tech = () => {
 
       <div className="hidden sm:flex">
         <div className='flex flex-row flex-wrap justify-center gap-10'>
-          {/* Add IT tools components here */}
+          {itTools.map((technology) => (
+            <div className='w-28 h-28' key={technology.name}>
+              <BallCanvas icon={technology.icon} />
+            </div>
+          ))}
         </div>
       </div>
 
       <motion.div variants={textVariant()}>
         <h3 className={`${styles.sectionHeadText} text-center`}>
-          Cybersecurity.
+          Cybersecurity/Pentesting Tools.
         </h3>
       </motion.div>
 
       <div className="hidden sm:flex">
         <div className='flex flex-row flex-wrap justify-center gap-10'>
-          {/* Add cybersecurity components here */}
+          {cybersecurityTools.map((technology) => (
+            <div className='w-28 h-28' key={technology.name}>
+              <BallCanvas icon={technology.icon} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <motion.div variants={textVariant()}>
+        <h3 className={`${styles.sectionHeadText} text-center`}>
+          Design Tools.
+        </h3>
+      </motion.div>
+
+      <div className="hidden sm:flex">
+        <div className='flex flex-row flex-wrap justify-center gap-10'>
+          {designTools.map((technology) => (
+            <div className='w-28 h-28' key={technology.name}>
+              <BallCanvas icon={technology.icon} />
+            </div>
+          ))}
         </div>
       </div>
     </>
