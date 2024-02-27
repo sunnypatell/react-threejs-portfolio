@@ -8,9 +8,6 @@ Step 3:
 Execute the following command in order to run the development server locally:
 
 npm run dev
-Step 4:
-
-Open http://localhost:5173 with your browser to see the result.
 
 📜 Scripts
 All scripts are defined in the package.json file. Here is a list of all scripts:
