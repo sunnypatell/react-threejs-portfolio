@@ -36,6 +36,11 @@ import johntheripper from "./tech/johntheripper.svg"
 import hydra from "./tech/hydra.svg"
 import aircrackng from "./tech/aircrackng.svg"
 
+import photoshop from "./tech/photoshop.svg"
+import premiere from "./tech/premiere.svg"
+import cinema4d from "./tech/cinema4d.png"
+import blender from "./tech/blender.svg"
+
 
 import samaritans from "./samaritans.png";
 import oist from "./oist.png";
@@ -119,4 +124,18 @@ export {
   typescript,
   node_js,
   powershell,
+  cisco,
+  connectwise,
+  virtualbox,
+  kalilinux,
+  wireshark,
+  nmap,
+  metasploit,
+  johntheripper,
+  hydra,
+  aircrackng,
+  photoshop,
+  premiere,
+  cinema4d,
+  blender,
 };
