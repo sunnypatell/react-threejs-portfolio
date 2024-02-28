@@ -13,6 +13,23 @@
   color-scheme: dark;
 }
 
+/* Add mobile scaling support */
+@media only screen and (max-width: 768px) {
+  .logo {
+    height: 4em;
+    /* Adjust the logo size for smaller screens */
+    padding: 1em;
+    /* Adjust padding for smaller screens */
+  }
+
+  .card {
+    padding: 1em;
+    /* Adjust card padding for smaller screens */
+  }
+
+  /* Add more mobile-specific styling as needed */
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
