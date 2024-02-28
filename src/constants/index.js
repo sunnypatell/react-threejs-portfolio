@@ -414,8 +414,7 @@ const projects = [
       },
     ],
     image: pythonanalysis,
-    source_code_link:
-      "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
+    source_code_link: "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
     live_project_link: "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
   },
   {
