@@ -63,10 +63,10 @@ const Extracurricular = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-        Explore my certifications below
+        Explore my Credentials below
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-        Certifications/Achievements. 
+        Certifications. 
         </h2>
       </motion.div>
 
