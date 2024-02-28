@@ -100,7 +100,7 @@ const Works = () => {
         {projects.map((project, index) => (
           <ProjectCard 
             key={`project-${index}`} 
-            animate={isMobile ? {} : fadeIn("up", "spring", index * 0.5, 0.75)}
+            animate={isMobile ? fadeIn("up", "spring", index * 0.5, 0.75) : fadeIn("up", "spring", index * 0.5, 0.75)}
             {...project} 
           />
         ))}
