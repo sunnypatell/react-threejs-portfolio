@@ -16,16 +16,13 @@ const ProjectCard = ({
   image,
   source_code_link,
   live_project_link,
+  isMobile,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        options={isMobile ? { max: 45, scale: 1, speed: 450 } : { max: 45, speed: 450 }}
+        className={isMobile ? 'bg-tertiary p-5 rounded-2xl w-full' : 'bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'}
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -77,6 +74,8 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const isMobile = window.innerWidth <= 768; // Adjust the breakpoint as needed
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -89,17 +88,17 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          Following projects showcase my skills and experience through real-world
+          examples of my work. Each project is briefly described with links to
+          code repositories and live demos in it. It reflects my ability to solve
+          complex problems, work with different technologies, and manage projects
+          effectively.
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className={isMobile ? 'flex flex-col' : 'mt-20 flex flex-wrap gap-7'}>
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard key={`project-${index}`} index={index} {...project} isMobile={isMobile} />
         ))}
       </div>
     </>
