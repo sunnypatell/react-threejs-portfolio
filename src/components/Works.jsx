@@ -86,15 +86,17 @@ const Works = () => {
         <h3 className={`${styles.sectionHeadText} text-center`}>Projects.</h3>
       </motion.div>
 
-      <div className={`${isMobile ? 'grid grid-cols-1 gap-4 place-items-center' : 'flex flex-wrap gap-7'}`}>
-        {projects.map((project, index) => (
-          <ProjectCard 
-            key={`project-${index}`} 
-            animate={isMobile ? {} : fadeIn("up", "spring", index * 0.5, 0.75)}
-            {...project} 
-          />
-        ))}
-      </div>
+      <motion.div>
+        <div className={`${isMobile ? 'grid grid-cols-1 gap-4 place-items-center' : 'flex flex-wrap gap-7'}`}>
+          {projects.map((project, index) => (
+            <ProjectCard 
+              key={`project-${index}`} 
+              animate={isMobile ? {} : fadeIn("up", "spring", index * 0.5, 0.75)}
+              {...project} 
+            />
+          ))}
+        </div>
+      </motion.div>
     </>
   );
 };
