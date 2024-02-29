@@ -86,22 +86,6 @@ const Works = () => {
         <h3 className={`${styles.sectionHeadText} text-center`}>Projects.</h3>
       </motion.div>
 
-      {!isMobile && (
-        <motion.div variants={textVariant()}>
-          <p className={`${styles.sectionHeadText} text-center`}>Projects.</p>
-        </motion.div>
-      )}
-
-      {!isMobile && (
-        <div className='w-full flex'>
-          <motion.p
-            variants={fadeIn("", "", 0.1, 1)}
-            className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-center'
-          >
-          </motion.p>
-        </div>
-      )}
-
       <div className={`${isMobile ? 'grid grid-cols-1 gap-4 place-items-center' : 'flex flex-wrap gap-7'}`}>
         {projects.map((project, index) => (
           <ProjectCard 
