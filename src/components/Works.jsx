@@ -87,6 +87,12 @@ const Works = () => {
       </motion.div>
 
       {!isMobile && (
+        <motion.div variants={textVariant()}>
+          <p className={`${styles.sectionHeadText} text-center`}>Projects.</p>
+        </motion.div>
+      )}
+
+      {!isMobile && (
         <div className='w-full flex'>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
