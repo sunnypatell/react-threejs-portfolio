@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter } from 'react-router-dom'
-import { About, Contact, Education, Experience, Extracurricular, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
+import { About, Contact, Education, Experience, Extracurricular, Hero, Navbar, Tech, Works, Feedbacks, StarsCanvas } from './components'
 
 function App() {
   return (

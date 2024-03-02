@@ -63,4 +63,4 @@ const Feedbacks = () => {
   );
 };
 
-export default SectionWrapper(Feedbacks, "");
+export default SectionWrapper(Feedbacks, "Testemonials");
