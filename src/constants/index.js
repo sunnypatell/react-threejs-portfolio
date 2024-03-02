@@ -290,9 +290,9 @@ const experiences = [
     points: [
       "Administered virtual machines on Azure AD domain and deployed malware prevention strategies.",
       "Performed regular software updates and managed cloud files using SSH, with Python and SQL for analysis.",
-      "Configured firewalls and monitored web traffic security using Wireshark/tcpdump.",
-      "Monitored 2FA protocols and collaborated in deploying DDOS attack prevention measures.",
-      "Maintained Privacy Security Architecture (PSA) systems for compliant data handling and protection.",
+      "Configured firewalls and monitored web traffic security with Wireshark/tcpdump.",
+      "Oversaw 2FA protocols and contributed to deploying DDOS attack prevention measures.",
+      "Managed Privacy Security Architecture (PSA) systems to ensure compliant data handling and protection.",
     ],
   },
 ];
