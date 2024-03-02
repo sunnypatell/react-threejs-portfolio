@@ -51,7 +51,7 @@ const About = () => {
         bringing over four years of industry expertise to the table. With a solid academic foundation 
         in computer science and a passion for problem-solving, Sunny is committed to delivering top-tier 
         solutions to intricate challenges. His portfolio showcases a diverse range of projects and accomplishments, 
-        highlighting his dedication to excellence in every endeavor
+        highlighting his dedication to excellence in every endeavor.
       </motion.p>
 
       <div className="mt-10 flex flex-wrap gap-10">

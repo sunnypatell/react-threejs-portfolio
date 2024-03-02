@@ -79,7 +79,9 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <h3 className={`${styles.sectionSubText} text-center`}>Innovative Solutions, Games, and Creations</h3>
+        <h3 className={`${styles.sectionSubText} text-center`}>
+          Innovative Solutions, Games, and Creations
+        </h3>
       </motion.div>
 
       <motion.div variants={textVariant()}>
