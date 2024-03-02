@@ -258,12 +258,11 @@ const experiences = [
     date: "Jun 2023 - Present",
     points: [
       "Managed Tier 1-3/L3 device management and deployment for 1500+ devices park-wide.",
-      "Implemented RSAT integration in systems encompassing LDAP, GPO, FTP, NAS, AP Clusters, Bitlocker Boot Sectoring, and many more.",
-      "Extensively utilized PowerShell/Connectwise scripting for mass changes to remote workstations.",
-      "Assembled and configured routers, switches, and catalysts (Cisco IOS, Aruba OS-CX, Netgear OS, SecureCRT).",
-      "Configured SaaS access via Active Directory (OU) groups for streamlined user access.",
-      "Utilized Oracle EMC and Symphony for POS/KDS systems deployment.",
-      "Patched LAN cables on server blades and tested using LinkRunner AT/IntelliTone.",
+      "Integrated RSAT integration in systems encompassing LDAP, GPO, FTP, NAS, AP Clusters, Bitlocker Boot Sectoring, and more.",
+      "Extensively utilized PowerShell, ConnectWise scripting, and SecureCRT for executing mass changes on remote workstations.",
+      "Assembled and configured routers, switches, and catalysts (Cisco IOS, Aruba OS-CX, Netgear OS, LinkRunner AT/IntelliTone).",
+      "Set up SaaS access through Active Directory (OU) groups to streamline user access.",
+      "Deployed POS/KDS systems using Oracle EMC and Symphony.",
   ],
   },
   {
