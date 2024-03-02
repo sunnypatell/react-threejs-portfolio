@@ -12,7 +12,6 @@ const FeedbackCard = ({
   name,
   designation,
   company,
-  image,
 }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
