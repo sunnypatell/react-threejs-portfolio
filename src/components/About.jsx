@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { resume } from "../assets";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -56,7 +57,7 @@ const About = () => {
 
       <div className="mt-10 flex flex-wrap gap-10">
         <button className="mt-4 px-6 py-3 text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-md shadow-md hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50" 
-          onClick={() => window.open("/Resume-Sunny-Patel.pdf", "_blank")}
+          onClick={() => window.open(resume, "_blank")}
         >
           <span className="font-semibold">Resume</span>
         </button>
