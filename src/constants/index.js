@@ -384,7 +384,7 @@ const projects = [
   {
     name: "COVID-19 GTA Cases Data Analysis",
     description:
-      "A deep dive into ongoing COVID-19 outbreaks in the Greater Toronto Area (GTA), Ontario. using data from a government-licensed dataset called Outbreaks by Public Health Unit (PHU) to explore trends and patterns in these outbreaks. This data analysis integrates the essential aspects of the data science workflow (Filesize: 3.5 MiB, 62699 Lines of Data)",
+      "A deep dive into ongoing COVID-19 outbreaks in the Greater Toronto Area (GTA), Ontario. Using data from a government-licensed dataset called Outbreaks by Public Health Unit (PHU) to explore trends and patterns in these outbreaks. This data analysis integrates the essential aspects of the data science workflow (Filesize: 3.5 MiB, 62699 lines of raw dataset)",
     tags: [
       {
         name: "python",
@@ -444,7 +444,7 @@ const projects = [
   {
     name: "Word Search Generator",
     description:
-      "Word Search Generator is a Java application that creates word search puzzles and allows the user to solve them. The application includes a GUI interface that allows the user to input the size of the puzzle, the path to a word list, and the paths to the output files for the unsolved and solved puzzles. Java game that takes an input.txt of a list of words and exports an HTML of solved words and Locations. Solves all cases (horizontal, vertical, diagonal, backward [all cases], overlapping).",
+      "Word Search Generator is a Java application that creates word search puzzles and allows users to solve them. The application includes a GUI interface that allows the user to input the size of the puzzle, the path to a word list, and the paths to the output files for the unsolved and solved puzzles. Java game that takes an input.txt of a list of words and exports a formatted/styled HTML of solved words and locations. Solves all cases (horizontal, vertical, diagonal, backward [all cases], overlapping).",
     tags: [
       {
         name: "java",
