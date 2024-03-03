@@ -75,6 +75,8 @@ import portfolio from "./3dportfolio.png";
 import pglife from "./pglife.png";
 import sortingvisualiser from "./sortingvisualiser.png";
 
+import resume from "./Resume-Sunny-Patel.pdf";
+
 export {
   logo,
   backend,
@@ -138,4 +140,5 @@ export {
   premiere,
   cinema4d,
   blender,
+  resume,
 };
