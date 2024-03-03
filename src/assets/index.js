@@ -75,7 +75,7 @@ import portfolio from "./3dportfolio.png";
 import pglife from "./pglife.png";
 import sortingvisualiser from "./sortingvisualiser.png";
 
-import resume from "./Resume-Sunny-Patel.pdf";
+import resume from "../components/Resume-Sunny-Patel.pdf";
 
 export {
   logo,
