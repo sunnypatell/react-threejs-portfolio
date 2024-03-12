@@ -3,7 +3,7 @@ import './App.css'
 import { BrowserRouter } from 'react-router-dom'
 import { About, Contact, Education, Experience, Extracurricular, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
 import Feedbacks from './components/Feedbacks'
-import { Analytics } from "@vercel/analytics/react"
+// import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
