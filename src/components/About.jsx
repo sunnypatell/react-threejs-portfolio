@@ -87,11 +87,11 @@ const About = () => {
         </button>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+    <div className="mt-20 flex flex-wrap gap-10 no-select">
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+            <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div>
+    </div>
     </>
   );
 };
