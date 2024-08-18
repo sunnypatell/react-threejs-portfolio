@@ -76,6 +76,8 @@ import pglife from "./pglife.png";
 import sortingvisualiser from "./sortingvisualiser.png";
 
 import resume from "./Resume-Sunny-Patel.pdf";
+import awsdbcert from "./AWS Database Specialty Certified - Sunny Jayendra Patel.jpg"
+import connectwisecert from "./Connectwise-Scripting-Certification.pdf"
 
 export {
   logo,
@@ -141,4 +143,6 @@ export {
   cinema4d,
   blender,
   resume,
+  awsdbcert,
+  connectwisecert,
 };

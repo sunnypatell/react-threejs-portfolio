@@ -48,6 +48,8 @@ import {
   premiere,
   cinema4d,
   blender,
+  connectwisecert,
+  awsdbcert,
 } from "../assets";
 
 export const navLinks = [
@@ -305,8 +307,7 @@ const extracurricular = [
     iconBg: "#1294C8",
     date: "Issue Date: Aug 14, 2024 -> Expiry Date: Aug 16, 2027",
     points: ["Cloud-Native Architecture, Multi-Region Data Replication, Automated Tuning and Query Optimization, IAM, Clustering, Distributed Databases, SQL/NoSQL, Legacy Cloud Integration"],
-    credential:
-      "https://www.freecodecamp.org/certification/sunnypatell/scientific-computing-with-python-v7",
+    credential: awsdbcert,
   },
   {
     title: "Certified Enterprise Scripting Architect",
@@ -315,8 +316,7 @@ const extracurricular = [
     iconBg: "#748C7B",
     date: "Jul 2024",
     points: ["RMM, MDM, Powershell, Scripting, Windows Server, Enterprise Architecture, Query Optimization"],
-    credential:
-      "https://www.freecodecamp.org/certification/sunnypatell/scientific-computing-with-python-v7",
+    credential: connectwisecert,
   },
   {
     title: "Google IT Automation With Python",
