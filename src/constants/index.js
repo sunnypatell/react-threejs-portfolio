@@ -251,33 +251,33 @@ const designTools = [
 
 const experiences = [
   {
-    title: "IT Technician - L3",
+    title: "IT Technician - lll",
     company_name: "Canada's Wonderland",
     icon: wonderland,
     iconBg: "#fff",
     date: "Jun 2023 - Present",
     points: [
-      "Managed Tier 1-3/L3 device management and deployment for 1500+ devices park-wide.",
-      "Integrated RSAT into systems covering LDAP, GPO, FTP, NAS, AP Clusters, Bitlocker Boot Sectoring, and more.",
-      "Utilized PowerShell, ConnectWise scripting, and SecureCRT for executing mass changes on remote workstations.",
-      "Assembled and configured routers, switches, and catalysts (Cisco IOS, Aruba OS-CX, Netgear OS) using LinkRunner AT/IntelliTone.",
-      "Set up SaaS access through Active Directory (OU) groups to streamline user access.",
-      "Deployed POS/KDS systems using Oracle EMC and Symphony.",
+      "Directed Tier 1-3/L3 migration and deployment for 2000+ devices on domain, ensuring smooth park-wide operations.",
+      "Integrated RSAT/ADK & Intune into systems, optimizing operational security across multiple platforms and IP protocols.",
+      "Deployed scripts on servers (AWS EC2 & local) using PowerShell, ConnectWise, and SSH, enhancing park-wide productivity.",
+      "Managed Layer 2/3 switches through CLI (Cisco, Aruba, Ubiquiti), utilizing SDN/CDN & MPLS routing, improving network availability.",
+      "Configured SaaS, printer logic, etc... within Azure AD, streamlining user access and mitigating authentication issues.",
+      "Deployed POS/KDS/Debit systems using Oracle EMC and Simphony, streamlining operations and enhancing guest satisfaction.",
   ],
   },
   {
-    title: "System Support Specialist - L2",
+    title: "System Support Specialist - ll",
     company_name: "Mackenzie Health Hospital",
     icon: mackenziehealth,
     iconBg: "#fff",
     date: "Jan 2023 - Aug 2023 (8 mos.)",
     points: [
       "Managed L2 hospital-wide deployment of 300+ bedside iPads efficiently with JamF (Apple MDM Profiling).",
-      "Optimized entertainment app load times by over 25%*, offering IPTV, VOIP, movies, games, and meal ordering.",
-      "Contributed to software development and maintenance using Java, Python, and SQL.",
-      "Performed CI/CD on system maintenance for IT infrastructure, including Citrix, VMware, VDI, Hyper-V, ESXi technologies.",
-      "Scripted CLI for system services resolution and conducted comprehensive audits for bedside application code updates.",
-      "Utilized Cortex XDR to monitor network traffic and identify malicious malware activity.",
+      "Optimized entertainment app load times by over 25%*, enhancing patient and staff experience with IPTV, VOIP, movies, games, and meal ordering.",
+      "Contributed to software development projects using Java, Python, and SQL, and AWS Elasticache for efficient memory caching.",
+      "Orchestrated CI/CD pipelines for IT infrastructure maintenance, optimizing workflows for Citrix, VMware, VDI, Hyper-V, ESXi.",
+      "Developed Bash/YAML scripts and conducted comprehensive audits to ensure stability and security of bedside application updates.",
+      "Utilized Cortex XDR and Rapid7 to monitor network traffic and identify malicious malware activity.",
     ],
   },
   {
@@ -287,16 +287,37 @@ const experiences = [
     iconBg: "#1294C8",
     date: "May 2021 - Sep 2021 (5 mos.)",
     points: [
-      "Administered virtual machines on Azure AD domain and deployed malware prevention strategies.",
-      "Performed regular software updates and managed cloud files using SSH, Python, and SQL for analysis.",
-      "Configured firewalls and monitored web traffic security with Wireshark/tcpdump.",
-      "Oversaw 2FA protocols and contributed to deploying DDOS attack prevention measures.",
-      "Managed Privacy Security Architecture (PSA) systems to ensure compliant data handling and protection.",
+      "Administered Azure domain VM's and deployed malware prevention strategies using Docker and Kubernetes.",
+      "Performed regular software updates and managed cloud files using SSH, Python, and SQL, improving data analysis efficiency.",
+      "Configured firewalls and monitored web traffic security with Wireshark/tcpdump, strengthening network defenses.",
+      "Managed 2FA protocols and implemented DDOS attack prevention methods, resulting in significant computational cost savings.",
+      "Oversaw Privacy Security Architecture (PSA) systems using .NET Core and Azure to ensure compliant data handling and protection.",
+      "Deployed Apache Kafka fault tolerance for real-time processing and messaging, optimizing system performance and stability.",
     ],
   },
 ];
 
 const extracurricular = [
+  {
+    title: "AWS Certified Database Specialty",
+    type: "Most Advanced Professional Credential",
+    icon: aws,
+    iconBg: "#1294C8",
+    date: "Issue Date: Aug 14, 2024 -> Expiry Date: Aug 16, 2027",
+    points: ["Cloud-Native Architecture, Multi-Region Data Replication, Automated Tuning and Query Optimization, IAM, Clustering, Distributed Databases, SQL/NoSQL, Legacy Cloud Integration"],
+    credential:
+      "https://www.freecodecamp.org/certification/sunnypatell/scientific-computing-with-python-v7",
+  },
+  {
+    title: "Certified Enterprise Scripting Architect",
+    type: "Automate | Connectwise University",
+    icon: connectwise,
+    iconBg: "#748C7B",
+    date: "Jul 2024",
+    points: ["RMM, MDM, Powershell, Scripting, Windows Server, Enterprise Architecture, Query Optimization"],
+    credential:
+      "https://www.freecodecamp.org/certification/sunnypatell/scientific-computing-with-python-v7",
+  },
   {
     title: "Google IT Automation With Python",
     type: "Professional Certificate (600+ hours)",
@@ -307,16 +328,6 @@ const extracurricular = [
       "Configuration Management, Automation, Google Cloud Platform (GCP), Cloud Servers and VM's, Version Control Tools, Automation.",
     ],
     credential: "https://www.coursera.org/account/accomplishments/specialization/certificate/82SZFUWF4B3T",
-  },
-  {
-    title: "Scientific Computing with Python",
-    type: "Certification",
-    icon: freecodecamp,
-    iconBg: "#1294C8",
-    date: "Mar 2023",
-    points: ["Arithmetic Formatter, Time Calculator, Budget App, Polygon Area Calculator, Probability Calculator"],
-    credential:
-      "https://www.freecodecamp.org/certification/sunnypatell/scientific-computing-with-python-v7",
   },
   {
     title: "WHMIS (Worker Health and Safety)",
