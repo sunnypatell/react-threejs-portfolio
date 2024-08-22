@@ -260,7 +260,7 @@ const experiences = [
     date: "Jun 2023 - Present",
     points: [
       "Directed Tier 1-3/L3 migration and deployment for 2000+ devices on domain, ensuring smooth park-wide operations.",
-      "Integrated RSAT/ADK & Intune into systems, optimizing operational security across multiple platforms and IP protocols.",
+      "Integrated RSAT/ADK & Intune into systems, optimizing operational security across multiple platforms and IP protocols(AD, LAPS, GP, FTP, NAS/SAN, AP Clusters, ACL permissions.)",
       "Deployed scripts on servers (AWS EC2 & local) using PowerShell, ConnectWise, and SSH, enhancing park-wide productivity.",
       "Managed Layer 2/3 switches through CLI (Cisco, Aruba, Ubiquiti), utilizing SDN/CDN & MPLS routing, improving network availability.",
       "Configured SaaS, printer logic, etc... within Azure AD, streamlining user access and mitigating authentication issues.",
@@ -275,7 +275,7 @@ const experiences = [
     date: "Jan 2023 - Aug 2023 (8 mos.)",
     points: [
       "Managed L2 hospital-wide deployment of 300+ bedside iPads efficiently with JamF (Apple MDM Profiling).",
-      "Optimized entertainment app load times by over 25%*, enhancing patient and staff experience with IPTV, VOIP, movies, games, and meal ordering.",
+      "Optimized CDN and load balancing for entertainment app by over 25%* offering IPTV, VOIP, movies, games, and meal ordering.",
       "Contributed to software development projects using Java, Python, and SQL, and AWS Elasticache for efficient memory caching.",
       "Orchestrated CI/CD pipelines for IT infrastructure maintenance, optimizing workflows for Citrix, VMware, VDI, Hyper-V, ESXi.",
       "Developed Bash/YAML scripts and conducted comprehensive audits to ensure stability and security of bedside application updates.",
