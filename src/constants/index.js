@@ -320,7 +320,7 @@ const extracurricular = [
   },
   {
     title: "Google IT Automation With Python",
-    type: "Professional Certificate (600+ hours)",
+    type: "Professional Certificate",
     icon: google,
     iconBg: "#050C18",
     date: "Mar 2023",
