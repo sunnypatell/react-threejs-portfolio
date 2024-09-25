@@ -369,7 +369,7 @@ const projects = [
     live_project_link: "https://financial-flow.vercel.app/",
   },
   {
-    name: "Sunnify (Spotify Downloader)",
+    name: "Sunnify (Spotify Downloader) ♫",
     description:
       "Sunnify is a Spotify downloader webapp/desktop application that allows you to download entire playlists locally onto your Mac/Linux/Windows PC. The web version of the app is hosted on AWS Lambda and Elastic Beanstalk, with FastAPI ASGI production.",
     tags: [
@@ -395,7 +395,7 @@ const projects = [
     live_project_link: "https://sunnify-spotify-downloader.vercel.app/",
   },
   {
-    name: "Enterprise API Tester",
+    name: "Enterprise API Tester 🌐",
     description:
       "Comprehensive API testing tool with support for all major HTTP methods, authentication, and CORS-friendly proxy. Features include request import/export, real-world samples, and local storage for data persistence. Built with Next.js, and TypeScript for optimal performance and developer experience.",
     tags: [
@@ -421,7 +421,7 @@ const projects = [
     live_project_link: "https://enterprise-api-request-tester.vercel.app/",
   },
   {
-    name: "KnifeThrow",
+    name: "KnifeThrow 🎯",
     description:
       "KnifeThrow is a Java Swing-based 2D mini-game, packed by maven with over 5000 lines of code. It includes a menu, game-over screens, sound effects, and custom sprites. Players unlock different knives with varied abilities in a dedicated knife shop. The game features improved collision systems, animations, and particle effects for an immersive experience.",
     tags: [
@@ -447,7 +447,7 @@ const projects = [
     live_project_link: "https://github.com/sunnypatell/KnifeThrow",
   },
   {
-    name: "COVID-19 GTA Cases Data Analysis",
+    name: "COVID-19 GTA Cases Data Analysis 🧪",
     description:
       "A deep dive into ongoing COVID-19 outbreaks in the Greater Toronto Area (GTA), Ontario. Using data from a government-licensed dataset called Outbreaks by Public Health Unit (PHU) to explore trends and patterns in these outbreaks. This data analysis integrates the essential aspects of the data science workflow (Filesize: 3.5 MiB, 62699 lines of raw dataset)",
     tags: [
@@ -481,7 +481,7 @@ const projects = [
     live_project_link: "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
   },
   {
-    name: "Secure Password Generator",
+    name: "Secure Password Generator 🔐",
     description:
       "Secure Password Generator is a Java-based tool designed to generate and manage secure passwords, prioritizing simplicity, security, and user-friendliness. It employs industry-standard encryption algorithms to create strong, unique passwords resistant to common hacking attempts.",
     tags: [
