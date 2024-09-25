@@ -91,15 +91,15 @@ const services = [
     icon: fullstack,
   },
   {
-    title: "Backend Developer",
+    title: "Systems Infrastructure",
     icon: backend,
   },
   {
-    title: "Frontend Developer",
+    title: "Cloud Automation",
     icon: mobile,
   },
   {
-    title: "Web Developer",
+    title: "Workflows",
     icon: web,
   },
 ];
