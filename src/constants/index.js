@@ -50,6 +50,8 @@ import {
   blender,
   connectwisecert,
   awsdbcert,
+  financialflowimage,
+  enterpriseapitester,
 } from "../assets";
 
 export const navLinks = [
@@ -110,7 +112,7 @@ const education = [
     iconBg: "#fff",
     date: "2022 - Present",
     points: [
-      "Courses undertaken: Data Structures and Algorithms, Object-Oriented Programming, REST API Development and Integration, Software Design UML, Python Data Analysis, Discrete Mathematics, Computer Architecture, Operating Systems, Database Systems, Software Engineering.",
+      "Courses undertaken: Data Structures and Algorithms, OOP, REST API, Software Design, Python Data Analysis, Discrete Mathematics, Computer Architecture, Operating Systems, PostgreSQL.",
     ],
   },
   {
@@ -341,9 +343,35 @@ const extracurricular = [
 
 const projects = [
   {
+    name: "FinancialFlow 💸",
+    description:
+      "Comprehensive personal finance management application built with Next.js and Typescript. It empowers users to take control of their financial health through intuitive tracking, insightful analytics, and personalized recommendations.",
+    tags: [
+      {
+        name: "React-native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: financialflowimage,
+    source_code_link: "https://github.com/sunnypatell/financialflow",
+    live_project_link: "https://financial-flow.vercel.app/",
+  },
+  {
     name: "Sunnify (Spotify Downloader)",
     description:
-      "Sunnify is a Spotify downloader application that allows you to download entire playlists locally onto your Mac/Linux/Windows PC.",
+      "Sunnify is a Spotify downloader webapp/desktop application that allows you to download entire playlists locally onto your Mac/Linux/Windows PC. The web version of the app is hosted on AWS Lambda and Elastic Beanstalk, with FastAPI ASGI production.",
     tags: [
       {
         name: "python",
@@ -354,17 +382,43 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "pyqt5",
+        name: "AWS Lambda/Beanstalk",
         color: "pink-text-gradient",
       },
       {
-        name: "(EDUCATIONAL PURPOSES ONLY)",
+        name: "Proxy/API",
         color: "blue-text-gradient",
       },
     ],
     image: sunnifyimage,
     source_code_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
-    live_project_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
+    live_project_link: "https://sunnify-spotify-downloader.vercel.app/",
+  },
+  {
+    name: "Enterprise API Tester",
+    description:
+      "Comprehensive API testing tool with support for all major HTTP methods, authentication, and CORS-friendly proxy. Features include request import/export, real-world samples, and local storage for data persistence. Built with Next.js, and TypeScript for optimal performance and developer experience.",
+    tags: [
+      {
+        name: "Typescript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Next.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Authentication-Body",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: enterpriseapitester,
+    source_code_link: "https://github.com/sunnypatell/enterprise-api-request-tester",
+    live_project_link: "https://enterprise-api-request-tester.vercel.app/",
   },
   {
     name: "KnifeThrow",
