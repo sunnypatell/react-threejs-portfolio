@@ -48,11 +48,15 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Sunny Patel is a seasoned computer science and software development professional, 
-        bringing over four years of industry expertise to the table. With a solid academic foundation 
-        in computer science and a passion for problem-solving, Sunny is committed to delivering top-tier 
-        solutions to intricate challenges. His portfolio showcases a diverse range of projects and accomplishments, 
-        highlighting his dedication to excellence in every endeavor.
+        👨‍💻 I&apos;m a Software Engineer with over 4 years of experience in software development and cloud technologies.
+
+        🎓 Currently working toward my Honours Bachelor of Science in Computer Science at Ontario Tech University, I&apos;m all about building reliable, scalable software that makes a difference.
+
+        🛠 From full-stack development to cloud-based solutions, I&apos;ve led enterprise-level projects that streamline operations and deliver real impact.
+
+        🔧 I enjoy automating workflows, optimizing systems, and turning complex challenges into real results. 📈
+
+        I&apos;m always curious and constantly learning.💡
       </motion.p>
 
       <div className="mt-10 flex flex-wrap gap-10">
