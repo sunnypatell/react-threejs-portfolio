@@ -61,7 +61,7 @@ import pythonanalysis from "./data_analysis.png"
 import password_generator from "./passwordgenerator.png"
 import wordsearch from "./wordsearchoutput.jpg"
 import financialflowimage from "./FinancialFlowDemonstration.png"
-import enterpriseapitester from "./enterpriseapiui.PNG"
+import enterpriseapitester from "./enterpriseapiui.png"
 //
 
 
