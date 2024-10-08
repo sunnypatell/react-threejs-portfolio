@@ -256,7 +256,7 @@ const designTools = [
 
 const experiences = [
   {
-    title: "IT Technician - lll",
+    title: "Lead Infrastructure Engineer",
     company_name: "Canada's Wonderland",
     icon: wonderland,
     iconBg: "#fff",
@@ -271,7 +271,7 @@ const experiences = [
   ],
   },
   {
-    title: "System Support Specialist - ll",
+    title: "Software Engineer ll",
     company_name: "Mackenzie Health Hospital",
     icon: mackenziehealth,
     iconBg: "#fff",
@@ -286,7 +286,7 @@ const experiences = [
     ],
   },
   {
-    title: "Junior Systems Administrator",
+    title: "System Administrator",
     company_name: "Privcurity Consulting Corporation",
     icon: privcurity,
     iconBg: "#1294C8",
