@@ -256,7 +256,7 @@ const designTools = [
 
 const experiences = [
   {
-    title: "Infrastructure Engineer ll",
+    title: "Infrastructure Engineer",
     company_name: "Canada's Wonderland",
     icon: wonderland,
     iconBg: "#fff",
