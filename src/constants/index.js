@@ -256,18 +256,18 @@ const designTools = [
 
 const experiences = [
   {
-    title: "Infrastructure Engineer",
+    title: "IT Technician lll",
     company_name: "Canada's Wonderland",
     icon: wonderland,
     iconBg: "#fff",
     date: "Jun 2023 - Present",
     points: [
       "Led Tier 1-3/L3 migration and deployment for 2000+ devices on domain, ensuring seemless park-wide operations.",
-      "Automated tasks with PowerShell and ConnectWise on custom AMI AWS EC2s and local servers, supporting internal web apps.",
+      "Automated tasks with PowerShell and ConnectWise on locally hosted virtual machines.",
       "Architected Windows MDT from scratch, enabling PXE boot, and sysprepped 15+ clean volumes for scalable PC deployment.",
       "Integrated SMB file shares with ACLs, configured Print Server roles, and optimized Azure.",
       "Optimized DNS zones and DHCP failover with RSAT, leveraging subnetting for high availability.",
-      "Upgraded L2/3 switches, core Palo Alto firewall, and Meraki SD-WAN for site-to-site tunneling between Six Flags parks.",
+      "Deployed POS/KDS/Debit systems using Oracle EMC and Simphony.",
   ],
   },
   {
