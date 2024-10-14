@@ -3,39 +3,71 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import { useState, useEffect } from "react";
 
-const Hero = () => {
-  const [typedText, setTypedText] = useState("");
-  const typedItems = ["Honours Computer Science", "Software Developer", "Systems Administrator", "IT Professional", "Team Leader"];
-  const [itemIndex, setItemIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
+const TypewriterText = ({ texts }) => {
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
-useEffect(() => {
-  const typeItem = () => {
-    if (charIndex < typedItems[itemIndex].length) {
-      setTypedText((prevText) => prevText + typedItems[itemIndex][charIndex]);
-      setCharIndex(charIndex + 1);
-    } else {
-      setIsTyping(false);
-      setTimeout(() => {
-        setIsTyping(true);
-        setItemIndex((itemIndex + 1) % typedItems.length);
-        setCharIndex(0);
-        setTypedText("");
-      }, 1000); // Delay before typing the next item
-    }
-  };
+  useEffect(() => {
+    const typingInterval = setInterval(() => {
+      if (isTyping) {
+        const currentText = texts[currentIndex];
+        if (displayText.length < currentText.length) {
+          setDisplayText((prevText) => currentText.slice(0, prevText.length + 1));
+        } else {
+          setIsTyping(false);
+          clearInterval(typingInterval);
+          setTimeout(() => {
+            setIsTyping(true);
+            setDisplayText("");
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+          }, 2000); // Delay before next typing cycle
+        }
+      }
+    }, 100); // Typing speed
 
-  const typingInterval = setInterval(typeItem, 100); // Typing speed
-
-  return () => clearInterval(typingInterval);
-}, [charIndex, itemIndex]);
+    return () => {
+      clearInterval(typingInterval);
+    };
+  }, [currentIndex, isTyping, texts, displayText]);
 
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
+    <span className="inline-block text-[#915EFF] font-bold">
+      {displayText.split('').map((char, index) => (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.1 }}
+        >
+          {char}
+        </motion.span>
+      ))}
+      {isTyping && (
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
+          className="inline-block ml-1"
+        >
+          |
+        </motion.span>
+      )}
+    </span>
+  );
+};
+
+const Hero = () => {
+  const typedItems = [
+    "Software Developer",
+    "Systems Administrator",
+    "Computer Enthusiast",
+    "Team Leader"
+  ];
+
+  return (
+    <section className="relative w-full h-screen mx-auto">
+      <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
@@ -46,28 +78,7 @@ useEffect(() => {
             Hi, I'm <span className="text-[#915EFF]">Sunny Patel</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm a{" "}
-            <span
-              className="typed"
-              aria-hidden="true"
-              style={{
-                backgroundImage: "linear-gradient(to bottom, rgba(245, 202, 153, 0.5), rgba(245, 202, 153, 0.5))",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100% 8px",
-                backgroundPosition: "0 100%",
-                color: "#915EFF",
-                display: "inline-block",
-                fontWeight: "bold"
-              }}
-            >
-              {typedText}
-            </span>
-            <span 
-              className="typed-cursor" 
-              aria-hidden="true"
-            >
-              |
-            </span>
+            I'm a <TypewriterText texts={typedItems} />
             <br />
             <b>Welcome to my portfolio, feel free to play around with the interactive elements!</b>
           </p>
