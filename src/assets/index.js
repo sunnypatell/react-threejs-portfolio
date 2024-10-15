@@ -1,3 +1,5 @@
+import profilepic from './pfp.png';
+
 import logo from "./logo0.png";
 import backend from "./backend.png";
 import mobile from "./mobile.png";
@@ -148,5 +150,6 @@ export {
   awsdbcert,
   connectwisecert,
   financialflowimage,
-  enterpriseapitester
+  enterpriseapitester,
+  profilepic
 };
