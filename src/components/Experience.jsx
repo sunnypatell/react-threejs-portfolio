@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
@@ -32,7 +32,11 @@ const ExperienceCard = ({ experience, isActive, onClick }) => {
 const ExperienceDetails = ({ experience }) => {
   return (
     <motion.div
-      variants={fadeIn("left", "spring", 0.5, 0.75)}
+      key={experience.company_name} // Use a unique key based on the experience
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.2 }} // Reduced duration for snappier transitions
       className="bg-tertiary p-8 rounded-lg"
     >
       <h3 className="text-white text-[24px] font-bold mb-4">{experience.title}</h3>
@@ -80,7 +84,12 @@ const Experience = () => {
           </div>
         </div>
         <div className="md:w-2/3">
-          <ExperienceDetails experience={experiences[activeExperience]} />
+          <AnimatePresence mode="wait">
+            <ExperienceDetails 
+              key={experiences[activeExperience].company_name} 
+              experience={experiences[activeExperience]} 
+            />
+          </AnimatePresence>
         </div>
       </div>
     </>
