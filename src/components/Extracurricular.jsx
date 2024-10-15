@@ -1,84 +1,64 @@
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-
-import "react-vertical-timeline-component/style.min.css";
-
 import { styles } from "../styles";
 import { extracurricular } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
-const ExtracurricularCard = ({ extracurricular }) => {
-  return (
-    <VerticalTimelineElement
-      contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
-      }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      date={extracurricular.date}
-      iconStyle={{ background: extracurricular.iconBg }}
-      icon={
-        <div className='flex justify-center items-center w-full h-full'>
-          <img
-            src={extracurricular.icon}
-            alt={extracurricular.type}
-            className='w-[60%] h-[60%] object-contain'
-          />
-        </div>
-      }
-    >
-      <div>
-        <h3 className='text-white text-[24px] font-bold'>{extracurricular.title}</h3>
-        <p
-          className='text-secondary text-[16px] font-semibold'
-          style={{ margin: 0 }}
-        >
-          {extracurricular.type}
-        </p>
-      </div>
-
-      <ul className='mt-5 list-disc ml-5 space-y-2'>
-        {extracurricular.points.map((point, index) => (
+const CertificationCard = ({ index, title, icon, type, date, points, credential }) => (
+  <motion.div
+    variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+    className="w-full flex gap-4 bg-tertiary p-4 rounded-lg hover:bg-black-100 transition-all"
+  >
+    <div className="w-16 h-16 flex-shrink-0">
+      <img
+        src={icon}
+        alt={title}
+        className="w-full h-full object-contain"
+      />
+    </div>
+    <div className="flex-grow">
+      <h3 className="text-white font-bold text-[20px]">{title}</h3>
+      <p className="text-secondary text-[14px] mt-1">{type}</p>
+      <p className="text-secondary text-[14px]">{date}</p>
+      <ul className="mt-2 list-disc ml-5 space-y-1">
+        {points.map((point, index) => (
           <li
-            key={`experience-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            key={`certification-point-${index}`}
+            className="text-white-100 text-[14px] pl-1 tracking-wider"
           >
             {point}
-            <br></br>
-            <a href={extracurricular.credential} target="_blank" className='text-blue-400'> See Credentials</a>
           </li>
         ))}
       </ul>
-    </VerticalTimelineElement>
-  );
-};
+      <a 
+        href={credential} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="inline-block mt-3 text-[14px] text-primary-600 hover:text-primary-400 transition-colors"
+      >
+        View Credential
+      </a>
+    </div>
+  </motion.div>
+);
 
 const Extracurricular = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-        Explore my Credentials below
+          Continuous Learning
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-        Certifications. 
+          Certifications
         </h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-col'>
-        <VerticalTimeline>
-          {extracurricular.map((extracurricular, index) => (
-            <ExtracurricularCard
-              key={`experience-${index}`}
-              extracurricular={extracurricular}
-            />
-          ))}
-        </VerticalTimeline>
+      <div className="mt-20 flex flex-col gap-5">
+        {extracurricular.map((certification, index) => (
+          <CertificationCard key={`certification-${index}`} index={index} {...certification} />
+        ))}
       </div>
     </>
   );
