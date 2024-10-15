@@ -33,7 +33,7 @@ const CanvasLoader = () => {
           ></div>
         </div>
         <p className="mt-4 text-lg font-bold text-white">
-          Loading my CodeStation... {progress.toFixed(0)}%
+          Loading... {progress.toFixed(0)}%
         </p>
       </div>
     </Html>
