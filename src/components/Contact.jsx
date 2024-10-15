@@ -1,6 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { Toaster, toast } from 'react-hot-toast';
+import Confetti from 'react-confetti';
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -20,6 +22,25 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [windowDimension, setWindowDimension] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  const detectSize = () => {
+    setWindowDimension({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', detectSize);
+    return () => {
+      window.removeEventListener('resize', detectSize);
+    };
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,7 +51,10 @@ const Contact = () => {
     e.preventDefault();
 
     if (!form.name || !form.email || !form.message) {
-      alert("Please fill all fields before submitting.");
+      toast.error("Please fill all fields before submitting.", {
+        duration: 4000,
+        position: 'bottom-right',
+      });
       return;
     }
 
@@ -54,18 +78,54 @@ const Contact = () => {
           setLoading(false);
           setSuccess(true);
           setForm({ name: "", email: "", message: "" });
-          setTimeout(() => setSuccess(false), 5000);
+          toast.success("Message sent successfully!", {
+            duration: 4000,
+            position: 'bottom-right',
+          });
+          setShowConfetti(true);
+          setTimeout(() => {
+            setSuccess(false);
+            setShowConfetti(false);
+          }, 5000);
         },
         (error) => {
           setLoading(false);
           console.error(error);
-          alert("Ahh, something went wrong. Please try again.");
+          toast.error("Something went wrong. Please try again.", {
+            duration: 4000,
+            position: 'bottom-right',
+          });
         }
       );
   };
 
+  const handleConfettiComplete = useCallback(() => {
+    setShowConfetti(false);
+  }, []);
+
   return (
     <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden no-select`}>
+      <Toaster 
+        position="bottom-right"
+        reverseOrder={false}
+        toastOptions={{
+          className: '',
+          style: {
+            border: '1px solid #713200',
+            padding: '16px',
+            color: '#713200',
+          },
+        }}
+      />
+      {showConfetti && (
+        <Confetti
+          width={windowDimension.width}
+          height={windowDimension.height}
+          recycle={false}
+          numberOfPieces={windowDimension.width > 768 ? 200 : 100}
+          onConfettiComplete={handleConfettiComplete}
+        />
+      )}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
