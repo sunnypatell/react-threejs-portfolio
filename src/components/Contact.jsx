@@ -10,7 +10,7 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faEnvelope, faComment, faPaperPlane, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faEnvelope, faComment, faPaperPlane, faSpinner, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
   const formRef = useRef();
@@ -130,7 +130,16 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
+        <div className="flex justify-between items-center mb-4">
+          <p className={styles.sectionSubText}>Get in touch</p>
+          <a
+            href="tel:+14372161611"
+            className="text-purple-500 hover:text-purple-400 transition-colors duration-300 flex items-center"
+          >
+            <FontAwesomeIcon icon={faPhone} className="mr-2" />
+            (437) 216-1611
+          </a>
+        </div>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
