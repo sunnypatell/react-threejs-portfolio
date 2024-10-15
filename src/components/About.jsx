@@ -91,7 +91,7 @@ const About = () => {
               className="px-6 py-3 text-white bg-gradient-to-r from-gray-600 to-gray-800 rounded-md shadow-md hover:bg-gradient-to-r hover:from-gray-700 hover:to-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 transform transition duration-500 ease-in-out hover:scale-105 active:translate-y-1 active:shadow-none no-select"
               style={{boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.6)', transition: 'all ease 0.1s'}}
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.95 }} 
               onClick={() => window.open("https://github.com/sunnypatell", "_blank")}
             >
               <span className="font-semibold">GitHub</span>
