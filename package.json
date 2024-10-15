@@ -33,6 +33,7 @@
     "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.6.0",
     "sitemap": "^7.1.1",
+    "swiper": "^11.1.14",
     "three": "^0.152.2"
   },
   "devDependencies": {
