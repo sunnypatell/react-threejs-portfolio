@@ -7,7 +7,10 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const CertificationCard = ({ index, title, icon, type, date, points, credential }) => (
   <motion.div
-    variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+    variants={fadeIn("up", "spring", index * 0.2, 0.75)}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.25 }}
     className="w-full flex gap-4 bg-tertiary p-4 rounded-lg hover:bg-black-100 transition-all"
   >
     <div className="w-16 h-16 flex-shrink-0">
@@ -55,11 +58,17 @@ const Extracurricular = () => {
         </h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-col gap-5">
+      <motion.div 
+        variants={fadeIn("up", "spring", 0.5, 0.75)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className="mt-20 flex flex-col gap-5"
+      >
         {extracurricular.map((certification, index) => (
           <CertificationCard key={`certification-${index}`} index={index} {...certification} />
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };
