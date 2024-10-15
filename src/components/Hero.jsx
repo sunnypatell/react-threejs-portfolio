@@ -57,6 +57,17 @@ const TypewriterText = ({ texts }) => {
   );
 };
 
+const WavingHand = () => {
+  return (
+    <img 
+      src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f44b.png" 
+      alt="Waving Hand"
+      className="wave-emoji"
+      style={{ display: 'inline-block', marginLeft: '10px', width: '60px', height: '60px' }}
+    />
+  );
+};
+
 const Hero = () => {
   const typedItems = [
     "Software Developer",
@@ -67,6 +78,24 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen mx-auto">
+      <style jsx>{`
+        @keyframes wave {
+          0% { transform: rotate(0deg); }
+          10% { transform: rotate(-10deg); }
+          20% { transform: rotate(12deg); }
+          30% { transform: rotate(-10deg); }
+          40% { transform: rotate(9deg); }
+          50% { transform: rotate(0deg); }
+          100% { transform: rotate(0deg); }
+        }
+        .wave-emoji {
+          animation-name: wave;
+          animation-duration: 1.8s;
+          animation-iteration-count: infinite;
+          transform-origin: 70% 70%;
+          display: inline-block;
+        }
+      `}</style>
       <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
@@ -75,7 +104,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Sunny Patel</span>
+            Hi, I'm <span className="text-[#915EFF]">Sunny Patel</span> <WavingHand />
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I'm a <TypewriterText texts={typedItems} />
