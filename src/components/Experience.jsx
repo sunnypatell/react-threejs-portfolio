@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo, useTransition } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant, fadeIn } from "../utils/motion";
 
-const ExperienceCard = ({ experience, isActive, onClick }) => {
+const ExperienceCard = React.memo(({ experience, isActive, onClick, index }) => {
   return (
     <motion.div
-      variants={fadeIn("right", "spring", 0.5, 0.75)}
+      variants={fadeIn("right", "spring", index * 0.1, 0.5)}
       className={`flex items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ${
         isActive ? "bg-tertiary" : "bg-primary"
       }`}
@@ -27,16 +27,16 @@ const ExperienceCard = ({ experience, isActive, onClick }) => {
       </div>
     </motion.div>
   );
-};
+});
 
-const ExperienceDetails = ({ experience }) => {
+const ExperienceDetails = React.memo(({ experience }) => {
   return (
     <motion.div
-      key={experience.company_name} // Use a unique key based on the experience
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.2 }} // Reduced duration for snappier transitions
+      key={experience.company_name}
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      transition={{ duration: 0.2, ease: "easeInOut" }}
       className="bg-tertiary p-8 rounded-lg"
     >
       <h3 className="text-white text-[24px] font-bold mb-4">{experience.title}</h3>
@@ -54,10 +54,19 @@ const ExperienceDetails = ({ experience }) => {
       </ul>
     </motion.div>
   );
-};
+});
 
 const Experience = () => {
   const [activeExperience, setActiveExperience] = useState(0);
+  const [isPending, startTransition] = useTransition();
+
+  const handleExperienceClick = useCallback((index) => {
+    startTransition(() => {
+      setActiveExperience(index);
+    });
+  }, []);
+
+  const currentExperience = useMemo(() => experiences[activeExperience], [activeExperience]);
 
   return (
     <>
@@ -78,17 +87,20 @@ const Experience = () => {
                 key={`experience-${index}`}
                 experience={experience}
                 isActive={index === activeExperience}
-                onClick={() => setActiveExperience(index)}
+                onClick={() => handleExperienceClick(index)}
+                index={index}
               />
             ))}
           </div>
         </div>
         <div className="md:w-2/3">
-          <AnimatePresence mode="wait">
-            <ExperienceDetails 
-              key={experiences[activeExperience].company_name} 
-              experience={experiences[activeExperience]} 
-            />
+          <AnimatePresence mode="wait" initial={false}>
+            {!isPending && (
+              <ExperienceDetails 
+                key={currentExperience.company_name} 
+                experience={currentExperience} 
+              />
+            )}
           </AnimatePresence>
         </div>
       </div>
