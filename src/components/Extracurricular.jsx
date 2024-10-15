@@ -12,41 +12,39 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
 const CertificationCard = ({ title, icon, type, date, points, credential }) => (
-  <div className="certification-card bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
-    <div className="relative w-full h-[230px]">
-      <img
-        src={icon}
-        alt={title}
-        className="w-full h-full object-cover rounded-2xl"
-      />
-      <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-        <div
-          onClick={() => window.open(credential, "_blank")}
-          className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-        >
-          <img
-            src="/link.png"
-            alt="link"
-            className="w-1/2 h-1/2 object-contain"
-          />
-        </div>
+  <div className="certification-card bg-tertiary p-6 rounded-2xl w-full h-full flex flex-col justify-between">
+    <div>
+      <div className="relative w-full h-[50px] mb-4">
+        <img
+          src={icon}
+          alt={title}
+          className="w-auto h-full object-contain"
+        />
       </div>
+      <h3 className="text-white font-bold text-[20px] mb-2">{title}</h3>
+      <p className="text-secondary text-[12px] mb-1">{type}</p>
+      <p className="text-secondary text-[12px] mb-3">{date}</p>
+      <ul className="list-disc ml-5 space-y-1">
+        {points.slice(0, 2).map((point, index) => (
+          <li
+            key={`certification-point-${index}`}
+            className="text-white-100 text-[12px] pl-1 tracking-wider"
+          >
+            {point}
+          </li>
+        ))}
+      </ul>
     </div>
-    <div className="mt-5">
-      <h3 className="text-white font-bold text-[24px]">{title}</h3>
-      <p className="mt-2 text-secondary text-[14px]">{type}</p>
+    <div className="mt-4 flex justify-end">
+      <a
+        href={credential}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="black-gradient text-secondary py-2 px-4 rounded-lg outline-none w-fit text-[12px] font-bold shadow-md shadow-primary transition-all hover:scale-105 hover:shadow-[0_0_10px_rgba(128,0,128,0.7)]"
+      >
+        View Credential
+      </a>
     </div>
-    <p className="mt-2 text-secondary text-[14px]">{date}</p>
-    <ul className="mt-5 list-disc ml-5 space-y-2">
-      {points.map((point, index) => (
-        <li
-          key={`certification-point-${index}`}
-          className="text-white-100 text-[14px] pl-1 tracking-wider"
-        >
-          {point}
-        </li>
-      ))}
-    </ul>
   </div>
 );
 
@@ -61,15 +59,6 @@ const Extracurricular = () => {
           Certifications
         </h2>
       </motion.div>
-
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
-        >
-          The following certifications showcase my expertise and continuous learning in various technologies and methodologies.
-        </motion.p>
-      </div>
 
       <motion.div 
         variants={fadeIn("up", "spring", 0.5, 0.75)}
@@ -117,8 +106,11 @@ const Extracurricular = () => {
         .swiper-slide {
           background-position: center;
           background-size: cover;
-          width: 300px;
-          height: 400px;
+          width: 280px;
+          height: 380px;
+        }
+        .swiper-slide-active {
+          transform: scale(1.1) !important;
         }
         .swiper-slide img {
           display: block;
@@ -134,9 +126,6 @@ const Extracurricular = () => {
           border: 1px solid rgba(255, 255, 255, 0.18);
           transition: all 0.3s ease-in-out;
         }
-        .certification-card:hover {
-          transform: scale(1.05);
-        }
         .black-gradient {
           background: #000000;
           background: -webkit-linear-gradient(to right, #434343, #000000);
@@ -144,8 +133,8 @@ const Extracurricular = () => {
         }
         @media (max-width: 768px) {
           .swiper-slide {
-            width: 250px;
-            height: 350px;
+            width: 240px;
+            height: 340px;
           }
         }
       `}</style>
