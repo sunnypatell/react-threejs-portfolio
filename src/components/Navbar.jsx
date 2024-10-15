@@ -45,7 +45,7 @@ const Navbar = () => {
         >
           <img src={logo} alt='logo' className='w-14 h-15 object-contain' />
           <motion.p 
-            className='text-white text-[18px] font-bold cursor-pointer flex'
+            className='text-white text-[18px] font-bold cursor-pointer flex items-center'
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -53,15 +53,16 @@ const Navbar = () => {
             <span 
               className='sm:block hidden' 
               style={{
-                backgroundImage: "linear-gradient(to right, #915EFF, #00BFFF)",
+                fontFamily: "'Dancing Script', cursive",
+                fontSize: "32px",
+                background: "linear-gradient(90deg, #915EFF, #00BFFF)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 textFillColor: "transparent",
-                fontWeight: "bold"
               }} 
             >
-              ᴘᴏʀᴛƒᴏʟɪᴏ
+              {"<"}Sunny Patel{"/>"}
             </span>
           </motion.p>
         </Link>
