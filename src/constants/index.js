@@ -3,15 +3,15 @@ import {
   backend,
   web,
   fullstack,
-  javascript,
-  java,
-  html,
-  css,
-  reactjs,
-  ubuntu,
-  tailwind,
-  mysql,
-  git,
+  // javascript,
+  // java,
+  // html,
+  // css,
+  // reactjs,
+  // ubuntu,
+  // tailwind,
+  // mysql,
+  // git,
   otu,
   rhhs,
   wonderland,
@@ -19,35 +19,35 @@ import {
   privcurity,
   google,
   whmis,
-  portfolio,
-  pglife,
-  sortingvisualiser,
+  // portfolio,
+  // pglife,
+  // sortingvisualiser,
   aws,
-  python,
-  cplusplus,
-  typescript,
-  node_js,
-  freecodecamp,
+  // python,
+  // cplusplus,
+  // typescript,
+  // node_js,
+  // freecodecamp,
   sunnifyimage,
   knifethrowimage,
   pythonanalysis,
   password_generator,
-  wordsearch,
-  powershell,
-  cisco,
+  // wordsearch,
+  // powershell,
+  // cisco,
   connectwise,
-  virtualbox,
-  kalilinux,
-  wireshark,
-  nmap,
-  metasploit,
-  johntheripper,
-  hydra,
-  aircrackng,
-  photoshop,
-  premiere,
-  cinema4d,
-  blender,
+  // virtualbox,
+  // kalilinux,
+  // wireshark,
+  // nmap,
+  // metasploit,
+  // johntheripper,
+  // hydra,
+  // aircrackng,
+  // photoshop,
+  // premiere,
+  // cinema4d,
+  // blender,
   connectwisecert,
   awsdbcert,
   financialflowimage,
@@ -130,129 +130,129 @@ const education = [
   },
 ];
 
-const technologies = [
-  {
-    name: "Java",
-    icon: java,
-  },
-  {
-    name: "Python",
-    icon: python,
-  },
-  {
-    name: "C++",
-    icon: cplusplus,
-  },
-    {
-    name: "Powershell",
-    icon: powershell,
-  },
-  {
-    name: "Kali Linux",
-    icon: kalilinux,
-  },
-  {
-    name: "Ubuntu",
-    icon: ubuntu,
-  },
-  {
-    name: "NodeJS",
-    icon: node_js,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-    {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  }, 
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-];
+// const technologies = [
+//   {
+//     name: "Java",
+//     icon: java,
+//   },
+//   {
+//     name: "Python",
+//     icon: python,
+//   },
+//   {
+//     name: "C++",
+//     icon: cplusplus,
+//   },
+//     {
+//     name: "Powershell",
+//     icon: powershell,
+//   },
+//   {
+//     name: "Kali Linux",
+//     icon: kalilinux,
+//   },
+//   {
+//     name: "Ubuntu",
+//     icon: ubuntu,
+//   },
+//   {
+//     name: "NodeJS",
+//     icon: node_js,
+//   },
+//   {
+//     name: "JavaScript",
+//     icon: javascript,
+//   },
+//   {
+//     name: "HTML 5",
+//     icon: html,
+//   },
+//     {
+//     name: "Tailwind CSS",
+//     icon: tailwind,
+//   }, 
+//   {
+//     name: "React JS",
+//     icon: reactjs,
+//   },
+//   {
+//     name: "git",
+//     icon: git,
+//   },
+//   {
+//     name: "AWS",
+//     icon: aws,
+//   },
+// ];
 
-const itTools = [
-  {
-    name: "Powershell",
-    icon: powershell,
-  },
-  {
-    name: "Cisco",
-    icon: cisco,
-  },
-  {
-    name: "ConnectWise",
-    icon: connectwise,
-  },
-  {
-    name: "VirtualBox",
-    icon: virtualbox,
-  },
-];
+// const itTools = [
+//   {
+//     name: "Powershell",
+//     icon: powershell,
+//   },
+//   {
+//     name: "Cisco",
+//     icon: cisco,
+//   },
+//   {
+//     name: "ConnectWise",
+//     icon: connectwise,
+//   },
+//   {
+//     name: "VirtualBox",
+//     icon: virtualbox,
+//   },
+// ];
 
-const cybersecurityTools = [
-  {
-    name: "Kali Linux",
-    icon: kalilinux,
-  },
-  {
-    name: "Wireshark",
-    icon: wireshark,
-  },
-  {
-    name: "Nmap",
-    icon: nmap,
-  },
-  {
-    name: "Metasploit",
-    icon: metasploit,
-  },
-  {
-    name: "John the Ripper",
-    icon: johntheripper,
-  },
-  {
-    name: "Hydra",
-    icon: hydra,
-  },
-  {
-    name: "Aircrack-ng",
-    icon: aircrackng,
-  },
-];
+// const cybersecurityTools = [
+//   {
+//     name: "Kali Linux",
+//     icon: kalilinux,
+//   },
+//   {
+//     name: "Wireshark",
+//     icon: wireshark,
+//   },
+//   {
+//     name: "Nmap",
+//     icon: nmap,
+//   },
+//   {
+//     name: "Metasploit",
+//     icon: metasploit,
+//   },
+//   {
+//     name: "John the Ripper",
+//     icon: johntheripper,
+//   },
+//   {
+//     name: "Hydra",
+//     icon: hydra,
+//   },
+//   {
+//     name: "Aircrack-ng",
+//     icon: aircrackng,
+//   },
+// ];
 
-const designTools = [
-  {
-    name: "Photoshop",
-    icon: photoshop,
-  },
-  {
-    name: "Premiere",
-    icon: premiere,
-  },
-  {
-    name: "Cinema 4D",
-    icon: cinema4d,
-  },
-  {
-    name: "Blender",
-    icon: blender,
-  },
-];
+// const designTools = [
+//   {
+//     name: "Photoshop",
+//     icon: photoshop,
+//   },
+//   {
+//     name: "Premiere",
+//     icon: premiere,
+//   },
+//   {
+//     name: "Cinema 4D",
+//     icon: cinema4d,
+//   },
+//   {
+//     name: "Blender",
+//     icon: blender,
+//   },
+// ];
 
 const experiences = [
   {
@@ -547,13 +547,13 @@ const testimonials = [
 
 export {
   services,
-  technologies,
-  itTools,
-  cybersecurityTools,
-  designTools,
+  // technologies,
+  // itTools,
+  // cybersecurityTools,
+  // designTools,
   experiences,
   extracurricular,
   projects,
   education,
-  testimonials,
+  testimonials
 };
