@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -41,8 +41,29 @@ const ServiceCard = ({ index, title, icon }) => (
 );
 
 const About = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#about' && sectionRef.current) {
+        const navbar = document.querySelector('nav');
+        const navbarHeight = navbar ? navbar.offsetHeight : 0;
+        const yOffset = -navbarHeight - 20; // Additional 20px buffer
+
+        const y = sectionRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange(); // Check on initial load
+
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   return (
-    <>
+    <div ref={sectionRef} className="pt-[60px] md:pt-0"> {/* Added padding top for mobile */}
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -136,7 +157,7 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
