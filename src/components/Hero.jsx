@@ -63,7 +63,7 @@ const WavingHand = () => {
       src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f44b.png" 
       alt="Waving Hand"
       className="wave-emoji"
-      style={{ display: 'inline-block', marginLeft: '10px', width: '60px', height: '60px' }}
+      style={{ display: 'inline-block', marginLeft: '10px', width: '50px', height: '50px' }}
     />
   );
 };
