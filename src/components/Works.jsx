@@ -80,7 +80,7 @@ const Works = () => {
     <>
       <motion.div variants={textVariant()}>
         <h3 className={`${styles.sectionSubText} text-center`}>
-          Innovative Solutions, Games, and Creations
+          Innovative Creations
         </h3>
       </motion.div>
 
