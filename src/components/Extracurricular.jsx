@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay, Pagination } from "swiper/modules";
@@ -49,6 +49,21 @@ const CertificationCard = ({ title, icon, type, date, points, credential }) => (
 );
 
 const Extracurricular = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -68,10 +83,11 @@ const Extracurricular = () => {
         className="mt-20 flex flex-col items-center"
       >
         <Swiper
-          effect={'coverflow'}
+          effect={isMobile ? 'slide' : 'coverflow'}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={3}
+          slidesPerView={isMobile ? 1 : 3}
+          spaceBetween={isMobile ? 20 : 0}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -133,8 +149,28 @@ const Extracurricular = () => {
         }
         @media (max-width: 768px) {
           .swiper-slide {
-            width: 240px;
-            height: 340px;
+            width: 90vw;
+            max-width: 300px;
+            height: auto;
+            min-height: 340px;
+            opacity: 1 !important;
+            transform: scale(1) !important;
+          }
+          .swiper-slide-active {
+            transform: scale(1) !important;
+          }
+          .mySwiper {
+            padding-left: 5vw;
+            padding-right: 5vw;
+          }
+          .certification-card {
+            background-color: rgba(30, 30, 60, 0.8);
+            box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.37);
+          }
+          .swiper-slide-next,
+          .swiper-slide-prev {
+            opacity: 0 !important;
+            visibility: hidden;
           }
         }
       `}</style>
