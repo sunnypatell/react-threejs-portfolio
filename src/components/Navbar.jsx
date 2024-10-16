@@ -43,7 +43,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-14 h-15 object-contain' />
+          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
           <motion.p 
             className='text-white text-[18px] font-bold cursor-pointer flex items-center'
             initial={{ opacity: 0, y: -20 }}
@@ -51,10 +51,10 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
           >
             <span 
-              className='sm:block hidden' 
+              className='block' 
               style={{
                 fontFamily: "'Dancing Script', cursive",
-                fontSize: "32px",
+                fontSize: "26px",
                 background: "linear-gradient(90deg, #915EFF, #00BFFF)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
