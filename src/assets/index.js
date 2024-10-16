@@ -43,17 +43,12 @@ import connectwise from "./tech/connectwise.png"
 // import blender from "./tech/blender.svg"
 
 
-// import samaritans from "./samaritans.png";
-// import oist from "./oist.png";
-
-// 
 import otu from "./company/otu.png"
 import rhhs from "./company/rhhs.jpg"
 import wonderland from "./company/wonderland.jpg"
 import mackenziehealth from "./company/mackenziehealth.png"
 import privcurity from "./company/privcurity.jpg"
 import google from "./company/google.png"
-// import freecodecamp from "./company/freecodecamp.png"
 import whmis from "./company/whmis.png"
 import aws from "./tech/aws.png";
 
@@ -64,20 +59,6 @@ import password_generator from "./passwordgenerator.png"
 import wordsearch from "./wordsearchoutput.jpg"
 import financialflowimage from "./FinancialFlowDemonstration.png"
 import enterpriseapitester from "./enterpriseapiui.png"
-//
-
-
-// import nextinnovation from "./company/nextinnovation.jpeg";
-// import cognizant from "./company/cognizant.png";
-// import internshala from "./company/internshala.webp";
-
-// import linkedin from "./company/linkedin.png";
-// import hackerrank from "./company/hackerrank.png";
-// import karate from "./karate.jpg";
-
-import portfolio from "./3dportfolio.png";
-// import pglife from "./pglife.png";
-// import sortingvisualiser from "./sortingvisualiser.png";
 
 import resume from "./Resume-Sunny-Patel.pdf";
 import awsdbcert from "./AWS Database Specialty Certified - Sunny Jayendra Patel.jpg"
@@ -103,30 +84,18 @@ export {
   // tailwind,
   // mysql,
   aws,
-  // samaritans,
-  // oist,
   otu,
   rhhs,
   wonderland,
   mackenziehealth,
   privcurity,
   google,
-  // freecodecamp,
   whmis,
   sunnifyimage,
   knifethrowimage,
   pythonanalysis,
   password_generator,
   wordsearch,
-  // nextinnovation,
-  // cognizant,
-  // internshala,
-  // linkedin,
-  // hackerrank,
-  // karate,
-  portfolio,
-  // pglife,
-  // sortingvisualiser,
   // python,
   // cplusplus,
   // typescript,
