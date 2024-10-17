@@ -123,7 +123,7 @@ const education = [
     iconBg: "#fff",
     date: "2018-2022",
     points: [
-      "Achievements: Valedictorian, Ontario Scholar",
+      "Achievements: Ontario Scholar",
       "Percentage: 96%",
       ,
     ],
