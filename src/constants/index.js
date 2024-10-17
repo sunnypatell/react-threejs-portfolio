@@ -124,7 +124,7 @@ const education = [
     date: "2018-2022",
     points: [
       "Ontario Scholar",
-      "Grade 12: 96%",
+      "12th Grade: 96%",
       ,
     ],
   },
