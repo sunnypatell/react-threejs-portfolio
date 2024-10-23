@@ -10,7 +10,7 @@ import {
   reactjs,
   ubuntu,
   tailwind,
-  mysql,
+  postgresql,
   git,
   otu,
   rhhs,
@@ -19,15 +19,10 @@ import {
   privcurity,
   google,
   whmis,
-  // portfolio,
-  // pglife,
-  // sortingvisualiser,
   aws,
   python,
   cplusplus,
   typescript,
-  node_js,
-  // freecodecamp,
   sunnifyimage,
   knifethrowimage,
   pythonanalysis,
@@ -53,6 +48,7 @@ import {
   financialflowimage,
   enterpriseapitester,
   github,
+  mongodb,
 } from "../assets";
 
 export const navLinks = [
@@ -152,12 +148,12 @@ const technologies = [
   //   icon: kalilinux,
   // },
   {
-    name: "Ubuntu",
-    icon: ubuntu,
+    name: "MongoDB",
+    icon: mongodb,
   },
   {
-    name: "NodeJS",
-    icon: node_js,
+    name: "PostGreSQL",
+    icon: postgresql,
   },
   {
     name: "JavaScript",
@@ -176,8 +172,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "git",
-    icon: git,
+    name: "Typescript",
+    icon: typescript,
   },
   {
     name: "AWS",

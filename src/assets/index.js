@@ -16,14 +16,13 @@ import javascript from "./tech/javascript.png";
 import java from "./tech/java.png";
 import ubuntu from "./tech/ubuntu.png";
 import reactjs from "./tech/reactjs.png";
-import mysql from "./tech/mysql.png";
+import postgresql from "./tech/postgresql.png";
+import mongodb from "./tech/mongodb.png";
 import linux from "./tech/linux.png";
 import tailwind from "./tech/tailwind.png";
 import python from "./tech/python.png"
 import cplusplus from "./tech/c++.svg"
 import typescript from "./tech/typescript.png"
-import node_js from "./tech/node_js.svg"
-
 import powershell from "./tech/powershell.svg"
 // import cisco from "./tech/cisco.svg"
 import connectwise from "./tech/connectwise.png"
@@ -82,7 +81,8 @@ export {
   reactjs,
   linux,
   tailwind,
-  mysql,
+  postgresql,
+  mongodb,
   aws,
   otu,
   rhhs,
@@ -99,7 +99,6 @@ export {
   python,
   cplusplus,
   typescript,
-  node_js,
   powershell,
   // cisco,
   connectwise,
