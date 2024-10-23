@@ -3,15 +3,15 @@ import {
   backend,
   web,
   fullstack,
-  // javascript,
-  // java,
-  // html,
-  // css,
-  // reactjs,
-  // ubuntu,
-  // tailwind,
-  // mysql,
-  // git,
+  javascript,
+  java,
+  html,
+  css,
+  reactjs,
+  ubuntu,
+  tailwind,
+  mysql,
+  git,
   otu,
   rhhs,
   wonderland,
@@ -23,17 +23,17 @@ import {
   // pglife,
   // sortingvisualiser,
   aws,
-  // python,
-  // cplusplus,
-  // typescript,
-  // node_js,
+  python,
+  cplusplus,
+  typescript,
+  node_js,
   // freecodecamp,
   sunnifyimage,
   knifethrowimage,
   pythonanalysis,
   password_generator,
   // wordsearch,
-  // powershell,
+  powershell,
   // cisco,
   connectwise,
   // virtualbox,
@@ -72,10 +72,10 @@ export const navLinks = [
     id: "extracurricular",
     title: "Certifications",
   },
-  // {
-  //   id: "skills",
-  //   title: "Skills",
-  // },
+  {
+    id: "skills",
+    title: "Skills",
+  },
   {
     id: "projects",
     title: "Projects",
@@ -130,60 +130,60 @@ const education = [
   },
 ];
 
-// const technologies = [
-//   {
-//     name: "Java",
-//     icon: java,
-//   },
-//   {
-//     name: "Python",
-//     icon: python,
-//   },
-//   {
-//     name: "C++",
-//     icon: cplusplus,
-//   },
-//     {
-//     name: "Powershell",
-//     icon: powershell,
-//   },
-//   {
-//     name: "Kali Linux",
-//     icon: kalilinux,
-//   },
-//   {
-//     name: "Ubuntu",
-//     icon: ubuntu,
-//   },
-//   {
-//     name: "NodeJS",
-//     icon: node_js,
-//   },
-//   {
-//     name: "JavaScript",
-//     icon: javascript,
-//   },
-//   {
-//     name: "HTML 5",
-//     icon: html,
-//   },
-//     {
-//     name: "Tailwind CSS",
-//     icon: tailwind,
-//   }, 
-//   {
-//     name: "React JS",
-//     icon: reactjs,
-//   },
-//   {
-//     name: "git",
-//     icon: git,
-//   },
-//   {
-//     name: "AWS",
-//     icon: aws,
-//   },
-// ];
+const technologies = [
+  {
+    name: "Java",
+    icon: java,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "C++",
+    icon: cplusplus,
+  },
+    {
+    name: "Powershell",
+    icon: powershell,
+  },
+  // {
+  //   name: "Kali Linux",
+  //   icon: kalilinux,
+  // },
+  {
+    name: "Ubuntu",
+    icon: ubuntu,
+  },
+  {
+    name: "NodeJS",
+    icon: node_js,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+    {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  }, 
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "git",
+    icon: git,
+  },
+  {
+    name: "AWS",
+    icon: aws,
+  },
+];
 
 // const itTools = [
 //   {
@@ -547,7 +547,7 @@ const testimonials = [
 
 export {
   services,
-  // technologies,
+  technologies,
   // itTools,
   // cybersecurityTools,
   // designTools,

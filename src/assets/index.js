@@ -9,22 +9,22 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-// import css from "./tech/css.png";
-// import git from "./tech/git.png";
-// import html from "./tech/html.png";
-// import javascript from "./tech/javascript.png";
-// import java from "./tech/java.png";
-// import ubuntu from "./tech/ubuntu.png";
-// import reactjs from "./tech/reactjs.png";
-// import mysql from "./tech/mysql.png";
-// import linux from "./tech/linux.png";
-// import tailwind from "./tech/tailwind.png";
-// import python from "./tech/python.png"
-// import cplusplus from "./tech/c++.svg"
-// import typescript from "./tech/typescript.png"
-// import node_js from "./tech/node_js.svg"
+import css from "./tech/css.png";
+import git from "./tech/git.png";
+import html from "./tech/html.png";
+import javascript from "./tech/javascript.png";
+import java from "./tech/java.png";
+import ubuntu from "./tech/ubuntu.png";
+import reactjs from "./tech/reactjs.png";
+import mysql from "./tech/mysql.png";
+import linux from "./tech/linux.png";
+import tailwind from "./tech/tailwind.png";
+import python from "./tech/python.png"
+import cplusplus from "./tech/c++.svg"
+import typescript from "./tech/typescript.png"
+import node_js from "./tech/node_js.svg"
 
-// import powershell from "./tech/powershell.svg"
+import powershell from "./tech/powershell.svg"
 // import cisco from "./tech/cisco.svg"
 import connectwise from "./tech/connectwise.png"
 // import virtualbox from "./tech/virtualbox.png"
@@ -73,16 +73,16 @@ export {
   github,
   menu,
   close,
-  // css,
-  // git,
-  // html,
-  // javascript,
-  // java,
-  // ubuntu,
-  // reactjs,
-  // linux,
-  // tailwind,
-  // mysql,
+  css,
+  git,
+  html,
+  javascript,
+  java,
+  ubuntu,
+  reactjs,
+  linux,
+  tailwind,
+  mysql,
   aws,
   otu,
   rhhs,
@@ -96,11 +96,11 @@ export {
   pythonanalysis,
   password_generator,
   wordsearch,
-  // python,
-  // cplusplus,
-  // typescript,
-  // node_js,
-  // powershell,
+  python,
+  cplusplus,
+  typescript,
+  node_js,
+  powershell,
   // cisco,
   connectwise,
   // virtualbox,

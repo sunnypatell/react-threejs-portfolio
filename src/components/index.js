@@ -7,7 +7,7 @@ import {
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import About from "./About";
-// import Tech from "./Tech";
+import Tech from "./Tech";
 import Education from "./Education";
 import Experience from "./Experience";
 import Extracurricular from "./Extracurricular";
@@ -19,7 +19,7 @@ export {
   Hero,
   Navbar,
   About,
-  // Tech,
+  Tech,
   Education,
   Experience,
   Extracurricular,
