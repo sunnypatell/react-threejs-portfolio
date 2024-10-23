@@ -41,3 +41,80 @@
 .no-select {
   user-select: none;
 }
+
+
+/* Honeycomb skills stuff */
+:root {
+  --color-2: #2a1d4c; /* Darker purple for hexagon background */
+  --color-3: #915eff; /* Lighter purple for glow effect */
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 200px 0px;
+}
+
+.container {
+  width: calc(100% - 20px);
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.honeycomb-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+.honeycomb-row {
+  display: flex;
+  filter: drop-shadow(0px 0px 3px var(--color-3));
+}
+
+/* Stagger the rows marked with the 'staggered-row' class */
+.honeycomb-row.staggered-row {
+  margin-left: 0px; /* Offset the row to create stagger */
+}
+
+.honeycomb-row .hexagon {
+  position: relative;
+  width: 150px;
+  height: 175px;
+  margin: -15px 7.5px;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+  background-color: var(--color-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.honeycomb-row .hexagon img {
+  width: 110px;
+  height: 130px;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+  background-color: var(--color-3);
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .honeycomb-row .hexagon {
+    width: 110px;
+    height: 125px;
+    margin: -10px 7.5px;
+  }
+
+  .honeycomb-row .hexagon img {
+    width: 90px;
+    height: 100px;
+  }
+
+  /* Remove stagger effect for smaller screens */
+  .honeycomb-row.staggered-row {
+    margin-left: 0px;
+  }
+}
