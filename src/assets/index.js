@@ -28,6 +28,7 @@ import cplusplus from "./tech/c++.svg"
 import typescript from "./tech/typescript.png"
 import threejs from "./tech/threejs.svg"
 
+import azure from "./tech/azure.png";
 import powershell from "./tech/powershell.svg"
 import cisco from "./tech/cisco.svg"
 import connectwise from "./tech/connectwise.png"
@@ -127,5 +128,6 @@ export {
   docker,
   figma,
   mysql,
-  threejs
+  threejs,
+  azure
 };
