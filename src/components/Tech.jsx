@@ -192,7 +192,7 @@ const Tech = () => {
                 animate="visible"
                 whileHover="hover"
               >
-                <img src={tech.icon} alt={tech.name} />
+                <img src={tech.icon} alt={tech.name}  style={{ userSelect: "none" }} draggable="false"/>
               </motion.div>
             ))}
           </div>
