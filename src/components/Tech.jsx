@@ -44,7 +44,7 @@ const programming = [
   { name: "React JS", icon: reactjs },
   { name: "PostgreSQL", icon: postgresql },
   { name: "MongoDB", icon: mongodb },
-  { name: "three.js", icon: threejs },
+  { name: "Three.js", icon: threejs },
 ];
 
 const itTools = [
