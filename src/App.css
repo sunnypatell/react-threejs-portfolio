@@ -47,17 +47,13 @@
 :root {
   --color-2: #2a1d4c; /* Darker purple for hexagon background */
   --color-3: #915eff; /* Lighter purple for glow effect */
-  --text-color: #ffffff;
-  --subheading-color: #d1c4e9;
-  --heading-font: 'Poppins', sans-serif; /* Or any preferred font */
-  --script-font: '', cursive;
 }
 
 .skills {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 150px 0;
+  margin: 70px 0;
 }
 
 .container {
@@ -65,7 +61,7 @@
   max-width: 1200px; /* Slightly larger width */
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 0px;
 }
 
 .honeycomb-grid {

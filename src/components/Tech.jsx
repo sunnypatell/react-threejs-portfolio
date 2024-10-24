@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-// Directly import assets
+// Import all assets
 import {
   python,
   javascript,
@@ -74,6 +74,16 @@ const Tech = () => {
     contentProduction: [],
   });
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
   const calculateRows = (width, techArray) => {
     let dynamicRows = [];
     let startIndex = 0;
@@ -101,21 +111,19 @@ const Tech = () => {
   };
 
   useEffect(() => {
-    // Calculate rows for each category based on window width
-    const rowsData = {
-      programming: calculateRows(window.innerWidth, programming),
-      itTools: calculateRows(window.innerWidth, itTools),
-      contentProduction: calculateRows(window.innerWidth, contentProduction),
-    };
-    setRows(rowsData);
-
-    const handleResize = () => {
-      const resizedRowsData = {
+    const calculateRowsForAllCategories = () => {
+      const rowsData = {
         programming: calculateRows(window.innerWidth, programming),
         itTools: calculateRows(window.innerWidth, itTools),
         contentProduction: calculateRows(window.innerWidth, contentProduction),
       };
-      setRows(resizedRowsData);
+      setRows(rowsData);
+    };
+
+    calculateRowsForAllCategories();
+
+    const handleResize = () => {
+      calculateRowsForAllCategories();
     };
     window.addEventListener("resize", handleResize);
 
@@ -123,8 +131,33 @@ const Tech = () => {
   }, []);
 
   const renderCategory = (categoryName, categoryRows) => (
-    <div key={categoryName}>
-      <h2 className="category-title top">{`<${categoryName}>`}</h2>
+    <motion.div
+      key={categoryName}
+      className="category-container"
+      initial="hidden"
+      animate={mainControls}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
+      }}
+    >
+      <motion.h2
+        className="category-title top"
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        }}
+        style={{
+          fontFamily: "'', cursive",
+          fontSize: "26px",
+          background: "linear-gradient(90deg, #915EFF, #00BFFF)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          textFillColor: "transparent",
+          filter: "drop-shadow(0 0 10px #915EFF)",
+        }}
+      >{`<${categoryName}>`}</motion.h2>
       <div className="honeycomb-grid">
         {categoryRows?.map((row, rowIndex) => (
           <div
@@ -132,19 +165,50 @@ const Tech = () => {
             className={`honeycomb-row ${rowIndex % 2 === 1 ? "staggered-row" : ""}`}
           >
             {row.map((tech) => (
-              <div key={tech.name} className="hexagon">
+              <motion.div
+                key={tech.name}
+                className="hexagon"
+                variants={{
+                  hidden: { opacity: 0, scale: 0.8 },
+                  visible: { 
+                    opacity: 1, 
+                    scale: 1, 
+                    transition: { 
+                      delay: Math.random() * 1.5, 
+                      duration: 0.5, 
+                      type: "spring" 
+                    } 
+                  },
+                }}
+              >
                 <img src={tech.icon} alt={tech.name} />
-              </div>
+              </motion.div>
             ))}
           </div>
         ))}
       </div>
-      <h2 className="category-title bottom">{`<${categoryName}/>`}</h2>
-    </div>
+      <motion.h2
+        className="category-title bottom"
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        }}
+        style={{
+          fontFamily: "'', cursive",
+          fontSize: "26px",
+          background: "linear-gradient(90deg, #915EFF, #00BFFF)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          textFillColor: "transparent",
+          filter: "drop-shadow(0 0 10px #915EFF)",
+        }}
+      >{`<${categoryName}/>`}</motion.h2>
+    </motion.div>
   );
 
   return (
-    <section className="skills">
+    <section className="skills" ref={ref}>
       <div className="container">
         <motion.div variants={textVariant()}>
           <p className={`${styles.sectionSubText} text-center`}>Technical Proficiencies</p>
@@ -158,4 +222,4 @@ const Tech = () => {
   );
 };
 
-export default SectionWrapper(Tech, "");
+export default SectionWrapper(Tech, "skills");
