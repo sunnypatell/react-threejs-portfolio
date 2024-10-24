@@ -91,7 +91,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s;
+  transition: transform 0.s;
+  z-index: 1;
 }
 
 .honeycomb-row .hexagon img {
@@ -103,6 +104,7 @@
 
 .honeycomb-row .hexagon:hover {
   transform: scale(1.05); /* Slight zoom on hover for effect */
+  z-index: 2;
 }
 
 .category-title {

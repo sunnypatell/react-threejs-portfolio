@@ -90,7 +90,6 @@ const Tech = () => {
     let rowSize = 6;
 
     if (width < 500) {
-      // For smaller screens
       dynamicRows = [
         techArray.slice(0, 3),
         techArray.slice(3, 5),
@@ -98,7 +97,6 @@ const Tech = () => {
         techArray.slice(8, 10),
       ];
     } else {
-      // For larger screens, alternate between rows of 6 and 5 items
       while (startIndex < techArray.length) {
         const endIndex = startIndex + rowSize;
         dynamicRows.push(techArray.slice(startIndex, endIndex));
@@ -168,20 +166,24 @@ const Tech = () => {
               <motion.div
                 key={tech.name}
                 className="hexagon"
-                variants={{
-                  hidden: { opacity: 0, scale: 0.8 },
-                  visible: { 
-                    opacity: 1, 
-                    scale: 1, 
-                    transition: { 
-                      delay: Math.random() * 1.5, 
-                      duration: 0.5, 
-                      type: "spring" 
-                    } 
-                  },
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ 
+                  opacity: 1, 
+                  scale: 1,
+                  transition: { 
+                    delay: Math.random() * 1.5, 
+                    duration: 0.5, 
+                    type: "spring" 
+                  } 
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  transition: { duration: 0.3 }
                 }}
               >
-                <img src={tech.icon} alt={tech.name} />
+                <div className="hexagon-content">
+                  <img src={tech.icon} alt={tech.name} />
+                </div>
               </motion.div>
             ))}
           </div>
