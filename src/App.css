@@ -54,6 +54,7 @@
   align-items: center;
   justify-content: center;
   margin: 70px 0;
+  padding-top: 50px; /* Add some top padding to delay when the section is considered "in view" */
 }
 
 .container {
@@ -88,7 +89,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s, filter 0.3s;
+  transition: all 0.3s ease;
   z-index: 1;
 }
 
@@ -123,10 +124,10 @@
   padding: 0; /* Remove padding */
   position: relative;
   z-index: 2;
+  transition: all 0.3s ease;
 }
 
 .honeycomb-row .hexagon:hover {
-  transform: scale(1.05); /* Slight zoom on hover for effect */
   filter: drop-shadow(0 0 10px rgba(128,0,128,0.7));
 }
 

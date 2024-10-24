@@ -75,7 +75,10 @@ const Tech = () => {
   });
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { 
+    once: true,
+    amount: 0.2
+  });
   const mainControls = useAnimation();
 
   useEffect(() => {
@@ -128,6 +131,24 @@ const Tech = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const hexagonVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { 
+      opacity: 1, 
+      scale: 1, 
+      transition: { 
+        delay: Math.random() * 1.5, 
+        duration: 0.5, 
+        type: "spring" 
+      } 
+    },
+    hover: {
+      scale: 1.05,
+      zIndex: 2,
+      transition: { duration: 0.3 }
+    }
+  };
+
   const renderCategory = (categoryName, categoryRows) => (
     <motion.div
       key={categoryName}
@@ -166,24 +187,12 @@ const Tech = () => {
               <motion.div
                 key={tech.name}
                 className="hexagon"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ 
-                  opacity: 1, 
-                  scale: 1,
-                  transition: { 
-                    delay: Math.random() * 1.5, 
-                    duration: 0.5, 
-                    type: "spring" 
-                  } 
-                }}
-                whileHover={{
-                  scale: 1.05,
-                  transition: { duration: 0.3 }
-                }}
+                variants={hexagonVariants}
+                initial="hidden"
+                animate="visible"
+                whileHover="hover"
               >
-                <div className="hexagon-content">
-                  <img src={tech.icon} alt={tech.name} />
-                </div>
+                <img src={tech.icon} alt={tech.name} />
               </motion.div>
             ))}
           </div>
@@ -205,7 +214,7 @@ const Tech = () => {
           textFillColor: "transparent",
           filter: "drop-shadow(0 0 10px #915EFF)",
         }}
-      >{`<${categoryName}/>`}</motion.h2>
+      >{`</${categoryName}>`}</motion.h2>
     </motion.div>
   );
 
