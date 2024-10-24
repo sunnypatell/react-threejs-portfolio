@@ -12,35 +12,35 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
 const CertificationCard = ({ title, icon, type, date, points, credential }) => (
-  <div className="certification-card bg-tertiary p-6 rounded-2xl w-full h-full flex flex-col justify-between">
+  <div className="certification-card bg-tertiary p-6 rounded-2xl w-full h-full flex flex-col justify-between no-select">
     <div>
       <div className="relative w-full h-[50px] mb-4">
         <img
           src={icon}
           alt={title}
-          className="w-auto h-full object-contain"
+          className="w-auto h-full object-contain no-select"
         />
       </div>
-      <h3 className="text-white font-bold text-[20px] mb-2">{title}</h3>
-      <p className="text-secondary text-[12px] mb-1">{type}</p>
-      <p className="text-secondary text-[12px] mb-3">{date}</p>
+      <h3 className="text-white font-bold text-[20px] mb-2 no-select">{title}</h3>
+      <p className="text-secondary text-[12px] mb-1 no-select">{type}</p>
+      <p className="text-secondary text-[12px] mb-3 no-select">{date}</p>
       <ul className="list-disc ml-5 space-y-1">
         {points.slice(0, 2).map((point, index) => (
           <li
             key={`certification-point-${index}`}
-            className="text-white-100 text-[12px] pl-1 tracking-wider"
+            className="text-white-100 text-[12px] pl-1 tracking-wider no-select"
           >
             {point}
           </li>
         ))}
       </ul>
     </div>
-    <div className="mt-4 flex justify-end">
+    <div className="mt-4 flex justify-end no-select">
       <a
         href={credential}
         target="_blank"
         rel="noopener noreferrer"
-        className="black-gradient text-secondary py-2 px-4 rounded-lg outline-none w-fit text-[12px] font-bold shadow-md shadow-primary transition-all hover:scale-105 hover:shadow-[0_0_10px_rgba(128,0,128,0.7)]"
+        className="black-gradient text-secondary py-2 px-4 rounded-lg outline-none w-fit text-[12px] font-bold shadow-md shadow-primary transition-all hover:scale-105 hover:shadow-[0_0_10px_rgba(128,0,128,0.7)] no-select"
       >
         View Credential
       </a>
