@@ -68,7 +68,7 @@ const Extracurricular = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-          CONTINUOUS LEARNING
+          Continuous Learning
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Certifications

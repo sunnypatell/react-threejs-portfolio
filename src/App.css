@@ -47,20 +47,25 @@
 :root {
   --color-2: #2a1d4c; /* Darker purple for hexagon background */
   --color-3: #915eff; /* Lighter purple for glow effect */
+  --text-color: #ffffff;
+  --subheading-color: #d1c4e9;
+  --heading-font: 'Poppins', sans-serif; /* Or any preferred font */
+  --script-font: '', cursive;
 }
 
 .skills {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 200px 0px;
+  margin: 150px 0;
 }
 
 .container {
   width: calc(100% - 20px);
-  max-width: 1000px;
+  max-width: 1200px; /* Slightly larger width */
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
 .honeycomb-grid {
@@ -68,7 +73,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .honeycomb-row {
@@ -76,45 +81,70 @@
   filter: drop-shadow(0px 0px 3px var(--color-3));
 }
 
-/* Stagger the rows marked with the 'staggered-row' class */
 .honeycomb-row.staggered-row {
-  margin-left: 0px; /* Offset the row to create stagger */
+  margin-left: 0; /* Ensure a stagger effect */
 }
 
 .honeycomb-row .hexagon {
   position: relative;
-  width: 150px;
-  height: 175px;
-  margin: -15px 7.5px;
+  width: 130px; /* Smaller hexagon size for better layout */
+  height: 150px;
+  margin: -10px 7.5px;
   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
   background-color: var(--color-2);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s;
 }
 
 .honeycomb-row .hexagon img {
-  width: 110px;
-  height: 130px;
-  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-  background-color: var(--color-3);
-  padding: 10px;
+  width: 80px; /* Smaller and consistent image size */
+  height: 100px;
+  background-color: transparent; /* Transparent to blend with hexagon background */
+  padding: 0; /* Remove padding */
+}
+
+.honeycomb-row .hexagon:hover {
+  transform: scale(1.05); /* Slight zoom on hover for effect */
+}
+
+.category-title {
+  font-family: var(--script-font);
+  font-size: 26px;
+  background: linear-gradient(90deg, #915EFF, #00BFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-align: left; /* Align to the left for <open> tags */
+  padding: 20px 0 5px 10px;
+}
+
+.category-title.bottom {
+  text-align: right; /* Align to the right for </close> tags */
+  padding: 5px 10px 20px 0;
 }
 
 @media (max-width: 600px) {
   .honeycomb-row .hexagon {
-    width: 110px;
-    height: 125px;
-    margin: -10px 7.5px;
+    width: 100px;
+    height: 115px;
+    margin: -8px 5px;
   }
 
   .honeycomb-row .hexagon img {
-    width: 90px;
-    height: 100px;
+    width: 60px;
+    height: 75px;
   }
 
   /* Remove stagger effect for smaller screens */
   .honeycomb-row.staggered-row {
     margin-left: 0px;
+  }
+
+  .category-title {
+    font-size: 20px; /* Adjust for mobile */
+    padding: 15px 0 5px 10px;
   }
 }

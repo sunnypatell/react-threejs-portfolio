@@ -31,7 +31,6 @@ import {
   photoshop,
   premiere,
   cinema4d,
-
 } from "../assets";
 
 const programming = [
@@ -57,9 +56,9 @@ const itTools = [
   { name: "ConnectWise", icon: connectwise },
   { name: "VirtualBox", icon: virtualbox },
   { name: "Kali Linux", icon: kalilinux },
-  {name: "Wireshark", icon: wireshark},
-  {name: "Nmap", icon: nmap},
-  {name: "John the Ripper", icon: johntheripper}
+  { name: "Wireshark", icon: wireshark },
+  { name: "Nmap", icon: nmap },
+  { name: "John the Ripper", icon: johntheripper },
 ];
 
 const contentProduction = [
@@ -72,7 +71,7 @@ const Tech = () => {
   const [rows, setRows] = useState({
     programming: [],
     itTools: [],
-    contentProduction: []
+    contentProduction: [],
   });
 
   const calculateRows = (width, techArray) => {
@@ -125,7 +124,7 @@ const Tech = () => {
 
   const renderCategory = (categoryName, categoryRows) => (
     <div key={categoryName}>
-      <h2 className="category-title">{`<${categoryName}>`}</h2>
+      <h2 className="category-title top">{`<${categoryName}>`}</h2>
       <div className="honeycomb-grid">
         {categoryRows?.map((row, rowIndex) => (
           <div
@@ -140,7 +139,7 @@ const Tech = () => {
           </div>
         ))}
       </div>
-      <h2 className="category-title">{`</${categoryName}>`}</h2>
+      <h2 className="category-title bottom">{`<${categoryName}/>`}</h2>
     </div>
   );
 
@@ -148,7 +147,7 @@ const Tech = () => {
     <section className="skills">
       <div className="container">
         <motion.div variants={textVariant()}>
-          <p className={`${styles.sectionSubText} text-center`}>My technical proficiencies</p>
+          <p className={`${styles.sectionSubText} text-center`}>Technical Proficiencies</p>
           <h2 className={`${styles.sectionHeadText} text-center`}>Skills.</h2>
         </motion.div>
         {renderCategory("programming", rows.programming)}
