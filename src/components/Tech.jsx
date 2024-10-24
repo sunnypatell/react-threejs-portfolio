@@ -6,73 +6,143 @@ import { textVariant } from "../utils/motion";
 
 // Directly import assets
 import {
-  git,
-  html,
+  python,
   javascript,
   java,
-  ubuntu,
+  cplusplus,
+  typescript,
+  html,
+  css,
   reactjs,
-  linux,
-  tailwind,
   postgresql,
   mongodb,
+  git,
+  aws,
+  ubuntu,
   powershell,
-} from "../assets"; // Assuming assets are exported here
+  linux,
+  cisco,
+  connectwise,
+  virtualbox,
+  kalilinux,
+  wireshark,
+  nmap,
+  johntheripper,
+  photoshop,
+  premiere,
+  cinema4d,
 
-// Define the technologies array directly
-const technologies = [
-  { name: "Git", icon: git },
-  { name: "HTML 5", icon: html },
-  { name: "JavaScript", icon: javascript },
+} from "../assets";
+
+const programming = [
+  { name: "Python", icon: python },
   { name: "Java", icon: java },
-  { name: "Ubuntu", icon: ubuntu },
+  { name: "C++", icon: cplusplus },
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+  { name: "HTML 5", icon: html },
+  { name: "CSS", icon: css },
   { name: "React JS", icon: reactjs },
-  { name: "Linux", icon: linux },
-  { name: "Tailwind CSS", icon: tailwind },
   { name: "PostgreSQL", icon: postgresql },
   { name: "MongoDB", icon: mongodb },
+  { name: "Git", icon: git },
+];
+
+const itTools = [
+  { name: "AWS", icon: aws },
+  { name: "Ubuntu", icon: ubuntu },
   { name: "PowerShell", icon: powershell },
+  { name: "Linux", icon: linux },
+  { name: "Cisco", icon: cisco },
+  { name: "ConnectWise", icon: connectwise },
+  { name: "VirtualBox", icon: virtualbox },
+  { name: "Kali Linux", icon: kalilinux },
+  {name: "Wireshark", icon: wireshark},
+  {name: "Nmap", icon: nmap},
+  {name: "John the Ripper", icon: johntheripper}
+];
+
+const contentProduction = [
+  { name: "Photoshop", icon: photoshop },
+  { name: "Premiere Pro", icon: premiere },
+  { name: "Cinema 4D", icon: cinema4d },
 ];
 
 const Tech = () => {
-  const [rows, setRows] = useState([]);
+  const [rows, setRows] = useState({
+    programming: [],
+    itTools: [],
+    contentProduction: []
+  });
 
-  const calculateRows = (width) => {
+  const calculateRows = (width, techArray) => {
     let dynamicRows = [];
     let startIndex = 0;
-    let rowSize = 6; // Start with 6 items in the first row
+    let rowSize = 6;
 
     if (width < 500) {
-      // For smaller screens, we simplify and follow a different row layout
+      // For smaller screens
       dynamicRows = [
-        technologies.slice(0, 3),
-        technologies.slice(3, 5),
-        technologies.slice(5, 8),
-        technologies.slice(8, 10),
+        techArray.slice(0, 3),
+        techArray.slice(3, 5),
+        techArray.slice(5, 8),
+        techArray.slice(8, 10),
       ];
     } else {
       // For larger screens, alternate between rows of 6 and 5 items
-      while (startIndex < technologies.length) {
+      while (startIndex < techArray.length) {
         const endIndex = startIndex + rowSize;
-        dynamicRows.push(technologies.slice(startIndex, endIndex));
+        dynamicRows.push(techArray.slice(startIndex, endIndex));
         startIndex += rowSize;
-        rowSize = rowSize === 6 ? 5 : 6; // Toggle between 6 and 5 items per row
+        rowSize = rowSize === 6 ? 5 : 6;
       }
     }
 
-    setRows(dynamicRows);
+    return dynamicRows;
   };
 
   useEffect(() => {
-    // Calculate rows initially based on window width
-    calculateRows(window.innerWidth);
+    // Calculate rows for each category based on window width
+    const rowsData = {
+      programming: calculateRows(window.innerWidth, programming),
+      itTools: calculateRows(window.innerWidth, itTools),
+      contentProduction: calculateRows(window.innerWidth, contentProduction),
+    };
+    setRows(rowsData);
 
-    // Recalculate rows on window resize
-    const handleResize = () => calculateRows(window.innerWidth);
+    const handleResize = () => {
+      const resizedRowsData = {
+        programming: calculateRows(window.innerWidth, programming),
+        itTools: calculateRows(window.innerWidth, itTools),
+        contentProduction: calculateRows(window.innerWidth, contentProduction),
+      };
+      setRows(resizedRowsData);
+    };
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const renderCategory = (categoryName, categoryRows) => (
+    <div key={categoryName}>
+      <h2 className="category-title">{`<${categoryName}>`}</h2>
+      <div className="honeycomb-grid">
+        {categoryRows?.map((row, rowIndex) => (
+          <div
+            key={`${categoryName}-row-${rowIndex}`}
+            className={`honeycomb-row ${rowIndex % 2 === 1 ? "staggered-row" : ""}`}
+          >
+            {row.map((tech) => (
+              <div key={tech.name} className="hexagon">
+                <img src={tech.icon} alt={tech.name} />
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+      <h2 className="category-title">{`</${categoryName}>`}</h2>
+    </div>
+  );
 
   return (
     <section className="skills">
@@ -81,27 +151,9 @@ const Tech = () => {
           <p className={`${styles.sectionSubText} text-center`}>My technical proficiencies</p>
           <h2 className={`${styles.sectionHeadText} text-center`}>Skills.</h2>
         </motion.div>
-        <h1 className="HTMLTags">{"<skills>"}</h1>
-        <div className="honeycomb-grid">
-          {rows.map((row, rowIndex) => (
-            <div
-              key={`row-${rowIndex}`}
-              className={`honeycomb-row ${rowIndex % 2 === 1 ? "staggered-row" : ""}`} // Apply stagger effect on alternate rows
-            >
-              {row.map((tech) => {
-                if (!tech || !tech.icon) return null;
-                return (
-                  <div key={tech.name} className="hexagon">
-                    <img src={tech.icon} alt={tech.name} />
-                  </div>
-                );
-              })}
-            </div>
-          ))}
-        </div>
-        <h1 className="HTMLTags" style={{ marginLeft: "auto" }}>
-          {"</skills>"}
-        </h1>
+        {renderCategory("programming", rows.programming)}
+        {renderCategory("itTools", rows.itTools)}
+        {renderCategory("contentProduction", rows.contentProduction)}
       </div>
     </section>
   );

@@ -29,20 +29,20 @@ import {
   password_generator,
   // wordsearch,
   powershell,
-  // cisco,
+  cisco,
   connectwise,
-  // virtualbox,
-  // kalilinux,
-  // wireshark,
-  // nmap,
-  // metasploit,
-  // johntheripper,
-  // hydra,
-  // aircrackng,
-  // photoshop,
-  // premiere,
-  // cinema4d,
-  // blender,
+  virtualbox,
+  kalilinux,
+  wireshark,
+  nmap,
+  metasploit,
+  johntheripper,
+  hydra,
+  aircrackng,
+  photoshop,
+  premiere,
+  cinema4d,
+  blender,
   connectwisecert,
   awsdbcert,
   financialflowimage,
@@ -143,10 +143,10 @@ const technologies = [
     name: "Powershell",
     icon: powershell,
   },
-  // {
-  //   name: "Kali Linux",
-  //   icon: kalilinux,
-  // },
+  {
+    name: "Kali Linux",
+    icon: kalilinux,
+  },
   {
     name: "MongoDB",
     icon: mongodb,
@@ -181,74 +181,74 @@ const technologies = [
   },
 ];
 
-// const itTools = [
-//   {
-//     name: "Powershell",
-//     icon: powershell,
-//   },
-//   {
-//     name: "Cisco",
-//     icon: cisco,
-//   },
-//   {
-//     name: "ConnectWise",
-//     icon: connectwise,
-//   },
-//   {
-//     name: "VirtualBox",
-//     icon: virtualbox,
-//   },
-// ];
+const itTools = [
+  {
+    name: "Powershell",
+    icon: powershell,
+  },
+  {
+    name: "Cisco",
+    icon: cisco,
+  },
+  {
+    name: "ConnectWise",
+    icon: connectwise,
+  },
+  {
+    name: "VirtualBox",
+    icon: virtualbox,
+  },
+];
 
-// const cybersecurityTools = [
-//   {
-//     name: "Kali Linux",
-//     icon: kalilinux,
-//   },
-//   {
-//     name: "Wireshark",
-//     icon: wireshark,
-//   },
-//   {
-//     name: "Nmap",
-//     icon: nmap,
-//   },
-//   {
-//     name: "Metasploit",
-//     icon: metasploit,
-//   },
-//   {
-//     name: "John the Ripper",
-//     icon: johntheripper,
-//   },
-//   {
-//     name: "Hydra",
-//     icon: hydra,
-//   },
-//   {
-//     name: "Aircrack-ng",
-//     icon: aircrackng,
-//   },
-// ];
+const cybersecurityTools = [
+  {
+    name: "Kali Linux",
+    icon: kalilinux,
+  },
+  {
+    name: "Wireshark",
+    icon: wireshark,
+  },
+  {
+    name: "Nmap",
+    icon: nmap,
+  },
+  {
+    name: "Metasploit",
+    icon: metasploit,
+  },
+  {
+    name: "John the Ripper",
+    icon: johntheripper,
+  },
+  {
+    name: "Hydra",
+    icon: hydra,
+  },
+  {
+    name: "Aircrack-ng",
+    icon: aircrackng,
+  },
+];
 
-// const designTools = [
-//   {
-//     name: "Photoshop",
-//     icon: photoshop,
-//   },
-//   {
-//     name: "Premiere",
-//     icon: premiere,
-//   },
-//   {
-//     name: "Cinema 4D",
-//     icon: cinema4d,
-//   },
-//   {
-//     name: "Blender",
-//     icon: blender,
-//   },
-// ];
+const designTools = [
+  {
+    name: "Photoshop",
+    icon: photoshop,
+  },
+  {
+    name: "Premiere",
+    icon: premiere,
+  },
+  {
+    name: "Cinema 4D",
+    icon: cinema4d,
+  },
+  {
+    name: "Blender",
+    icon: blender,
+  },
+];
 
 const experiences = [
   {
@@ -544,9 +544,9 @@ const testimonials = [
 export {
   services,
   technologies,
-  // itTools,
-  // cybersecurityTools,
-  // designTools,
+  itTools,
+  cybersecurityTools,
+  designTools,
   experiences,
   extracurricular,
   projects,

@@ -9,6 +9,9 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+import docker from "./tech/docker.png";
+import figma from "./tech/figma.png";
+import mysql from "./tech/mysql.png";
 import css from "./tech/css.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -23,23 +26,24 @@ import tailwind from "./tech/tailwind.png";
 import python from "./tech/python.png"
 import cplusplus from "./tech/c++.svg"
 import typescript from "./tech/typescript.png"
+import threejs from "./tech/threejs.svg"
+
 import powershell from "./tech/powershell.svg"
-// import cisco from "./tech/cisco.svg"
+import cisco from "./tech/cisco.svg"
 import connectwise from "./tech/connectwise.png"
-// import virtualbox from "./tech/virtualbox.png"
+import virtualbox from "./tech/virtualbox.png"
+import kalilinux from "./tech/kali_linux.svg"
+import wireshark from "./tech/wireshark.png"
+import nmap from "./tech/nmap.svg"
+import metasploit from "./tech/metasploit.svg"
+import johntheripper from "./tech/johntheripper.svg"
+import hydra from "./tech/hydra.svg"
+import aircrackng from "./tech/aircrackng.svg"
 
-// import kalilinux from "./tech/kali_linux.svg"
-// import wireshark from "./tech/wireshark.png"
-// import nmap from "./tech/nmap.svg"
-// import metasploit from "./tech/metasploit.svg"
-// import johntheripper from "./tech/johntheripper.svg"
-// import hydra from "./tech/hydra.svg"
-// import aircrackng from "./tech/aircrackng.svg"
-
-// import photoshop from "./tech/photoshop.svg"
-// import premiere from "./tech/premiere.svg"
-// import cinema4d from "./tech/cinema4d.png"
-// import blender from "./tech/blender.svg"
+import photoshop from "./tech/photoshop.svg"
+import premiere from "./tech/premiere.svg"
+import cinema4d from "./tech/cinema4d.png"
+import blender from "./tech/blender.svg"
 
 
 import otu from "./company/otu.png"
@@ -100,24 +104,28 @@ export {
   cplusplus,
   typescript,
   powershell,
-  // cisco,
+  cisco,
   connectwise,
-  // virtualbox,
-  // kalilinux,
-  // wireshark,
-  // nmap,
-  // metasploit,
-  // johntheripper,
-  // hydra,
-  // aircrackng,
-  // photoshop,
-  // premiere,
-  // cinema4d,
-  // blender,
+  virtualbox,
+  kalilinux,
+  wireshark,
+  nmap,
+  metasploit,
+  johntheripper,
+  hydra,
+  aircrackng,
+  photoshop,
+  premiere,
+  cinema4d,
+  blender,
   resume,
   awsdbcert,
   connectwisecert,
   financialflowimage,
   enterpriseapitester,
-  profilepic
+  profilepic,
+  docker,
+  figma,
+  mysql,
+  threejs
 };
