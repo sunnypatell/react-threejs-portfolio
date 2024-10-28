@@ -83,17 +83,17 @@ const Extracurricular = () => {
         className="mt-20 flex flex-col items-center"
       >
         <Swiper
-          effect={isMobile ? 'slide' : 'coverflow'}
+          effect={isMobile ? '' : 'coverflow'}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={isMobile ? 1 : 3}
+          slidesPerView={1}
           spaceBetween={isMobile ? 20 : 0}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
             depth: 100,
             modifier: 1,
-            slideShadows: true,
+            slideShadows: false, // Disable slide shadows entirely
           }}
           pagination={{
             clickable: true,
@@ -103,6 +103,22 @@ const Extracurricular = () => {
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              centeredSlides: true,
+            },
+            768: {
+              slidesPerView: 1,
+              centeredSlides: true,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              centeredSlides: true,
+              spaceBetween: 0,
+            },
           }}
         >
           {extracurricular.map((certification, index) => (
