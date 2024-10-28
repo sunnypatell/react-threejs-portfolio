@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 import { styles } from "../styles";
-import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { resume, profilepic } from "../assets";
@@ -42,30 +41,36 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const mainControls = useAnimation();
 
   useEffect(() => {
-    const handleHashChange = () => {
-      if (window.location.hash === '#about' && sectionRef.current) {
-        const navbar = document.querySelector('nav');
-        const navbarHeight = navbar ? navbar.offsetHeight : 0;
-        const yOffset = -navbarHeight - 20; // Additional 20px buffer
-
-        const y = sectionRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
-    };
-
-    window.addEventListener('hashchange', handleHashChange);
-    handleHashChange(); // Check on initial load
-
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
 
   return (
-    <div ref={sectionRef} className="pt-[60px] md:pt-0 overflow-hidden"> {/* Added padding top for mobile */}
-      <motion.div variants={textVariant()}>
+    <div ref={sectionRef} className="pt-[60px] md:pt-0 overflow-hidden">
+      <motion.div
+        initial="hidden"
+        animate={mainControls}
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        }}
+      >
         <p className={styles.sectionSubText}>Introduction</p>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        animate={mainControls}
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        }}
+      >
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
@@ -81,8 +86,8 @@ const About = () => {
                 alt="Sunny Patel"
                 className="w-[150%] h-[150%] object-cover rounded-full"
                 style={{
-                  objectPosition: '50% 45%',
-                  transform: 'scale(1.1) translate(3.0%, -29.625%)'
+                  objectPosition: "50% 45%",
+                  transform: "scale(1.1) translate(3.0%, -29.625%)",
                 }}
               />
             </div>
@@ -90,7 +95,7 @@ const About = () => {
           <div className="mt-10 flex flex-wrap gap-5 justify-center">
             <motion.button
               className="px-6 py-3 text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-md shadow-md hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transform transition duration-500 ease-in-out hover:scale-105 active:translate-y-1 active:shadow-none no-select"
-              style={{boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.6)', transition: 'all ease 0.1s'}}
+              style={{ boxShadow: "0px 5px 0px 0px rgba(0,0,0,0.6)", transition: "all ease 0.1s" }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.open(resume, "_blank")}
@@ -100,7 +105,7 @@ const About = () => {
 
             <motion.button
               className="px-6 py-3 text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-md shadow-md hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transform transition duration-500 ease-in-out hover:scale-105 active:translate-y-1 active:shadow-none no-select"
-              style={{boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.6)', transition: 'all ease 0.1s'}}
+              style={{ boxShadow: "0px 5px 0px 0px rgba(0,0,0,0.6)", transition: "all ease 0.1s" }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.open("https://www.linkedin.com/in/sunny-patel-30b460204/", "_blank")}
@@ -110,9 +115,9 @@ const About = () => {
 
             <motion.button
               className="px-6 py-3 text-white bg-gradient-to-r from-gray-600 to-gray-800 rounded-md shadow-md hover:bg-gradient-to-r hover:from-gray-700 hover:to-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 transform transition duration-500 ease-in-out hover:scale-105 active:translate-y-1 active:shadow-none no-select"
-              style={{boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.6)', transition: 'all ease 0.1s'}}
+              style={{ boxShadow: "0px 5px 0px 0px rgba(0,0,0,0.6)", transition: "all ease 0.1s" }}
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }} 
+              whileTap={{ scale: 0.95 }}
               onClick={() => window.open("https://github.com/sunnypatell", "_blank")}
             >
               <span className="font-semibold">GitHub</span>
@@ -130,33 +135,37 @@ const About = () => {
           >
             <motion.li className="flex items-start" variants={fadeIn("up", "spring", 0.1, 0.75)}>
               <span className="mr-4 text-2xl flex-shrink-0">👨‍💻</span>
-              <span>I&apos;m a Software Engineer with over 4 years of experience in software development and cloud technologies.</span>
+              <span>
+                I&apos;m a Software Engineer with over 4 years of experience in software development and cloud technologies.
+              </span>
             </motion.li>
             <motion.li className="flex items-start" variants={fadeIn("up", "spring", 0.2, 0.75)}>
               <span className="mr-4 text-2xl flex-shrink-0">🎓</span>
-              <span>Currently working toward my Honours Bachelor of Science in Computer Science at Ontario Tech University, I&apos;m all about building reliable, scalable software that makes a difference.</span>
+              <span>
+                Currently working toward my Honours Bachelor of Science in Computer Science at Ontario Tech University, I&apos;m all about building reliable, scalable software that makes a difference.
+              </span>
             </motion.li>
             <motion.li className="flex items-start" variants={fadeIn("up", "spring", 0.3, 0.75)}>
               <span className="mr-4 text-2xl flex-shrink-0">🛠</span>
-              <span>From full-stack development to cloud-based solutions, I&apos;ve led enterprise-level projects that streamline operations and deliver real impact.</span>
+              <span>
+                From full-stack development to cloud-based solutions, I&apos;ve led enterprise-level projects that streamline operations and deliver real impact.
+              </span>
             </motion.li>
             <motion.li className="flex items-start" variants={fadeIn("up", "spring", 0.4, 0.75)}>
               <span className="mr-4 text-2xl flex-shrink-0">🔧</span>
-              <span>I enjoy automating workflows, optimizing systems, and turning complex challenges into real results. 📈</span>
+              <span>
+                I enjoy automating workflows, optimizing systems, and turning complex challenges into real results. 📈
+              </span>
             </motion.li>
             <motion.li className="flex items-start" variants={fadeIn("up", "spring", 0.5, 0.75)}>
               <span className="mr-4 text-2xl flex-shrink-0">💡</span>
-              <span>I&apos;m always curious and constantly learning.</span>
+              <span>
+                I&apos;m always curious and constantly learning.
+              </span>
             </motion.li>
           </motion.ul>
         </motion.div>
       </div>
-
-      {/* <div className="mt-20 flex flex-wrap justify-center gap-10 no-select">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div> */}
     </div>
   );
 };

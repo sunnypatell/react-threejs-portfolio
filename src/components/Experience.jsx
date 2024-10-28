@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useMemo, useTransition } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useCallback, useMemo, useTransition, useRef, useEffect } from "react";
+import { motion, AnimatePresence, useAnimation, useInView } from "framer-motion";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
@@ -59,6 +59,9 @@ const ExperienceDetails = React.memo(({ experience }) => {
 const Experience = () => {
   const [activeExperience, setActiveExperience] = useState(0);
   const [isPending, startTransition] = useTransition();
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const mainControls = useAnimation();
 
   const handleExperienceClick = useCallback((index) => {
     startTransition(() => {
@@ -68,12 +71,35 @@ const Experience = () => {
 
   const currentExperience = useMemo(() => experiences[activeExperience], [activeExperience]);
 
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
   return (
-    <>
-      <motion.div variants={textVariant()}>
+    <div ref={sectionRef}>
+      <motion.div
+        initial="hidden"
+        animate={mainControls}
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        }}
+      >
         <p className={`${styles.sectionSubText} text-center`}>
           My Professional Journey
         </p>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        animate={mainControls}
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        }}
+      >
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Work Experience
         </h2>
@@ -96,15 +122,12 @@ const Experience = () => {
         <div className="md:w-2/3">
           <AnimatePresence mode="wait" initial={false}>
             {!isPending && (
-              <ExperienceDetails 
-                key={currentExperience.company_name} 
-                experience={currentExperience} 
-              />
+              <ExperienceDetails key={currentExperience.company_name} experience={currentExperience} />
             )}
           </AnimatePresence>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

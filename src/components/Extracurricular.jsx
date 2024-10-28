@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay, Pagination } from "swiper/modules";
 import { styles } from "../styles";
@@ -50,6 +50,15 @@ const CertificationCard = ({ title, icon, type, date, points, credential }) => (
 
 const Extracurricular = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -65,14 +74,27 @@ const Extracurricular = () => {
   }, []);
 
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          Continuous Learning
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
-          Certifications
-        </h2>
+    <div ref={sectionRef}>
+      <motion.div
+        initial="hidden"
+        animate={mainControls}
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        }}
+      >
+        <p className={`${styles.sectionSubText} text-center`}>Continuous Learning</p>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        animate={mainControls}
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        }}
+      >
+        <h2 className={`${styles.sectionHeadText} text-center`}>Certifications</h2>
       </motion.div>
 
       <motion.div 
@@ -190,7 +212,7 @@ const Extracurricular = () => {
           }
         }
       `}</style>
-    </>
+    </div>
   );
 };
 
