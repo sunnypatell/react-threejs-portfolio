@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -25,6 +25,47 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Styling for the menu button and navicon
+  const menuIconStyle = {
+    position: 'relative',
+    width: '28px',
+    height: '20px',
+    display: 'flex',
+    justifyContent: 'center',
+    cursor: 'pointer',
+    flexDirection: 'column',
+    alignItems: 'center',
+  };
+
+  const barCommonStyle = {
+    background: 'white',
+    display: 'block',
+    height: '2px',
+    width: '18px',
+    borderRadius: '2px',
+    position: 'absolute',
+    transition: 'all 0.2s ease-out',
+  };
+
+  const topBarStyle = {
+    ...barCommonStyle,
+    top: toggle ? '50%' : '5px',
+    transform: toggle ? 'rotate(-45deg)' : 'none',
+  };
+
+  const middleBarStyle = {
+    ...barCommonStyle,
+    opacity: toggle ? 0 : 1,
+    top: '50%',
+    transition: 'opacity 0.2s ease-out',
+  };
+
+  const bottomBarStyle = {
+    ...barCommonStyle,
+    top: toggle ? '50%' : '15px',
+    transform: toggle ? 'rotate(45deg)' : 'none',
+  };
 
   return (
     <nav
@@ -89,13 +130,14 @@ const Navbar = () => {
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
-            src={toggle ? close : menu}
-            alt='menu'
-            className='w-[28px] h-[28px] object-contain cursor-pointer'
-            onClick={() => setToggle(!toggle)}
-          />
+          {/* Menu Icon Toggle */}
+          <div style={menuIconStyle} onClick={() => setToggle(!toggle)}>
+            <span style={topBarStyle}></span>
+            <span style={middleBarStyle}></span>
+            <span style={bottomBarStyle}></span>
+          </div>
 
+          {/* Menu Items */}
           <motion.div
             className={`${
               !toggle ? "hidden" : "flex"
