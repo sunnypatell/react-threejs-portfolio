@@ -63,7 +63,7 @@ const About = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="pt-[60px] md:pt-0"> {/* Added padding top for mobile */}
+    <div ref={sectionRef} className="pt-[60px] md:pt-0 overflow-hidden"> {/* Added padding top for mobile */}
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -152,11 +152,11 @@ const About = () => {
         </motion.div>
       </div>
 
-      <div className="mt-20 flex flex-wrap justify-center gap-10 no-select">
+      {/* <div className="mt-20 flex flex-wrap justify-center gap-10 no-select">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
