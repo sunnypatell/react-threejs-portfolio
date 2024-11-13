@@ -51,8 +51,8 @@ const Contact = () => {
     e.preventDefault();
 
     if (!form.name || !form.email || !form.message) {
-      toast.error("Please fill all fields before submitting.", {
-        duration: 4000,
+      toast.error("Please fill all fields before submitting. ⚠️", {
+        duration: 3000,
         position: 'bottom-right',
       });
       return;
@@ -79,7 +79,7 @@ const Contact = () => {
           setSuccess(true);
           setForm({ name: "", email: "", message: "" });
           toast.success("Message sent successfully!", {
-            duration: 4000,
+            duration: 3000,
             position: 'bottom-right',
           });
           setShowConfetti(true);
@@ -92,7 +92,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
           toast.error("Something went wrong. Please try again.", {
-            duration: 4000,
+            duration: 3000,
             position: 'bottom-right',
           });
         }
