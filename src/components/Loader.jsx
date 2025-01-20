@@ -1,43 +1,62 @@
-"use client"
+"use client";
 
-import { Html, useProgress } from "@react-three/drei"
-import { useEffect, useState } from "react"
+import { Html, useProgress } from "@react-three/drei";
+import { useEffect, useState } from "react";
 
 const CanvasLoader = () => {
-  const { progress } = useProgress()
-  const [showLoader, setShowLoader] = useState(true)
+  const { progress } = useProgress();
+  const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
     if (progress === 100) {
-      setTimeout(() => setShowLoader(false), 500)
+      setTimeout(() => setShowLoader(false), 500);
     }
-  }, [progress])
+  }, [progress]);
 
-  if (!showLoader) return null
+  if (!showLoader) return null;
 
   return (
     <Html
-      as='div'
+      as="div"
       center
       className="w-full h-full flex justify-center items-center bg-black bg-opacity-80"
     >
-      <div className="text-center">
-        <div className="inline-block relative w-20 h-20 mb-4">
-          <div className="absolute top-0 left-0 w-full h-full border-4 border-purple-500 rounded-full animate-pulse"></div>
-          <div className="absolute top-0 left-0 w-full h-full border-4 border-transparent border-t-blue-500 rounded-full animate-spin"></div>
-        </div>
-        <div className="w-48 h-2 bg-gray-700 rounded-full overflow-hidden">
-          <div 
-            className="h-full bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 ease-out"
-            style={{ width: `${progress}%` }}
-          ></div>
-        </div>
-        <p className="mt-4 text-lg font-bold text-white">
-          Loading... {progress.toFixed(0)}%
-        </p>
+      <div className="text-center flex flex-col items-center">
+        <div className="loader mb-4"></div>
+        <p className="text-lg font-bold text-white mb-2">Loading...</p>
+        <p className="text-lg font-bold text-white">{progress.toFixed(0)}%</p>
       </div>
+      <style jsx>{`
+        .loader {
+          width: 50px;
+          aspect-ratio: 1;
+          display: grid;
+          border: 4px solid #0000;
+          border-radius: 50%;
+          border-right-color: #514b82; /* Purple color */
+          animation: l15 1s infinite linear;
+        }
+        .loader::before,
+        .loader::after {
+          content: "";
+          grid-area: 1/1;
+          margin: 2px;
+          border: inherit;
+          border-radius: 50%;
+          animation: l15 2s infinite;
+        }
+        .loader::after {
+          margin: 8px;
+          animation-duration: 3s;
+        }
+        @keyframes l15 {
+          100% {
+            transform: rotate(1turn);
+          }
+        }
+      `}</style>
     </Html>
-  )
-}
+  );
+};
 
-export default CanvasLoader
+export default CanvasLoader;
