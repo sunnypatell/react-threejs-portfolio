@@ -105,11 +105,12 @@ const Extracurricular = () => {
         className="mt-20 flex flex-col items-center"
       >
         <Swiper
-          effect={isMobile ? '' : 'coverflow'}
+          effect={'coverflow'}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={1}
-          spaceBetween={isMobile ? 20 : 0}
+          slidesPerView={"auto"}
+          loop={true}
+          spaceBetween={0}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -127,21 +128,11 @@ const Extracurricular = () => {
             disableOnInteraction: false,
           }}
           breakpoints={{
-            640: {
-              slidesPerView: 1,
-              centeredSlides: true,
-            },
-            768: {
-              slidesPerView: 1,
-              centeredSlides: true,
-              spaceBetween: 30,
-            },
-            1024: {
+            1024:{
               slidesPerView: 3,
-              centeredSlides: true,
-              spaceBetween: 0,
-            },
+            }
           }}
+         
         >
           {extracurricular.map((certification, index) => (
             <SwiperSlide key={`certification-${index}`}>
