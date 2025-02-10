@@ -281,8 +281,8 @@ const experiences = [
     ],
   },
   {
-    title: "Tech Sales Associate (Co-op) - Staples Canada",
-    company_name: "Staples Canada",
+    title: "Tech Sales Associate - Staples Canada",
+    company_name: "Staples Canada (Co-op)",
     icon: staples,
     iconBg: "#1294C8",
     date: "Sep. 2020 - Feb. 2021",
