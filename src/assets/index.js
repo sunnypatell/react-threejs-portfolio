@@ -52,6 +52,7 @@ import rhhs from "./company/rhhs.jpg"
 import wonderland from "./company/wonderland.jpg"
 import mackenziehealth from "./company/mackenziehealth.png"
 import privcurity from "./company/privcurity.jpg"
+import staples from "./company/staples.png"
 import google from "./company/google.png"
 import whmis from "./company/whmis.png"
 import aws from "./tech/aws.png";
@@ -129,5 +130,6 @@ export {
   figma,
   mysql,
   threejs,
-  azure
+  azure,
+  staples
 };

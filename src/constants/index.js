@@ -17,6 +17,7 @@ import {
   wonderland,
   mackenziehealth,
   privcurity,
+  staples,
   google,
   whmis,
   aws,
@@ -252,51 +253,49 @@ const designTools = [
 
 const experiences = [
   {
-    title: "IT Technician lll",
+    title: "IT Technician - Canada's Wonderland",
     company_name: "Canada's Wonderland",
     icon: wonderland,
     iconBg: "#fff",
-    date: "Jun 2023 - Present",
+    date: "Jun. 2023 - Present",
     points: [
-      "Led Tier 1-3/L3 migration and deployment for 2000+ devices on domain, ensuring seemless park-wide operations.",
-      "Automated tasks with PowerShell and ConnectWise on locally hosted virtual machines.",
-      "Architected Windows MDT from scratch, enabling PXE boot, and sysprepped 15+ clean volumes for scalable PC deployment.",
-      "Integrated SMB file shares with ACLs, configured Print Server roles, and optimized Azure.",
-      "Optimized DNS zones and DHCP failover with RSAT, leveraging subnetting for high availability.",
-      "Deployed POS/KDS/Debit systems using Oracle EMC and Simphony.",
-  ],
-  },
-  {
-    title: "Software Engineer",
-    company_name: "Mackenzie Health Hospital",
-    icon: mackenziehealth,
-    iconBg: "#fff",
-    date: "Jan 2023 - Aug 2023 (8 mos.)",
-    points: [
-      "Deployed 300+ iPads with JamF, enforcing HIPAA-compliant MDM.",
-      "Optimized CDN and load balancing for entertainment app by over 25%* offering IPTV, VOIP, movies, games, and meal ordering.",
-      "Developed NDA software with Java, Python, SQL, and integrated caching with AWS ElastiCache.",
-      "Automated CI/CD workflows with GitLab CI, optimizing workflows for Citrix, VMware, VDI, Hyper-V, ESXi.",
-      "Architected updates with Bash/YAML and audited stability/security of bedside apps.",
-      "Monitored traffic and identified threats using Cortex XDR and Rapid7, reducing security incidents by 30%*.",
+      "Provisioned Windows PCs with MDT, and deployed scripting via PowerShell and ConnectWise.",
+      "Managed AD accounts to propagate ACLs and unified access across in-house apps, Exchange, and SharePoint.",
+      "Configured Cisco CUCM, Unity, and Finesse for stable call routing and voicemail services.",
+      "Handled switch patching and VLAN/routing via PuTTY & SecureCRT, ensuring stable network performance.",
+      "Deployed Oracle POS/KDS/Debit solutions (EMC, Simphony), tracking updates in Jira & Confluence.",
     ],
   },
   {
-    title: "Junior System Administrator",
-    company_name: "Privcurity Consulting Corporation",
-    icon: privcurity,
-    iconBg: "#1294C8",
-    date: "May 2021 - Sep 2021 (5 mos.)",
+    title: "System Support Specialist - Mackenzie Health",
+    company_name: "Mackenzie Health",
+    icon: mackenziehealth,
+    iconBg: "#fff",
+    date: "Jan. 2023 - Aug. 2023",
     points: [
-      "Scaled Azure VMs, implementing Docker/Kubernetes for containerized malware prevention and microservices.",
-      "Automated cloud operations with SSH and Python scripts, optimizing data processing for MySQL databases.",
-      "Secured networks with advanced firewalls, deep packet inspection via Wireshark/tcpdump.",
-      "Implemented 2FA and ML-driven DDoS mitigation, cutting overhead computational cost.",
-      "Built PSA systems on .NET Core/Azure, ensuring encrypted, GDPR-compliant data.",
-      "Deployed Apache Kafka & Zookeeper for fault-tolerant, real-time processing, messaging, and stability.",
+      "Overhauled 400+ Surface tablets to bedside iPads, deploying the in-house 'Get Well Soon' app with Intune to hospital systems.",
+      "Developed and refined an admin portal for managing app services, user roles, and subscription expirations.",
+      "Utilized Jamf Pro for MDM, securely deploying iPads/iPhones across clinical departments.",
+      "Implemented Vocera VOIP on iPhones, enabling real-time communication among nurses and ER staff.",
+      "Performed in-room checks, resolved device issues, and collaborated with vendors on bug logs and system updates.",
+    ],
+  },
+  {
+    title: "Tech Sales Associate (Co-op) - Staples Canada",
+    company_name: "Staples Canada",
+    icon: staples,      // You can swap out the icon if you have one for Staples
+    iconBg: "#1294C8",
+    date: "Sep. 2020 - Feb. 2021",
+    points: [
+      "Provided specialized support for Windows, Mac, and Linux, performing on-site installations, repairs, and optimizations.",
+      "Streamlined inventory processes by handling SKUs and POs, maintaining a well-organized sales floor.",
+      "Maintained accurate sales and inventory data in IBM AS/400, improving workflows and operational efficiency.",
+      "Resolved complex technical inquiries, delivering tailored solutions that ensured high customer satisfaction.",
+      "Facilitated e-commerce transactions, merging in-store and online channels.",
     ],
   },
 ];
+
 
 const extracurricular = [
   {
