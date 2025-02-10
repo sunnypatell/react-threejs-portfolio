@@ -283,7 +283,7 @@ const experiences = [
   {
     title: "Tech Sales Associate (Co-op) - Staples Canada",
     company_name: "Staples Canada",
-    icon: staples,      // You can swap out the icon if you have one for Staples
+    icon: staples,
     iconBg: "#1294C8",
     date: "Sep. 2020 - Feb. 2021",
     points: [
