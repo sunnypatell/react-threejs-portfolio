@@ -75,7 +75,7 @@ const ProjectCard = ({
 
 const Works = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 }); // Adjust amount as needed
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -200px 0px" }); // Adjust amount as needed
   const mainControls = useAnimation();
 
   useEffect(() => {
