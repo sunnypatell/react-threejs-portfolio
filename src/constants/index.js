@@ -299,6 +299,15 @@ const experiences = [
 
 const extracurricular = [
   {
+    title: "MongoDB Python Developer Path",
+    type: "Proof of Completion",
+    icon: mongodb,
+    iconBg: "#000000",
+    date: "Feb 2025",
+    points: ["PyMongo, NoSQL Schema Design, Data Aggregation, MongoDB Query Optimization"],
+    credential: "https://learn.mongodb.com/c/tf2DSC7hTcyM3NBZjkLPoA",
+  },
+  {
     title: "Github Foundations",
     type: "Professional Certificate",
     icon: github,
@@ -306,15 +315,6 @@ const extracurricular = [
     date: "Sep 2024",
     points: ["Version Control, Git, Actions, CI/CD, Repository Management, SAP Workflow"],
     credential: "https://www.credly.com/badges/b6f69785-2da8-447e-b02c-3350bf9af803",
-  },
-  {
-    title: "AWS Certified Database Specialty",
-    type: "Most Advanced Professional Credential",
-    icon: aws,
-    iconBg: "#FFFFFF",
-    date: "Issued: Aug 14, 2024 | Expiry: Aug 16, 2027",
-    points: ["Cloud-Native Architecture, Multi-Region Data Replication, Automated Tuning and Query Optimization, IAM, Clustering, Distributed Databases, SQL/NoSQL, Legacy Cloud Integration"],
-    credential: awsdbcert,
   },
   {
     title: "Certified Enterprise Scripting Architect",
