@@ -42,6 +42,18 @@ const Contact = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (showConfetti) {
+      document.body.style.overflowX = "hidden";
+    } else {
+      document.body.style.overflowX = "";
+    }
+
+    return () => {
+      document.body.style.overflowX = "";
+    };
+  }, [showConfetti]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -213,25 +225,6 @@ const Contact = () => {
             )}
           </button>
         </form>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-8 text-center text-secondary"
-        >
-          Copyright &copy; {new Date().getFullYear()} Sunny Patel's Portfolio
-          <br />
-          Designed and Developed by
-          <a
-            href="https://www.linkedin.com/in/sunny-patel-30b460204/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold text-purple-500 hover:text-purple-400 transition-colors duration-300 ml-1"
-          >
-            Sunny Jayendra Patel
-          </a>
-        </motion.p>
       </motion.div>
 
       <motion.div
