@@ -312,7 +312,7 @@ const extracurricular = [
     type: "Professional Certificate",
     icon: github,
     iconBg: "#000000",
-    date: "Sep 2024",
+    date: "Issued: Sep 2024 - Expires: Sep 2027",
     points: ["Version Control, Git, Actions, CI/CD, Repository Management, SAP Workflow"],
     credential: "https://www.credly.com/badges/b6f69785-2da8-447e-b02c-3350bf9af803",
   },
