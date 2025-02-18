@@ -84,10 +84,10 @@ const About = () => {
               <img
                 src={profilepic}
                 alt="Sunny Patel"
-                className="w-[150%] h-[150%] object-cover rounded-full"
+                className="w-full h-full object-cover"
                 style={{
-                  objectPosition: "50% 45%",
-                  transform: "scale(1.1) translate(3.0%, -29.625%)",
+                  objectFit: "cover",
+                  objectPosition: "50% 50%",
                 }}
               />
             </div>
