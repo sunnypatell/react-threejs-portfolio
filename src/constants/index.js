@@ -110,7 +110,8 @@ const education = [
     iconBg: "#fff",
     date: "2022 - Present",
     points: [
-      "Courses undertaken: Data Structures and Algorithms, OOP, REST API, Software Design, Python Data Analysis, Discrete Mathematics, Computer Architecture, Operating Systems, PostgreSQL.",
+      "Dean's Honours List - Fall 2024",
+      // "Courses undertaken: Data Structures and Algorithms, OOP, REST API, Software Design, Python Data Analysis, Discrete Mathematics, Computer Architecture, Operating Systems, PostgreSQL.",
     ],
   },
   {
