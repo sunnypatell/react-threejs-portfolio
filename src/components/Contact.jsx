@@ -74,7 +74,7 @@ const Contact = () => {
     }
 
     if (!captchaToken) {
-      toast("Hold up! Gotta make sure you're not a spam bot 🧠🤖", {
+      toast("Hold up! Gotta make sure you're not a spam bot, checkmark the CAPTCHA! 🧠🤖", {
         icon: '🛡️',
         duration: 3500,
         position: 'bottom-right',
