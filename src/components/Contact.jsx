@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from 'react-hot-toast';
 import Confetti from 'react-confetti';
+import ReCAPTCHA from "react-google-recaptcha"; // <-- NEW
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -14,6 +15,8 @@ import { faUser, faEnvelope, faComment, faPaperPlane, faSpinner, faPhone } from 
 
 const Contact = () => {
   const formRef = useRef();
+  const captchaRef = useRef(); // <-- NEW
+  const [captchaToken, setCaptchaToken] = useState(null); // <-- NEW
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -70,6 +73,15 @@ const Contact = () => {
       return;
     }
 
+    if (!captchaToken) {
+      toast("Hold up! Gotta make sure you're not a spam bot 🧠🤖", {
+        icon: '🛡️',
+        duration: 3500,
+        position: 'bottom-right',
+      });
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -95,6 +107,8 @@ const Contact = () => {
             position: 'bottom-right',
           });
           setShowConfetti(true);
+          setCaptchaToken(null);
+          captchaRef.current.reset(); // reset captcha after submit
           setTimeout(() => {
             setSuccess(false);
             setShowConfetti(false);
@@ -117,18 +131,7 @@ const Contact = () => {
 
   return (
     <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden no-select`}>
-      <Toaster 
-        position="bottom-right"
-        reverseOrder={false}
-        toastOptions={{
-          className: '',
-          style: {
-            border: '1px solid #713200',
-            padding: '16px',
-            color: '#713200',
-          },
-        }}
-      />
+      <Toaster />
       {showConfetti && (
         <Confetti
           width={windowDimension.width}
@@ -204,6 +207,19 @@ const Contact = () => {
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium transition-all duration-300 focus:ring-2 focus:ring-purple-500'
             />
           </label>
+
+          {/* 🤖 CAPTCHA Field */}
+          <div className="flex justify-center">
+            <ReCAPTCHA
+              sitekey="6Lf3gxcrAAAAACSY81KwC29xmPUQqhHReDYWcfbl"
+              onChange={token => setCaptchaToken(token)}
+              theme="dark"
+              ref={captchaRef}
+            />
+          </div>
+          <span className="text-xs text-gray-400 text-center -mt-2">
+            Prove you're not a spam bot. Yes, even you, future employer. 🤖🧠
+          </span>
 
           <button
             type='submit'
