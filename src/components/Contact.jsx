@@ -211,7 +211,7 @@ const Contact = () => {
           {/* 🤖 CAPTCHA Field */}
           <div className="flex justify-center">
             <ReCAPTCHA
-              sitekey="6Lf3gxcrAAAAACSY81KwC29xmPUQqhHReDYWcfbl"
+              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
               onChange={token => setCaptchaToken(token)}
               theme="dark"
               ref={captchaRef}
