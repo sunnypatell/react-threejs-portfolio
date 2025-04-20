@@ -130,7 +130,9 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden no-select`}>
+    <div
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden no-select`}
+    >
       <Toaster />
       {showConfetti && (
         <Confetti
@@ -143,7 +145,7 @@ const Contact = () => {
       )}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <div className="flex justify-between items-center mb-4">
           <p className={styles.sectionSubText}>Get in touch</p>
@@ -160,51 +162,63 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className="mt-12 flex flex-col gap-8"
         >
           <div className="flex flex-col sm:flex-row gap-8">
             <div className="flex-1">
-              <label className='flex flex-col'>
-                <span className='text-white font-medium mb-4'>
-                  <FontAwesomeIcon icon={faUser} className="text-purple-500 mr-2" /> Name
+              <label className="flex flex-col">
+                <span className="text-white font-medium mb-4">
+                  <FontAwesomeIcon
+                    icon={faUser}
+                    className="text-purple-500 mr-2"
+                  />{" "}
+                  Name
                 </span>
                 <input
                   type="text"
-                  name='name'
+                  name="name"
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Your name"
-                  className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium transition-all duration-300 focus:ring-2 focus:ring-purple-500'
+                  className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium transition-all duration-300 focus:ring-2 focus:ring-purple-500"
                 />
               </label>
             </div>
             <div className="flex-1">
-              <label className='flex flex-col'>
-                <span className='text-white font-medium mb-4'>
-                  <FontAwesomeIcon icon={faEnvelope} className="text-purple-500 mr-2" /> Email
+              <label className="flex flex-col">
+                <span className="text-white font-medium mb-4">
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    className="text-purple-500 mr-2"
+                  />{" "}
+                  Email
                 </span>
                 <input
                   type="email"
-                  name='email'
+                  name="email"
                   value={form.email}
                   onChange={handleChange}
                   placeholder="Your email"
-                  className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium transition-all duration-300 focus:ring-2 focus:ring-purple-500'
+                  className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium transition-all duration-300 focus:ring-2 focus:ring-purple-500"
                 />
               </label>
             </div>
           </div>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>
-              <FontAwesomeIcon icon={faComment} className="text-purple-500 mr-2" /> Message
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">
+              <FontAwesomeIcon
+                icon={faComment}
+                className="text-purple-500 mr-2"
+              />{" "}
+              Message
             </span>
             <textarea
               rows={7}
-              name='message'
+              name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="Hey Sunny, love the website! I'd like to chat about some opportunities you might like! 🎉"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium transition-all duration-300 focus:ring-2 focus:ring-purple-500'
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium transition-all duration-300 focus:ring-2 focus:ring-purple-500"
             />
           </label>
 
@@ -212,18 +226,18 @@ const Contact = () => {
           <div className="flex justify-center">
             <ReCAPTCHA
               sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-              onChange={token => setCaptchaToken(token)}
+              onChange={(token) => setCaptchaToken(token)}
               theme="dark"
               ref={captchaRef}
             />
           </div>
           <span className="text-xs text-gray-400 text-center -mt-2">
-            Prove you're not a spam bot. Yes, even you, future employer. 🤖🧠
+            Protected by reCAPTCHA Enterprise. ⚔️
           </span>
 
           <button
-            type='submit'
-            className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center'
+            type="submit"
+            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
             disabled={loading}
           >
             {loading ? (
@@ -245,7 +259,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
       </motion.div>
