@@ -62,24 +62,11 @@ const Contact = () => {
   }, [showConfetti]);
 
   useEffect(() => {
-    const loadCaptcha = async () => {
-      if (window.grecaptcha && window.grecaptcha.enterprise) {
-        window.grecaptcha.enterprise.ready(() => {
-          window.grecaptcha.enterprise
-            .execute(import.meta.env.VITE_RECAPTCHA_SITE_KEY, {
-              action: "contact_form",
-            })
-            .then((token) => setCaptchaToken(token));
-        });
-      }
-    };
-
     const script = document.createElement("script");
     script.src =
       "https://www.google.com/recaptcha/enterprise.js?render=" +
       import.meta.env.VITE_RECAPTCHA_SITE_KEY;
     script.async = true;
-    script.onload = loadCaptcha;
     document.body.appendChild(script);
   }, []);
 
@@ -99,7 +86,24 @@ const Contact = () => {
       return;
     }
 
-    if (!captchaToken) {
+    let token = null;
+
+    try {
+      token = await window.grecaptcha.enterprise.execute(
+        import.meta.env.VITE_RECAPTCHA_SITE_KEY,
+        { action: "contact_form" }
+      );
+      setCaptchaToken(token);
+    } catch (err) {
+      toast("CAPTCHA load failed. Try refreshing.", {
+        icon: "🧨",
+        duration: 3500,
+        position: "bottom-right",
+      });
+      return;
+    }
+
+    if (!token) {
       toast("Hold up! Gotta make sure you're not a spam bot. 🛡️", {
         icon: "🤖",
         duration: 3500,
@@ -114,7 +118,7 @@ const Contact = () => {
       const verifyRes = await fetch("/api/verify-captcha", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token: captchaToken }),
+        body: JSON.stringify({ token }),
       });
 
       const verifyData = await verifyRes.json();
