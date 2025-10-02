@@ -24,10 +24,12 @@ import {
   python,
   cplusplus,
   typescript,
+  netdashlanding,
+  securebankdashboard,
   sunnifyimage,
   knifethrowimage,
-  pythonanalysis,
-  password_generator,
+  // pythonanalysis,
+  // password_generator,
   // wordsearch,
   powershell,
   cisco,
@@ -349,6 +351,58 @@ const extracurricular = [
 
 const projects = [
   {
+    name: "Netdash (Networking Toolbox) 🌐",
+    description:
+      "Netdash is a production-grade networking toolkit with 15+ tools for subnetting, IP conflict detection, and configuration generation. It supports real-time RTT testing, WebSocket port scans, DNS-over-HTTPS queries, and vendor-specific config builders for Cisco, Aruba, Palo Alto, and Juniper. Built as a PWA with encryption, offline persistence, and full accessibility compliance.",
+    tags: [
+      {
+        name: "Subnetting",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "DNS-over-HTTPS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "PWA",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "WCAG2.2",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: netdashlanding,
+    source_code_link: "https://netdash-toolkit.vercel.app/",
+    live_project_link: "https://netdash-toolkit.vercel.app/",
+  },
+  {
+    name: "SecureBank 🏦",
+    description:
+      "SecureBank is a custom-built Capture The Flag (CTF) challenge simulating a realistic online banking platform with intentional security flaws for educational exploitation. Inspired by OWASP Juice Shop, this full-stack app integrates a modern Next.js 15 frontend, real SQLite database, and handcrafted vulnerabilities hidden within common banking workflows like login, transaction tracking, and feedback submission.",
+    tags: [
+      {
+        name: "CTF",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Cybersecurity",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "SQLite",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: securebankdashboard,
+    source_code_link: "https://github.com/sunnypatell/securebank-ctf",
+    live_project_link: "https://github.com/sunnypatell/securebank-ctf",
+  },
+  {
     name: "FinancialFlow 💸",
     description:
       "Comprehensive personal finance management application built with Next.js and Typescript. It empowers users to take control of their financial health through intuitive tracking, insightful analytics, and personalized recommendations.",
@@ -452,66 +506,66 @@ const projects = [
     source_code_link: "https://github.com/sunnypatell/KnifeThrow",
     live_project_link: "https://github.com/sunnypatell/KnifeThrow",
   },
-  {
-    name: "COVID-19 GTA Cases Data Analysis 🧪",
-    description:
-      "A deep dive into ongoing COVID-19 outbreaks in the Greater Toronto Area (GTA), Ontario. Using data from a government-licensed dataset called Outbreaks by Public Health Unit (PHU) to explore trends and patterns in these outbreaks. This data analysis integrates the essential aspects of the data science workflow (Filesize: 3.5 MiB, 62699 lines of raw dataset)",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tensorflow",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scikit-learn",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "pandas",
-        color: "green-text-gradient",
-      },
-      {
-        name: "matplotlib",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "numpy",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: pythonanalysis,
-    source_code_link: "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
-    live_project_link: "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
-  },
-  {
-    name: "Secure Password Generator 🔐",
-    description:
-      "Secure Password Generator is a Java-based tool designed to generate and manage secure passwords, prioritizing simplicity, security, and user-friendliness. It employs industry-standard encryption algorithms to create strong, unique passwords resistant to common hacking attempts.",
-    tags: [
-      {
-        name: "java",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "sha-256",
-        color: "green-text-gradient",
-      },
-      {
-        name: "encryption/decryption",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "data-algorithms",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: password_generator,
-    source_code_link: "https://github.com/sunnypatell/SecurePasswordGenerator",
-    live_project_link: "https://github.com/sunnypatell/SecurePasswordGenerator",
-  },
+  // {
+  //   name: "COVID-19 GTA Cases Data Analysis 🧪",
+  //   description:
+  //     "A deep dive into ongoing COVID-19 outbreaks in the Greater Toronto Area (GTA), Ontario. Using data from a government-licensed dataset called Outbreaks by Public Health Unit (PHU) to explore trends and patterns in these outbreaks. This data analysis integrates the essential aspects of the data science workflow (Filesize: 3.5 MiB, 62699 lines of raw dataset)",
+  //   tags: [
+  //     {
+  //       name: "python",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "tensorflow",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "scikit-learn",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "pandas",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "matplotlib",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "numpy",
+  //       color: "blue-text-gradient",
+  //     },
+  //   ],
+  //   image: pythonanalysis,
+  //   source_code_link: "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
+  //   live_project_link: "https://drive.google.com/drive/folders/1cTbp-6-flypV-kj3-q606UwwWEralu11",
+  // },
+  // {
+  //   name: "Secure Password Generator 🔐",
+  //   description:
+  //     "Secure Password Generator is a Java-based tool designed to generate and manage secure passwords, prioritizing simplicity, security, and user-friendliness. It employs industry-standard encryption algorithms to create strong, unique passwords resistant to common hacking attempts.",
+  //   tags: [
+  //     {
+  //       name: "java",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "sha-256",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "encryption/decryption",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "data-algorithms",
+  //       color: "blue-text-gradient",
+  //     },
+  //   ],
+  //   image: password_generator,
+  //   source_code_link: "https://github.com/sunnypatell/SecurePasswordGenerator",
+  //   live_project_link: "https://github.com/sunnypatell/SecurePasswordGenerator",
+  // },
 ];
 
 const testimonials = [

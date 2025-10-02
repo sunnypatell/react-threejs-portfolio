@@ -57,10 +57,12 @@ import google from "./company/google.png"
 import whmis from "./company/whmis.png"
 import aws from "./tech/aws.png";
 
+import netdashlanding from "./netdashlanding.png"
+import securebankdashboard from "./securebankdash.jpg"
 import sunnifyimage from "./demonstration 2.jpg"
 import knifethrowimage from "./knifethrow_demonstration.jpg"
-import pythonanalysis from "./data_analysis.png"
-import password_generator from "./passwordgenerator.png"
+// import pythonanalysis from "./data_analysis.png"
+// import password_generator from "./passwordgenerator.png"
 import wordsearch from "./wordsearchoutput.jpg"
 import financialflowimage from "./FinancialFlowDemonstration.png"
 import enterpriseapitester from "./enterpriseapiui.png"
@@ -97,10 +99,12 @@ export {
   privcurity,
   google,
   whmis,
+  netdashlanding,
+  securebankdashboard,
   sunnifyimage,
   knifethrowimage,
-  pythonanalysis,
-  password_generator,
+  // pythonanalysis,
+  // password_generator,
   wordsearch,
   python,
   cplusplus,
