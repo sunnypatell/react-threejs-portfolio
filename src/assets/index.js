@@ -56,6 +56,7 @@ import staples from "./company/staples.png"
 import google from "./company/google.png"
 import whmis from "./company/whmis.png"
 import aws from "./tech/aws.png";
+import microsoft from "./company/microsoft.png";
 
 import netdashlanding from "./netdashlanding.png"
 import securebankdashboard from "./securebankdash.jpg"
@@ -135,5 +136,6 @@ export {
   mysql,
   threejs,
   azure,
-  staples
+  staples,
+  microsoft
 };

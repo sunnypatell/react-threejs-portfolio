@@ -52,6 +52,7 @@ import {
   enterpriseapitester,
   github,
   mongodb,
+  microsoft,
 } from "../assets";
 
 export const navLinks = [
@@ -112,6 +113,7 @@ const education = [
     iconBg: "#fff",
     date: "2022 - Present",
     points: [
+      "President's List - Winter 2025",
       "Dean's Honours List - Fall 2024",
       // "Courses undertaken: Data Structures and Algorithms, OOP, REST API, Software Design, Python Data Analysis, Discrete Mathematics, Computer Architecture, Operating Systems, PostgreSQL.",
     ],
@@ -301,6 +303,17 @@ const experiences = [
 
 
 const extracurricular = [
+  {
+  title: "GitHub Copilot Intermediate (GH-300)",
+  type: "Microsoft Certification",
+  icon: microsoft,
+  iconBg: "#000000",
+  date: "Issued: Oct 13, 2025 - Expires: Oct 13, 2027",
+  points: [
+    "Prompt Engineering, Copilot Chat Architecture, Policy Enforcement, Enterprise AI Integration, Secure Development Workflows"
+  ],
+  credential: "https://learn.microsoft.com/api/credentials/share/en-us/sunnypatell/D07D3774894C605?sharingId=6255C292987551EF",
+  },
   {
     title: "MongoDB Python Developer Path",
     type: "Proof of Completion",
