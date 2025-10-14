@@ -1,35 +1,31 @@
-"use client"
+import React, { useRef, useEffect } from "react";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import { motion, useAnimation, useInView } from "framer-motion";
 
-import { useRef, useEffect } from "react"
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
-import { motion, useAnimation, useInView } from "framer-motion"
+import "react-vertical-timeline-component/style.min.css";
 
-import "react-vertical-timeline-component/style.min.css"
-
-import { styles } from "../styles"
-import { education } from "../constants"
-import { SectionWrapper } from "../hoc"
+import { styles } from "../styles";
+import { education } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { textVariant } from "../utils/motion";
 
 const EducationCard = ({ education }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)",
+        background: "#1d1836",
         color: "#fff",
-        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
-        borderRadius: "12px",
-        border: "1px solid rgba(255, 255, 255, 0.1)",
       }}
-      contentArrowStyle={{ borderRight: "7px solid #1e1b4b" }}
+      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={education.date}
-      iconStyle={{
-        background: education.iconBg,
-        boxShadow: "0 0 0 4px #1e1b4b, 0 4px 12px rgba(0, 0, 0, 0.3)",
-      }}
+      iconStyle={{ background: education.iconBg }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
           <img
-            src={education.icon || "/placeholder.svg"}
+            src={education.icon}
             alt={education.company_name}
             className="w-[60%] h-[60%] object-contain"
           />
@@ -37,31 +33,36 @@ const EducationCard = ({ education }) => {
       }
     >
       <div>
-        <h3 className="text-white text-2xl font-bold tracking-tight">{education.title}</h3>
-        <p className="text-purple-300 text-base font-semibold mt-1">{education.company_name}</p>
+        <h3 className="text-white text-[24px] font-bold">{education.title}</h3>
+        <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
+          {education.company_name}
+        </p>
       </div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {education.points.map((point, index) => (
-          <li key={`experience-point-${index}`} className="text-gray-200 text-sm pl-1 tracking-wide leading-relaxed">
+          <li
+            key={`experience-point-${index}`}
+            className="text-white-100 text-[14px] pl-1 tracking-wider"
+          >
             {point}
           </li>
         ))}
       </ul>
     </VerticalTimelineElement>
-  )
-}
+  );
+};
 
 const Education = () => {
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
-  const mainControls = useAnimation()
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const mainControls = useAnimation();
 
   useEffect(() => {
     if (isInView) {
-      mainControls.start("visible")
+      mainControls.start("visible");
     }
-  }, [isInView, mainControls])
+  }, [isInView, mainControls]);
 
   return (
     <div ref={sectionRef}>
@@ -95,7 +96,7 @@ const Education = () => {
         </VerticalTimeline>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SectionWrapper(Education, "education")
+export default SectionWrapper(Education, "education");
