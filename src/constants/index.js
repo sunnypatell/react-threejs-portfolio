@@ -465,7 +465,7 @@ const projects = [
     ],
     image: sunnifyimage,
     source_code_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
-    live_project_link: "https://sunnify-spotify-downloader.vercel.app/",
+    live_project_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
   },
   {
     name: "Enterprise API Tester 🌐",
