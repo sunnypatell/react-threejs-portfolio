@@ -86,16 +86,16 @@ The site includes a custom domain via GitHub Pages CNAME and can also be deploye
 ## Architecture
 
 ```mermaid
-graph TD
-	A[main.jsx] --> B[App.jsx]
-	B --> C[Navbar]
-	B --> D[Hero → ComputersCanvas]
-	D --> E[GLTF: desktop_pc]
-	B --> F[About/Education/Experience/Extracurricular]
-	B --> G[Tech → Animated Hex Grid]
-	B --> H[Works → Project Cards (Tilt)]
-	B --> I[Contact → EarthCanvas + EmailJS + reCAPTCHA]
-	B --> J[StarsCanvas]
+flowchart TD
+  A["main.jsx"] --> B["App.jsx"]
+  B --> C["Navbar"]
+  B --> D["Hero / ComputersCanvas"]
+  D --> E["GLTF: desktop_pc"]
+  B --> F["About · Education · Experience · Extracurricular"]
+  B --> G["Tech · Animated Hex Grid"]
+  B --> H["Works · Project Cards"]
+  B --> I["Contact · EarthCanvas · EmailJS · reCAPTCHA"]
+  B --> J["StarsCanvas"]
 ```
 
 ## Quick Start
@@ -175,33 +175,6 @@ Vercel (optional)
 
 Any Static Host
 - Serve the `dist/` directory over any CDN or static hosting provider.
-
-<details>
-	<summary><b>Example GitHub Actions workflow (optional)</b></summary>
-
-```yaml
-name: deploy
-on:
-	push:
-		branches: [ main ]
-jobs:
-	build-and-deploy:
-		runs-on: ubuntu-latest
-		steps:
-			- uses: actions/checkout@v4
-			- uses: actions/setup-node@v4
-				with:
-					node-version: 22
-			- run: npm ci
-			- run: npm run build
-			- name: Deploy to GitHub Pages
-				uses: peaceiris/actions-gh-pages@v3
-				with:
-					github_token: ${{ secrets.GITHUB_TOKEN }}
-					publish_dir: ./dist
-```
-
-</details>
 
 ## SEO
 
