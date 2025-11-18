@@ -58,6 +58,7 @@ import whmis from "./company/whmis.png"
 import aws from "./tech/aws.png";
 import microsoft from "./company/microsoft.png";
 
+import axelotlanding from "./axelotlanding.png"
 import netdashlanding from "./netdashlanding.png"
 import securebankdashboard from "./securebankdash.jpg"
 import sunnifyimage from "./demonstration 2.jpg"
@@ -66,7 +67,7 @@ import knifethrowimage from "./knifethrow_demonstration.jpg"
 // import password_generator from "./passwordgenerator.png"
 import wordsearch from "./wordsearchoutput.jpg"
 import financialflowimage from "./FinancialFlowDemonstration.png"
-import enterpriseapitester from "./enterpriseapiui.png"
+// import enterpriseapitester from "./enterpriseapiui.png"
 
 import resume from "./Resume-Sunny-Patel.pdf";
 import awsdbcert from "./AWS Database Specialty Certified - Sunny Jayendra Patel.jpg"
@@ -100,6 +101,7 @@ export {
   privcurity,
   google,
   whmis,
+  axelotlanding,
   netdashlanding,
   securebankdashboard,
   sunnifyimage,
@@ -129,7 +131,7 @@ export {
   awsdbcert,
   connectwisecert,
   financialflowimage,
-  enterpriseapitester,
+  // enterpriseapitester,
   profilepic,
   docker,
   figma,

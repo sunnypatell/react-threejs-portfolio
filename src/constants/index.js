@@ -24,6 +24,7 @@ import {
   python,
   cplusplus,
   typescript,
+  axelotlanding,
   netdashlanding,
   securebankdashboard,
   sunnifyimage,
@@ -49,7 +50,7 @@ import {
   connectwisecert,
   awsdbcert,
   financialflowimage,
-  enterpriseapitester,
+  // enterpriseapitester,
   github,
   mongodb,
   microsoft,
@@ -363,6 +364,32 @@ const extracurricular = [
 ];
 
 const projects = [
+    {
+    name: "Axelot ✍️",
+    description:
+      "Axelot is a real-time collaborative writing and knowledge workspace built with Next.js 16, TypeScript, Firebase, TipTap 3, and Yjs. It supports multi-user editing with presence cursors, CRDT-based conflict-free sync over WebRTC, rich blocks (tables, code, math, Mermaid diagrams), and AI-assisted editing via OpenRouter-backed Next.js API routes. Production-ready auth with NextAuth v5 (Google/GitHub/email), Firestore-backed storage, and Vercel/Docker deployment make it feel like a polished SaaS product.",
+    tags: [
+      {
+        name: "Next.js 16",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TipTap 3 / Yjs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "WebRTC",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "OpenRouter AI",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: axelotlanding,
+    source_code_link: "https://github.com/royce-mathew/axelot",
+    live_project_link: "https://www.axelot.io",
+  },
   {
     name: "Netdash (Networking Toolbox) 🌐",
     description:
@@ -467,32 +494,32 @@ const projects = [
     source_code_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
     live_project_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
   },
-  {
-    name: "Enterprise API Tester 🌐",
-    description:
-      "Comprehensive API testing tool with support for all major HTTP methods, authentication, and CORS-friendly proxy. Features include request import/export, real-world samples, and local storage for data persistence. Built with Next.js, and TypeScript for optimal performance and developer experience.",
-    tags: [
-      {
-        name: "Typescript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Tailwind CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Next.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Authentication-Body",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: enterpriseapitester,
-    source_code_link: "https://github.com/sunnypatell/enterprise-api-request-tester",
-    live_project_link: "https://enterprise-api-request-tester.vercel.app/",
-  },
+  // {
+  //   name: "Enterprise API Tester 🌐",
+  //   description:
+  //     "Comprehensive API testing tool with support for all major HTTP methods, authentication, and CORS-friendly proxy. Features include request import/export, real-world samples, and local storage for data persistence. Built with Next.js, and TypeScript for optimal performance and developer experience.",
+  //   tags: [
+  //     {
+  //       name: "Typescript",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "Tailwind CSS",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "Next.js",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "Authentication-Body",
+  //       color: "blue-text-gradient",
+  //     },
+  //   ],
+  //   image: enterpriseapitester,
+  //   source_code_link: "https://github.com/sunnypatell/enterprise-api-request-tester",
+  //   live_project_link: "https://enterprise-api-request-tester.vercel.app/",
+  // },
   {
     name: "KnifeThrow 🎯",
     description:
