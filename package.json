@@ -34,7 +34,8 @@
     "react-vertical-timeline-component": "^3.6.0",
     "sitemap": "^7.1.1",
     "swiper": "^11.1.14",
-    "three": "^0.152.2"
+    "three": "^0.152.2",
+    "pdf-lib": "^1.17.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

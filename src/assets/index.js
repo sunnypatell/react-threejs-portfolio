@@ -68,8 +68,9 @@ import knifethrowimage from "./knifethrow_demonstration.jpg"
 import wordsearch from "./wordsearchoutput.jpg"
 import financialflowimage from "./FinancialFlowDemonstration.png"
 // import enterpriseapitester from "./enterpriseapiui.png"
-
-import resume from "./Resume-Sunny-Patel.pdf";
+ 
+// Use the stable route; dev/prod redirect to /resume/<basename>
+const resume = "/resume";
 import awsdbcert from "./AWS Database Specialty Certified - Sunny Jayendra Patel.jpg"
 import connectwisecert from "./Connectwise-Scripting-Certification.pdf"
 

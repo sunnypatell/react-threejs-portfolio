@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/resume", "destination": "/api/resume" },
+    { "source": "/resume/(.*)", "destination": "/api/resume/$1" }
+  ]
+}
