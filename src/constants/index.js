@@ -128,7 +128,6 @@ const education = [
     points: [
       "Ontario Scholar",
       "12th Grade: 96%",
-      ,
     ],
   },
 ];
@@ -147,7 +146,7 @@ const technologies = [
     icon: cplusplus,
   },
     {
-    name: "Powershell",
+    name: "PowerShell",
     icon: powershell,
   },
   {
@@ -159,7 +158,7 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "PostGreSQL",
+    name: "PostgreSQL",
     icon: postgresql,
   },
   {
@@ -179,7 +178,7 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Typescript",
+    name: "TypeScript",
     icon: typescript,
   },
   {
