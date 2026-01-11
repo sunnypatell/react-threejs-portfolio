@@ -49,15 +49,12 @@ const Contact = () => {
 
   useEffect(() => {
     if (showConfetti) {
-      document.documentElement.style.overflowX = "hidden"
       document.body.style.overflowX = "hidden"
     } else {
-      document.documentElement.style.overflowX = ""
       document.body.style.overflowX = ""
     }
 
     return () => {
-      document.documentElement.style.overflowX = ""
       document.body.style.overflowX = ""
     }
   }, [showConfetti])
@@ -135,7 +132,7 @@ const Contact = () => {
   }, [])
 
   return (
-    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 no-select`}>
+    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden no-select`}>
       <Toaster />
       {showConfetti && (
         <Confetti
@@ -144,7 +141,6 @@ const Contact = () => {
           recycle={false}
           numberOfPieces={windowDimension.width > 768 ? 200 : 100}
           onConfettiComplete={handleConfettiComplete}
-          style={{ position: 'fixed', top: 0, left: 0, pointerEvents: 'none' }}
         />
       )}
       <motion.div
