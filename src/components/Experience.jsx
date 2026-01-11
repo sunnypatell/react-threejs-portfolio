@@ -13,6 +13,11 @@ const ExperienceCard = React.memo(({ experience, isActive, onClick, index }) => 
         isActive ? "bg-tertiary" : "bg-primary"
       }`}
       onClick={onClick}
+      onKeyDown={(e) => e.key === 'Enter' && onClick()}
+      role="button"
+      tabIndex={0}
+      aria-selected={isActive}
+      aria-label={`${experience.title} at ${experience.company_name}`}
     >
       <div className="flex-shrink-0 w-16 h-16 rounded-full overflow-hidden mr-4">
         <img
