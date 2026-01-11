@@ -5,13 +5,13 @@ import {
   fullstack,
   javascript,
   java,
-  html,
-  css,
+  // html,  // unused - not in Tech.jsx
+  // css,   // unused - not in any array
   reactjs,
   ubuntu,
   tailwind,
   postgresql,
-  git,
+  // git,   // unused - not in any array
   otu,
   rhhs,
   wonderland,
@@ -39,14 +39,14 @@ import {
   kalilinux,
   wireshark,
   nmap,
-  metasploit,
+  // metasploit,  // unused - not in Tech.jsx
   johntheripper,
-  hydra,
-  aircrackng,
+  // hydra,       // unused - not in Tech.jsx
+  // aircrackng,  // unused - not in Tech.jsx
   photoshop,
   premiere,
   cinema4d,
-  blender,
+  // blender,  // unused - not in Tech.jsx
   connectwisecert,
   awsdbcert,
   financialflowimage,
@@ -166,10 +166,10 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
+  // {
+  //   name: "HTML 5",
+  //   icon: html,
+  // },
     {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -220,22 +220,22 @@ const cybersecurityTools = [
     name: "Nmap",
     icon: nmap,
   },
-  {
-    name: "Metasploit",
-    icon: metasploit,
-  },
+  // {
+  //   name: "Metasploit",
+  //   icon: metasploit,
+  // },
   {
     name: "John the Ripper",
     icon: johntheripper,
   },
-  {
-    name: "Hydra",
-    icon: hydra,
-  },
-  {
-    name: "Aircrack-ng",
-    icon: aircrackng,
-  },
+  // {
+  //   name: "Hydra",
+  //   icon: hydra,
+  // },
+  // {
+  //   name: "Aircrack-ng",
+  //   icon: aircrackng,
+  // },
 ];
 
 const designTools = [
@@ -251,10 +251,10 @@ const designTools = [
     name: "Cinema 4D",
     icon: cinema4d,
   },
-  {
-    name: "Blender",
-    icon: blender,
-  },
+  // {
+  //   name: "Blender",
+  //   icon: blender,
+  // },
 ];
 
 const experiences = [
