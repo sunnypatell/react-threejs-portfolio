@@ -265,7 +265,7 @@ const experiences = [
     iconBg: "#fff",
     date: "Jan. 2026 - Present",
     points: [
-      "Full-Stack AI Engineering with watsonx platform.",
+      "Full-Stack AI Engineering • watsonx Workshop 🤖",
     ],
   },
   {
