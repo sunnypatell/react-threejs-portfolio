@@ -54,6 +54,7 @@ import {
   github,
   mongodb,
   microsoft,
+  ibm,
 } from "../assets";
 
 export const navLinks = [
@@ -258,11 +259,21 @@ const designTools = [
 
 const experiences = [
   {
-    title: "IT Technician - Canada's Wonderland",
+    title: "Software Engineer Intern",
+    company_name: "IBM",
+    icon: ibm,
+    iconBg: "#fff",
+    date: "Jan. 2026 - Present",
+    points: [
+      "Full-Stack AI Engineering with watsonx platform.",
+    ],
+  },
+  {
+    title: "IT Technician",
     company_name: "Canada's Wonderland",
     icon: wonderland,
     iconBg: "#fff",
-    date: "Jun. 2023 - Present",
+    date: "Jun. 2023 - Jan. 2026",
     points: [
       "Provisioned Windows PCs with MDT, and deployed scripting via PowerShell and ConnectWise.",
       "Managed AD accounts to propagate ACLs and unified access across in-house apps, Exchange, and SharePoint.",
@@ -272,7 +283,7 @@ const experiences = [
     ],
   },
   {
-    title: "System Support Specialist - Mackenzie Health",
+    title: "System Support Specialist",
     company_name: "Mackenzie Health",
     icon: mackenziehealth,
     iconBg: "#fff",
@@ -286,7 +297,7 @@ const experiences = [
     ],
   },
   {
-    title: "Tech Sales Associate - Staples Canada",
+    title: "Tech Sales Associate",
     company_name: "Staples Canada (Co-op)",
     icon: staples,
     iconBg: "#1294C8",
