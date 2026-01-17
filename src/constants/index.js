@@ -377,7 +377,7 @@ const projects = [
     {
     name: "Axelot ✍️",
     description:
-      "Axelot is a real-time collaborative writing and knowledge workspace built with Next.js 16, TypeScript, Firebase, TipTap 3, and Yjs. It supports multi-user editing with presence cursors, CRDT-based conflict-free sync over WebRTC, rich blocks (tables, code, math, Mermaid diagrams), and AI-assisted editing via OpenRouter-backed Next.js API routes. Production-ready auth with NextAuth v5 (Google/GitHub/email), Firestore-backed storage, and Vercel/Docker deployment make it feel like a polished SaaS product.",
+      "Axelot is a real-time collaborative writing and knowledge workspace built with Next.js 16, TypeScript, Firebase, TipTap 3, and Yjs. It supports multi-user editing with presence cursors, CRDT-based conflict-free sync over WebRTC, and AI-assisted editing via OpenRouter-backed Next.js API routes. Features secure auth with NextAuth v5 (Google/GitHub OAuth, email/password with bcrypt), Firestore-backed storage with Firebase custom tokens, a Vercel cron-powered trending algorithm, and production deployment via multi-stage Docker pipeline.",
     tags: [
       {
         name: "Next.js 16",
@@ -403,18 +403,18 @@ const projects = [
   {
     name: "Netdash (Networking Toolbox) 🌐",
     description:
-      "Netdash is a production-grade networking toolkit with 15+ tools for subnetting, IP conflict detection, and configuration generation. It supports real-time RTT testing, WebSocket port scans, DNS-over-HTTPS queries, and vendor-specific config builders for Cisco, Aruba, Palo Alto, and Juniper. Built as a PWA with encryption, offline persistence, and full accessibility compliance.",
+      "Netdash is a cross-platform Electron desktop app (macOS, Windows, Linux) with Homebrew distribution, featuring Firebase Auth with Google OAuth and real-time Firestore sync. It includes 15+ networking tools for subnetting, VLSM, IP conflict detection, and multi-vendor configuration generation. Built with RTT measurement via Performance API, TCP port scanning, DNS-over-HTTPS with TTL-aware caching, and RFC-compliant IPv4/IPv6 algorithms with WCAG2.2 accessibility compliance.",
     tags: [
       {
-        name: "Subnetting",
+        name: "Electron",
         color: "blue-text-gradient",
       },
       {
-        name: "DNS-over-HTTPS",
+        name: "Firebase",
         color: "green-text-gradient",
       },
       {
-        name: "PWA",
+        name: "DNS-over-HTTPS",
         color: "pink-text-gradient",
       },
       {
@@ -423,34 +423,60 @@ const projects = [
       },
     ],
     image: netdashlanding,
-    source_code_link: "https://netdash-toolkit.vercel.app/",
+    source_code_link: "https://github.com/sunnypatell/netdash-toolkit/",
     live_project_link: "https://netdash-toolkit.vercel.app/",
   },
   {
     name: "SecureBank 🏦",
     description:
-      "SecureBank is a custom-built Capture The Flag (CTF) challenge simulating a realistic online banking platform with intentional security flaws for educational exploitation. Inspired by OWASP Juice Shop, this full-stack app integrates a modern Next.js 15 frontend, real SQLite database, and handcrafted vulnerabilities hidden within common banking workflows like login, transaction tracking, and feedback submission.",
+      "SecureBank is a deliberately vulnerable banking simulation built for Capture The Flag (CTF) training, focused on SQL injection and privilege escalation. It features exploit paths including raw query interpolation, single/double URL encoding, and a hidden admin portal to teach secure coding by example. Core features include transaction search/filter, a feedback system, and an admin dashboard with live DB console and security logs. Backed by a normalized SQLite schema with session handling via cookie-signature, and dockerized with structured challenge documentation.",
     tags: [
       {
         name: "CTF",
         color: "blue-text-gradient",
       },
       {
-        name: "Cybersecurity",
+        name: "SQLi/XSS",
         color: "green-text-gradient",
       },
       {
-        name: "TypeScript",
+        name: "SQLite",
         color: "pink-text-gradient",
       },
       {
-        name: "SQLite",
+        name: "Docker",
         color: "blue-text-gradient",
       },
     ],
     image: securebankdashboard,
     source_code_link: "https://github.com/sunnypatell/securebank-ctf",
     live_project_link: "https://github.com/sunnypatell/securebank-ctf",
+  },
+  {
+    name: "Sunnify (Spotify Downloader) 🎵",
+    description:
+      "Sunnify is a Spotify downloader that reverse-engineers embed pages to extract track metadata by parsing protected JSON states without authentication. It features a cross-platform PyQt5 desktop client (macOS, Windows, Linux) with thread-safe UI updates and supports playlists with 1000+ tracks via Spotify's internal spclient API. Includes retry logic with exponential backoff for rate limiting, cross-platform FFmpeg detection, 43 pytest unit tests with GitHub Actions CI/CD, and ships as a Homebrew Cask.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "PyQt5",
+        color: "green-text-gradient",
+      },
+      {
+        name: "yt-dlp",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Homebrew",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: sunnifyimage,
+    source_code_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
+    live_project_link: "https://sunnify-spotify-downloader.vercel.app/",
   },
   {
     name: "FinancialFlow 💸",
@@ -477,32 +503,6 @@ const projects = [
     image: financialflowimage,
     source_code_link: "https://github.com/sunnypatell/financialflow",
     live_project_link: "https://financial-flow.vercel.app/",
-  },
-  {
-    name: "Sunnify (Spotify Downloader) ♫",
-    description:
-      "Sunnify is a Spotify downloader webapp/desktop application that allows you to download entire playlists locally onto your Mac/Linux/Windows PC. The web version of the app is hosted on AWS Lambda and Elastic Beanstalk, with FastAPI ASGI production.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "webscraping",
-        color: "green-text-gradient",
-      },
-      {
-        name: "AWS Lambda/Beanstalk",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Proxy/API",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: sunnifyimage,
-    source_code_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
-    live_project_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
   },
   // {
   //   name: "Enterprise API Tester 🌐",
