@@ -1,3 +1,6 @@
+> [!NOTE]
+> This is the previous version of my portfolio. The current site is a ground-up rebuild, live at **[sunnypatel.net](https://www.sunnypatel.net)** with its source at **[sunnypatell/Portfolio](https://github.com/sunnypatell/Portfolio)**.
+
 <div align="center">
 
 # Sunny Patel — 3D Portfolio
